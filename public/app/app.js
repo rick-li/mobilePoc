@@ -1,5 +1,5 @@
 (function() {
-  var HomeController, HomeView, Research, ResearchCollection, app,
+  var HomeView, Research, ResearchCollection, ShowResearchView, app,
     __hasProp = Object.prototype.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; },
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
@@ -125,8 +125,11 @@
 
     function HomeView() {
       this.render = __bind(this.render, this);      HomeView.__super__.constructor.call(this);
+      console.log('Im in constructor');
+      console.log(app.activePage());
+      console.log($('.ui-page-active'));
       this.el = app.activePage();
-      this.template = _.template('<div>\n<ul data-role="listview" data-theme="c" data-filter="true">\n    <% researches.each(function(research){ %>\n        <li><a href="#researches-<%= research.pubId%>"><%=research.getHeadLine()%></a></li>\n    <%})%>\n</ul>\n</div>');
+      this.template = _.template('<div>\n<ul data-role="listview" data-theme="c" data-filter="true">\n    <% researches.each(function(research){ %>\n        <!--<li><a href="index.html"><%=research.getHeadLine()%></a></li>-->\n        <li><a href="#research?cid=<%= research.cid%>"><%=research.getHeadLine()%></a></li>\n    <%})%>\n</ul>\n</div>');
       console.log('home view render');
       console.log(window.Researchs);
       this.render();
@@ -143,35 +146,84 @@
 
   })(Backbone.View);
 
-  HomeController = (function(_super) {
+  ShowResearchView = (function(_super) {
 
-    __extends(HomeController, _super);
+    __extends(ShowResearchView, _super);
 
-    HomeController.prototype.routes = {
-      "home": "home",
-      "researchs-:cid": "show"
-    };
-
-    function HomeController() {
-      HomeController.__super__.constructor.apply(this, arguments);
-      this._views = {};
+    function ShowResearchView() {
+      this.render = __bind(this.render, this);      ShowResearchView.__super__.constructor.apply(this, arguments);
+      console.log('show research view');
+      this.el = app.activePage();
+      this.template = _.template('<article>\n    <header><h2><%=research.getHeadLine()%></h2></header>\n    <content><%=research.getSynopsis()%></content>\n</article>');
+      this.model.bind('change', this.render);
+      this.render();
     }
 
-    HomeController.prototype.home = function() {
-      var _base;
-      console.log(this._views.home);
-      return (_base = this._views).home || (_base.home = new HomeView);
+    ShowResearchView.prototype.render = function() {
+      this.el.find('h1').text(this.model.getHeadLine());
+      this.el.find('.ui-content').html(this.template({
+        research: this.model
+      }));
+      return app.reapplyStyles(this.el);
     };
 
-    return HomeController;
+    return ShowResearchView;
 
-  })(Backbone.Router);
+  })(Backbone.View);
 
-  app.homeController = new HomeController;
+  /*
+  class HomeController extends Backbone.Router
+      routes:
+          "home" : "home"
+          "researches-:cid" : "show"
+  
+      constructor: ->
+          super
+          @_views= {}
+      home: ->
+          console.log @_views.home
+          @_views.home||=new HomeView
+      show: (cid) ->
+          console.log "show research #{cid}"
+          @_views["researches-#{cid}"]?= new ShowResearchView({model: window.Resesarchs.getByCid(cid)})
+  
+  app.homeController = new HomeController()
+  */
+
+  app.homeController = new $.mobile.Router({
+    "#home": {
+      handler: function() {
+        var _base;
+        console.log('home');
+        if (!this.views) this.views = {};
+        return (_base = this.views).home || (_base.home = new HomeView());
+      },
+      events: 'h,s'
+    },
+    "#research([?].*)?": {
+      handler: function(type, match, ui) {
+        var cid, params, research, _base, _name;
+        console.log('there');
+        console.log(match);
+        console.log(ui);
+        if (!match) return;
+        params = app.homeController.getParams(match[1]);
+        cid = params.cid;
+        if (!this.views) this.views = {};
+        if (!window.Researchs) console.log("window.Researchs is empty");
+        research = window.Researchs.getByCid(cid);
+        if (params) {
+          return (_base = this.views)[_name = "research-" + cid] || (_base[_name] = new ShowResearchView({
+            model: research
+          }));
+        }
+      },
+      events: 'h,s'
+    }
+  });
 
   $(document).ready(function() {
-    Backbone.history.start();
-    return app.homeController.home();
+    return window.location = '#home';
   });
 
   this.app = app;
