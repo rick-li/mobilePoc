@@ -13,30 +13,26 @@ app =
   goBack: ->
     $.historyBack
 
-class Venue extends Backbone.Model
-  getName: ->
-    @get('name')
-  getAddress: ->
-    [@get('address'), @get('city'), @get('state')].join ", "
-  getImageUrl: ->
-    @get('photo_url')
-  getLatitude: ->
-    @get('geolat')
-  getLongtitude: ->
-    @get('geolong')
-
-  getMapUrl: (width=300, height=220) ->
-    "http://maps.google.com/maps/api/staticmap?center=#{@getLatitude()},#{@getLongitude()}&zoom=14&size=#{width}x#{height}&maptype=terrain&markers=color:red|#{@getLatitude()},#{@getLongitude()}&sensor=false"  
-  
-class VenueCollection extends Backbone.Collection
-  model: Venue
+class Research extends Backbone.Model
+  getHeadLine: ->
+    @get('headLine')
+  getPubDate: ->
+    @get('pubDate')
+  getFileLink: ->
+    @get('fileLink')
+  getSynopsis: ->
+    @get('synopsis')
+    
+class ResearchCollection extends Backbone.Collection
+  model: Research
   constructor: ->
     super
-    @reset $FOURSQUARE_JSON
-window.Venues = new VenueCollection
-console.log Venues
+    @reset $RESEARCH_JSON.store.data.list
+window.Researchs = new ResearchCollection
+console.log Researchs
 
-class EditVenueView extends Backbone.View
+###
+class EditResearchView extends Backbone.View
   constructor: ->
     super
     @el = app.activePage()
@@ -46,19 +42,11 @@ class EditVenueView extends Backbone.View
       <div data-role="fieldcontain">
         <label>Name</label>
         <input type="text" value="<%= venue.getName()%>" name="name" />
-      <div>
-      <div data-role="fieldcontain">
-        <label>Address</label>
-        <input type="text" value="<%= venue.get('address')%>" name="name" />
-      <div>
-      <div data-role="fieldcontain">
-        <label>City</label>
-        <input type="text" value="<%= venue.get('city')%>" name="name" />
-      <div>
+      </div>
       <div data-role="fieldcontain">
         <label>State</label>
         <input type="text" value="<%= venue.get('sate')%>" name="name" />
-      <div>
+      </div>
       <button type="submit" data-role="button">Save</button>
     </form>
     ''')
@@ -90,6 +78,8 @@ class EditVenueView extends Backbone.View
     
     #rebind events
     @delegateEvents
+###
+
 
 class HomeView extends Backbone.View
   constructor: ->
@@ -98,25 +88,25 @@ class HomeView extends Backbone.View
         @template = _.template('''
             <div>
             <ul data-role="listview" data-theme="c" data-filter="true">
-                <% venues.each(function(venue){ %>
-                    <li><a href="#venues-<%= venue.cid%>"><%=venue.getName()%></a></li>
+                <% researches.each(function(research){ %>
+                    <li><a href="#researches-<%= research.pubId%>"><%=research.getHeadLine()%></a></li>
                 <%})%>
             </ul>
             </div>
         ''')
         console.log 'home view render'
-        console.log window.Venues
+        console.log window.Researchs
         @render()
   render: =>
-        #console.log(window.Venues)
-    @el.find('.ui-content').html(@template({venues: window.Venues}))
+        #console.log(window.Researchs)
+    @el.find('.ui-content').html(@template({researches: window.Researchs}))
     app.reapplyStyles(@el)
 
 
 class HomeController extends Backbone.Router
     routes:
         "home" : "home"
-        "venues-:cid" : "show"
+        "researchs-:cid" : "show"
 
     constructor: ->
         super
