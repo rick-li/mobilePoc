@@ -144,21 +144,19 @@ class HomeController extends Backbone.Router
 app.homeController = new HomeController()
 ###
 
-
 app.homeController = new $.mobile.Router(
     "#home" :
         handler : ->
             console.log 'home'
             @views = {} if not @views
+            #clear research content
             @views.home ||= new HomeView()
         events: 'h,s'
     "#research([?].*)?" :
         handler: (type, match, ui)->
-            console.log 'there'
-            console.log match
-            console.log ui
+            console.log 'research'
             if not match then return
-            params = app.homeController.getParams(match[1]);
+            params = app.homeController.getParams(match[1])
             cid = params.cid
             @views = {} if not @views
             if not window.Researchs then console.log("window.Researchs is empty")
@@ -175,3 +173,8 @@ $(document).ready ->
    window.location='#home'
    
 @app = app
+$(document).bind('pagebeforechange', (toPage, opts)->
+    #check page beforechange here
+    $('#research .ui-content').html('')
+    $('#research .ui-header h1').html('')
+)
