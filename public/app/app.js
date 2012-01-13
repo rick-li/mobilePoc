@@ -203,9 +203,7 @@
     "#research([?].*)?": {
       handler: function(type, match, ui) {
         var cid, params, research, _base, _name;
-        console.log('there');
-        console.log(match);
-        console.log(ui);
+        console.log('research');
         if (!match) return;
         params = app.homeController.getParams(match[1]);
         cid = params.cid;
@@ -227,5 +225,10 @@
   });
 
   this.app = app;
+
+  $(document).bind('pagebeforechange', function(toPage, opts) {
+    $('#research .ui-content').html('');
+    return $('#research .ui-header h1').html('');
+  });
 
 }).call(this);
