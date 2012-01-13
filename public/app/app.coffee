@@ -121,7 +121,6 @@ class ShowResearchView extends Backbone.View
         @render()
 
     render: =>
-        @el.find('h1').text(@model.getHeadLine())
         @el.find('.ui-content').html(@template(research: @model))
         app.reapplyStyles(@el)
 
@@ -150,8 +149,10 @@ app.homeController = new $.mobile.Router(
             console.log 'home'
             @views = {} if not @views
             #clear research content
+            #$('#research .ui-content').html('')
+            #$('#research .ui-header h1').html('')
             @views.home ||= new HomeView()
-        events: 'h,s'
+        events: 's'
     "#research([?].*)?" :
         handler: (type, match, ui)->
             console.log 'research'
@@ -162,7 +163,7 @@ app.homeController = new $.mobile.Router(
             if not window.Researchs then console.log("window.Researchs is empty")
             research = window.Researchs.getByCid(cid)
             if params then @views["research-#{cid}"] ||= new ShowResearchView({model:research})
-        events: 'h,s'
+        events: 's'
 
 )
 
@@ -175,6 +176,4 @@ $(document).ready ->
 @app = app
 $(document).bind('pagebeforechange', (toPage, opts)->
     #check page beforechange here
-    $('#research .ui-content').html('')
-    $('#research .ui-header h1').html('')
 )

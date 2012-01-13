@@ -160,7 +160,6 @@
     }
 
     ShowResearchView.prototype.render = function() {
-      this.el.find('h1').text(this.model.getHeadLine());
       this.el.find('.ui-content').html(this.template({
         research: this.model
       }));
@@ -198,7 +197,7 @@
         if (!this.views) this.views = {};
         return (_base = this.views).home || (_base.home = new HomeView());
       },
-      events: 'h,s'
+      events: 's'
     },
     "#research([?].*)?": {
       handler: function(type, match, ui) {
@@ -216,7 +215,7 @@
           }));
         }
       },
-      events: 'h,s'
+      events: 's'
     }
   });
 
@@ -226,9 +225,6 @@
 
   this.app = app;
 
-  $(document).bind('pagebeforechange', function(toPage, opts) {
-    $('#research .ui-content').html('');
-    return $('#research .ui-header h1').html('');
-  });
+  $(document).bind('pagebeforechange', function(toPage, opts) {});
 
 }).call(this);
