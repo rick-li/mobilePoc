@@ -1,13 +1,13 @@
-app = 
+app =
   activePage: ->
     $('.ui-page-active')
   redirectTo: (page) ->
     $.mobile.changePage(page)
   reapplyStyles: (el) ->
-      el.find('ul[data-role]').listview();
-      el.find('div[data-role="fieldcontain"]').fieldcontain();
-      el.find('button[data-role="button"]').button();
-      el.find('input,textarea').textinput();
+      el.find('ul[data-role]').listview()
+      el.find('div[data-role="fieldcontain"]').fieldcontain()
+      el.find('button[data-role="button"]').button()
+      el.find('input,textarea').textinput()
       el.page()
   
   goBack: ->
