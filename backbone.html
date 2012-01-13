@@ -5,28 +5,29 @@
 		<title>Mobile POC</title>
 		<link rel='stylesheet' media='all' href=''/>
 		<meta name='viewport' content='width=device-width, initial-scale=1'/>
-		<link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
-		<!--<link href="http://bennolan.com/science/backbone-mobile/jquery-mobile.css" rel="stylesheet" type="text/css" />-->
+	<link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
+	<!--<link href="http://bennolan.com/science/backbone-mobile/jquery-mobile.css" rel="stylesheet" type="text/css" />-->
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-		<script type="text/javascript">
+ <!--       <script type="text/javascript">
+ 
+            console.log('bind mobile disable ajax')
+            $(document).bind('mobileinit', function(){
+                
+               console.log('disable mobile ajax')
+                $.mobile.ajaxEnabled=false;
+                $.mobile.hashListeningEnabled = false;
+            })
+            -->
+        </script>
+	<script src="public/app/libs/jquery.mobile.router.0.6.js"></script>
+		<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
 
-			console.log('bind mobile disable ajax')
-			$(document).bind('mobileinit', function(){
+		<!--<script src="http://bennolan.com/science/backbone-mobile/jquery-mobile.js"></script>-->
 
-				$.mobile.defaultPageTransition = 'none'
-				$.mobile.ajaxEnabled=false;
-				$.mobile.hashListeningEnabled = false;
-			})
-		</script>
-<script src="public/app/libs/jquery.mobile.router.0.6.js"></script>
-<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
-
-<!--<script src="http://bennolan.com/science/backbone-mobile/jquery-mobile.js"></script>-->
-
-<script src="public/app/libs/underscore.js"></script>
-<script src="public/app/libs/backbone.js"></script>
-<script src="public/app/citiresearch.json"></script>
-<script src="public/app/app.js"></script>
+		<script src="public/app/libs/underscore.js"></script>
+		<script src="public/app/libs/backbone.js"></script>
+		<script src="public/app/citiresearch.json"></script>
+		<script src="public/app/app.js"></script>
 	</head>
 	<body>
 		<div data-role="page" id="home">
@@ -39,20 +40,20 @@
 				<h4><a rel="external" href="#there">@rick</a></h4>
 			</div>
 		</div>
-		<div id="research" data-role="page" data-add-back-btn="true">
+<div id="research" data-role="page" data-add-back-btn="true">
 
-			<div data-role="header">
-				<h1>Detail</h1>
-			</div>
+        <div data-role="header">
+                    <h1>Detail</h1>
+                            </div>
 
-			<div data-role="content">
-			</div>
+                                    <div data-role="content">
+                                            </div>
 
-			<div data-role="footer" data-position="fixed">
-				<h4>Footer</h4>
-			</div>
+                                                    <div data-role="footer" data-position="fixed">
+                                                                <h4>Footer</h4>
+                                                                        </div>
 
-		</div>
+                                                                            </div>
 	</body>
 </html>
-
+			
