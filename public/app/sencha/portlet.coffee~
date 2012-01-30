@@ -1,0 +1,11 @@
+cv.Portlet = Ext.extend(Ext.Panel,
+    portletType: ''
+    title: ''
+    #dockedItems: [{xtype: 'toolbar', title: @title}]
+    initComponent: ->
+        cv.Portlet.superclass.initComponent.call(this)
+        @.addDocked(
+            xtype: 'toolbar'
+            title: @title
+        )
+)
