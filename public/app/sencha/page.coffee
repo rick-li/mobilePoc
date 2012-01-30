@@ -1,5 +1,6 @@
-#page map
+#page cache
 cv.pages = {}
+cv.portlets = {}
 renderPage = (pageId)->
     #render page here
 cv.Page = Ext.extend(Ext.Panel,
@@ -10,6 +11,22 @@ cv.Page = Ext.extend(Ext.Panel,
         cv.Page.superclass.constructor.call(this, config)
     initComponent: ->
         console.log 'init component'
-        @html = '<h1>this is '+@pageId+ ' Page.'
+        if @pageId != 'MarketBuzz'
+            @html = '<h1>this is '+@pageId+ ' Page.'
+        else
+            #read json and render the portlets
+            portlets = @getPortlets()
+            #portlets = []
+            Ext.apply(this,
+                items: portlets
+            )
+
         cv.Page.superclass.initComponent.call(this)
+    getPortlets: ->
+        console.log('get portlets')
+        #research for the moment
+        result = []
+        p = new cv.ResearchPortlet({title: 'Research'})
+        result.push p
+        return result
 )

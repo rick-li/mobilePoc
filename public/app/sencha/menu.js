@@ -1,9 +1,10 @@
 (function() {
 
-  cv.Menu = Ext.extend(Ext.Panel, {
-    height: 30,
+  cv.Menu = Ext.extend(Ext.Toolbar, {
+    height: 40,
     itemId: 'cvMenu',
     layout: 'fit',
+    scroll: 'horizontal',
     initComponent: function() {
       Ext.apply(this, {
         items: [
@@ -20,7 +21,7 @@
     getMenuItems: function() {
       var menuItems, menus,
         _this = this;
-      menus = ['MarketBuzz', 'Rates', 'Credit'];
+      menus = ['MarketBuzz', 'Rates', 'Credit', 'FX', 'EmergeMarkets', 'Muni'];
       menuItems = [];
       menus.forEach(function(page, i) {
         menuItems.push({

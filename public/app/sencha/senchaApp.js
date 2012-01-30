@@ -35,6 +35,10 @@
         dockedItems: [
           {
             dock: 'top',
+            xtype: 'toolbar',
+            title: 'CitiVelocity'
+          }, {
+            dock: 'top',
             xtype: 'cvMenu'
           }
         ]
@@ -42,5 +46,11 @@
       return cv.Viewport.superclass.initComponent.apply(this, arguments);
     }
   });
+
+  cv.util = {
+    getCurrentHashUrl: function() {
+      return location.href.substring(location.href.indexOf('#') + 1);
+    }
+  };
 
 }).call(this);

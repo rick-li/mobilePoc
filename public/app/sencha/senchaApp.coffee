@@ -29,12 +29,19 @@ cv.Viewport = Ext.extend(Ext.Panel,
     id: 'viewport'
     fullscreen: true
     layout: 'card'
-
     initComponent: ->
         Ext.apply( this,
             dockedItems: [
+                {dock: 'top', xtype: 'toolbar', title: 'CitiVelocity'}
                 {dock: 'top', xtype: 'cvMenu'}
             ]
         )
         cv.Viewport.superclass.initComponent.apply(this, arguments)
 )
+
+
+cv.util = {
+    getCurrentHashUrl: ->
+        return location.href.substring(location.href.indexOf('#')+1)
+
+}

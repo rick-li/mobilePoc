@@ -1,5 +1,22 @@
 (function() {
 
+  Ext.regController('research', {
+    detail: function(options) {
+      var pubId, record;
+      pubId = options.pubId;
+      console.log('research controller ' + pubId);
+      if (!this.researchArticles) this.researchArticles = [];
+      if (!this.researchArticles[pubId]) {
+        record = cv.researchStore.findRecord('pubId', pubId);
+        console.log('record is ');
+        this.researchArticles[pubId] = new cv.ResearchDetail({
+          record: record
+        });
+      }
+      return Ext.getCmp('viewport').setActiveItem(this.researchArticles[pubId]);
+    }
+  });
+
   Ext.regController('page', {
     index: function(options) {
       var pageId;
@@ -22,6 +39,10 @@
     map.connect('page/index/:id', {
       controller: 'page',
       action: 'index'
+    });
+    map.connect('research/:category/:pubId', {
+      controller: 'research',
+      action: 'detail'
     });
     return map.connect(':controller/:action');
   });

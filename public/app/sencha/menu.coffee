@@ -1,8 +1,8 @@
-cv.Menu = Ext.extend(Ext.Panel,
-    height: 30
+cv.Menu = Ext.extend(Ext.Toolbar,
+    height: 40
     itemId: 'cvMenu'
     layout: 'fit'
-    
+    scroll: 'horizontal'
     initComponent: ->
         Ext.apply(this,
             items:[
@@ -17,7 +17,7 @@ cv.Menu = Ext.extend(Ext.Panel,
     getMenuItems: ->
         #hardcode menu itmes for the time being
         #TODO read from datastore
-        menus = ['MarketBuzz','Rates','Credit']
+        menus = ['MarketBuzz','Rates','Credit','FX','EmergeMarkets','Muni']
         menuItems = []
         # => to rebind this to foreach callback
         menus.forEach (page, i)=>

@@ -1,3 +1,15 @@
+Ext.regController 'research',
+    detail: (options)->
+        pubId = options.pubId
+        console.log('research controller '+pubId)
+        if not @researchArticles
+            @researchArticles = []
+        if not @researchArticles[pubId]
+            record = cv.researchStore.findRecord('pubId', pubId)
+            console.log 'record is '
+            @researchArticles[pubId] = new cv.ResearchDetail({record: record})
+        Ext.getCmp('viewport').setActiveItem(@researchArticles[pubId])
+            
 Ext.regController 'page',
     index: (options)->
         pageId = options.id
@@ -16,5 +28,6 @@ Ext.regController 'page',
     
 Ext.Router.draw (map)->
     map.connect('page/index/:id', {controller: 'page', action: 'index'})
+    map.connect('research/:category/:pubId', {controller: 'research', action: 'detail'})
     map.connect(':controller/:action')
 

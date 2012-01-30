@@ -3,6 +3,8 @@
 
   cv.pages = {};
 
+  cv.portlets = {};
+
   renderPage = function(pageId) {};
 
   cv.Page = Ext.extend(Ext.Panel, {
@@ -13,9 +15,27 @@
       return cv.Page.superclass.constructor.call(this, config);
     },
     initComponent: function() {
+      var portlets;
       console.log('init component');
-      this.html = '<h1>this is ' + this.pageId + ' Page.';
+      if (this.pageId !== 'MarketBuzz') {
+        this.html = '<h1>this is ' + this.pageId + ' Page.';
+      } else {
+        portlets = this.getPortlets();
+        Ext.apply(this, {
+          items: portlets
+        });
+      }
       return cv.Page.superclass.initComponent.call(this);
+    },
+    getPortlets: function() {
+      var p, result;
+      console.log('get portlets');
+      result = [];
+      p = new cv.ResearchPortlet({
+        title: 'Research'
+      });
+      result.push(p);
+      return result;
     }
   });
 
