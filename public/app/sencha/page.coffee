@@ -26,7 +26,7 @@ cv.Page = Ext.extend(Ext.Panel,
         console.log('get portlets')
         #research for the moment
         result = []
-        p = new cv.ResearchPortlet({title: 'Research'})
+        p = new cv.ResearchPortlet({title: 'Daily Research'})
         result.push p
         return result
 )

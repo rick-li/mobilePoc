@@ -32,7 +32,7 @@
       console.log('get portlets');
       result = [];
       p = new cv.ResearchPortlet({
-        title: 'Research'
+        title: 'Daily Research'
       });
       result.push(p);
       return result;

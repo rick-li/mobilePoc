@@ -15,7 +15,7 @@
       }
       return Ext.getCmp('viewport').setActiveItem(this.researchArticles[pubId], {
         type: 'slide',
-        direction: 'right'
+        direction: 'left'
       });
     }
   });
