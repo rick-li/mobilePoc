@@ -8,7 +8,7 @@ Ext.regController 'research',
             record = cv.researchStore.findRecord('pubId', pubId)
             console.log 'record is '
             @researchArticles[pubId] = new cv.ResearchDetail({record: record})
-        Ext.getCmp('viewport').setActiveItem(@researchArticles[pubId])
+        Ext.getCmp('viewport').setActiveItem(@researchArticles[pubId], {type: 'slide', direction: 'right'})
             
 Ext.regController 'page',
     index: (options)->

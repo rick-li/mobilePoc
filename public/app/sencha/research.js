@@ -69,11 +69,12 @@
     },
     selectArticle: function(sel, records) {
       var pubId, record, type;
+      if (records.length === 0) return;
       console.log('select article');
       record = records[0];
       type = 'demo';
       pubId = record.data.pubId;
-      console.log('select research '.pubId);
+      console.log('select research ' + pubId);
       cv.previousHashUrl = cv.util.getCurrentHashUrl();
       return Ext.dispatch({
         controller: 'research',

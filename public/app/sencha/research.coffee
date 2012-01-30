@@ -41,11 +41,13 @@ cv.ResearchPortlet = Ext.extend(cv.Portlet,
         cv.ResearchPortlet.superclass.initComponent.call(this)
         @.add(@createList())
     selectArticle: (sel, records)->
+            #filter out the unselect 
+            if records.length == 0 then return
             console.log 'select article'
             record = records[0]
             type = 'demo'
             pubId = record.data.pubId
-            console.log 'select research '.pubId
+            console.log 'select research '+pubId
             cv.previousHashUrl = cv.util.getCurrentHashUrl()
             Ext.dispatch
                 controller: 'research'

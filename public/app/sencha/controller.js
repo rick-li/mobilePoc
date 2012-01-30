@@ -13,7 +13,10 @@
           record: record
         });
       }
-      return Ext.getCmp('viewport').setActiveItem(this.researchArticles[pubId]);
+      return Ext.getCmp('viewport').setActiveItem(this.researchArticles[pubId], {
+        type: 'slide',
+        direction: 'right'
+      });
     }
   });
 
