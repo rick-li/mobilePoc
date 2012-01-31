@@ -36,7 +36,15 @@
           {
             dock: 'top',
             xtype: 'toolbar',
-            title: 'CitiVelocity'
+            layout: 'hbox',
+            title: 'CitiVelocity',
+            items: [
+              {
+                xtype: 'searchfield',
+                name: 'searchfield',
+                placeholder: 'Search...'
+              }
+            ]
           }, {
             dock: 'top',
             xtype: 'cvMenu'

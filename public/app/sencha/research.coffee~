@@ -37,6 +37,7 @@ cv.ResearchDetail = Ext.extend(Ext.Panel,
 )
 
 cv.ResearchPortlet = Ext.extend(cv.Portlet,
+    height: 100
     initComponent: ->
         cv.ResearchPortlet.superclass.initComponent.call(this)
         @.add(@createList())
@@ -49,7 +50,6 @@ cv.ResearchPortlet = Ext.extend(cv.Portlet,
             pubId = record.data.pubId
             console.log 'select research '+pubId
             cv.previousHashUrl = cv.util.getCurrentHashUrl()
-            return
             Ext.dispatch
                 controller: 'research'
                 action: 'detail'
@@ -58,6 +58,7 @@ cv.ResearchPortlet = Ext.extend(cv.Portlet,
                 historyUrl: 'research/'+type+'/'+pubId
     createList: ->
         list = new Ext.List(
+            height: @height
             itemTpl: '<div>{headLine}</div><div>{synopsis}</div>'
             store: cv.researchStore
             listeners:

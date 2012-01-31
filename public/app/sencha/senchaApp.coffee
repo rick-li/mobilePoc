@@ -32,7 +32,13 @@ cv.Viewport = Ext.extend(Ext.Panel,
     initComponent: ->
         Ext.apply( this,
             dockedItems: [
-                {dock: 'top', xtype: 'toolbar', title: 'CitiVelocity'}
+                {
+                 dock: 'top'
+                 xtype: 'toolbar'
+                 layout: 'hbox'
+                 title: 'CitiVelocity'
+                 items: [{xtype:'searchfield',name: 'searchfield',placeholder: 'Search...'}]
+                }
                 {dock: 'top', xtype: 'cvMenu'}
             ]
         )

@@ -63,6 +63,7 @@
   });
 
   cv.ResearchPortlet = Ext.extend(cv.Portlet, {
+    height: 200,
     initComponent: function() {
       cv.ResearchPortlet.superclass.initComponent.call(this);
       return this.add(this.createList());
@@ -87,6 +88,7 @@
     createList: function() {
       var list;
       list = new Ext.List({
+        height: this.height,
         itemTpl: '<div>{headLine}</div><div>{synopsis}</div>',
         store: cv.researchStore,
         listeners: {

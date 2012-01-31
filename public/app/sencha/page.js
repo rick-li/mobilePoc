@@ -35,6 +35,9 @@
         title: 'Daily Research'
       });
       result.push(p);
+      result.push(new cv.VideoPortlet({
+        title: 'CitiVelocity Video'
+      }));
       return result;
     }
   });

@@ -28,5 +28,6 @@ cv.Page = Ext.extend(Ext.Panel,
         result = []
         p = new cv.ResearchPortlet({title: 'Daily Research'})
         result.push p
+        result.push new cv.VideoPortlet({title: 'CitiVelocity Video' })
         return result
 )
