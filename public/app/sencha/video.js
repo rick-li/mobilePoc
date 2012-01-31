@@ -9,7 +9,7 @@
           posterUrl: 'videoposter.png',
           url: 'http://broken-links.com/tests/media/BigBuck.m4v',
           preload: false,
-          height: 200,
+          height: 300,
           width: 200
         }
       ];
