@@ -7,7 +7,7 @@
         {
           xtype: 'video',
           posterUrl: 'videoposter.png',
-          url: 'http://dev.sencha.com/deploy/touch/examples/video/space.mp4',
+          url: 'http://broken-links.com/tests/media/BigBuck.m4v',
           height: 200,
           width: 200
         }
