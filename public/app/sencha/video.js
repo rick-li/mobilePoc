@@ -7,7 +7,7 @@
         {
           xtype: 'video',
           posterUrl: 'videoposter.png',
-          url: 'http://mediaelementjs.com/media/echo-hereweare.mp4',
+          url: 'http://dev.sencha.com/deploy/touch/examples/video/space.mp4',
           height: 200,
           width: 200
         }
