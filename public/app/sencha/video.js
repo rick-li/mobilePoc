@@ -8,6 +8,7 @@
           xtype: 'video',
           posterUrl: 'videoposter.png',
           url: 'http://broken-links.com/tests/media/BigBuck.m4v',
+          preload: false,
           height: 200,
           width: 200
         }
