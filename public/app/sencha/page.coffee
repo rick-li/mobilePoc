@@ -20,7 +20,7 @@ cv.Page = Ext.extend(Ext.Panel,
             Ext.apply(this,
                 items: portlets
                 #layout: 'vbox'
-                align: 'stretch'
+                #align: 'stretch'
                 scroll: 'vertical'
             )
 
