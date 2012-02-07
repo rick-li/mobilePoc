@@ -22,19 +22,26 @@
       } else {
         portlets = this.getPortlets();
         Ext.apply(this, {
-          items: portlets
+          items: portlets,
+          align: 'stretch',
+          scroll: 'vertical'
         });
       }
       return cv.Page.superclass.initComponent.call(this);
     },
     getPortlets: function() {
-      var p, result;
+      var result;
       console.log('get portlets');
       result = [];
-      p = new cv.ResearchPortlet({
+      result.push(new cv.ResearchPortlet({
         title: 'Daily Research'
-      });
-      result.push(p);
+      }));
+      result.push(new cv.ResearchPortlet({
+        title: 'Daily Research'
+      }));
+      result.push(new cv.ResearchPortlet({
+        title: 'Daily Research'
+      }));
       result.push(new cv.VideoPortlet({
         title: 'CitiVelocity Video'
       }));
