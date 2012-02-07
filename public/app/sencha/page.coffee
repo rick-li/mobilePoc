@@ -19,6 +19,9 @@ cv.Page = Ext.extend(Ext.Panel,
             #portlets = []
             Ext.apply(this,
                 items: portlets
+                #layout: 'vbox'
+                align: 'stretch'
+                scroll: 'vertical'
             )
 
         cv.Page.superclass.initComponent.call(this)
@@ -26,8 +29,9 @@ cv.Page = Ext.extend(Ext.Panel,
         console.log('get portlets')
         #research for the moment
         result = []
-        p = new cv.ResearchPortlet({title: 'Daily Research'})
-        result.push p
+        result.push new cv.ResearchPortlet({title: 'Daily Research'})
+        result.push new cv.ResearchPortlet({title: 'Daily Research'})
+        result.push new cv.ResearchPortlet({title: 'Daily Research'})
         result.push new cv.VideoPortlet({title: 'CitiVelocity Video' })
         return result
 )
