@@ -23,7 +23,6 @@
         portlets = this.getPortlets();
         Ext.apply(this, {
           items: portlets,
-          align: 'stretch',
           scroll: 'vertical'
         });
       }
