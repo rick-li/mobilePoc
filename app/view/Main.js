@@ -5,24 +5,30 @@
     config: {
       id: 'viewport',
       fullscreen: true,
-      layout: 'card'
-    },
-    initialize: function() {
-      var cvMenu;
-      console.log('main init');
-      cvMenu = Ext.create('cv.view.Menu');
-      this.setItems([
+      layout: 'card',
+      items: [
         {
           docked: 'top',
           xtype: 'toolbar',
-          layout: 'hbox',
-          title: 'CitiVelocity'
-        }, {
-          docked: 'top',
-          items: [cvMenu]
+          title: 'Test'
         }
-      ]);
-      return this.callParent(arguments);
+      ]
+    },
+    initialize: function() {
+      /*
+              console.log 'main init'
+              cvMenu = Ext.create 'cv.view.Menu'
+              @setItems ([
+                      {
+                       docked: 'top'
+                       xtype: 'toolbar'
+                       #layout: 'hbox'
+                       title: 'CitiVelocity'
+                       #items: [{xtype:'searchfield',name: 'searchfield',placeholder: 'Search...'}]
+                      }
+                      {docked: 'top', items:[cvMenu]}
+                  ])
+      */      return this.callParent(arguments);
     }
   });
 
