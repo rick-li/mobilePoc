@@ -6,13 +6,7 @@
       id: 'viewport',
       fullscreen: true,
       layout: 'card',
-      items: [
-        {
-          docked: 'top',
-          xtype: 'toolbar',
-          title: 'Test'
-        }
-      ]
+      items: []
     },
     initialize: function() {
       var cvMenu;

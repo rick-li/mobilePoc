@@ -5,7 +5,7 @@ Ext.define("cv.view.Main",
         fullscreen: true
         layout: 'card'
         items: [
-            {docked: 'top', xtype: 'toolbar', title: 'Test'}
+            #{docked: 'top', xtype: 'toolbar', title: 'Test'}
         ]
     initialize: ->
         console.log 'main init'
