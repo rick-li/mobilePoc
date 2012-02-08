@@ -1,0 +1,10 @@
+/* line 5, ../sass/buttons.scss */
+body {
+  margin: 50px;
+}
+
+/* line 9, ../sass/buttons.scss */
+.button {
+  padding: 0 15px;
+  display: inline-block;
+}
