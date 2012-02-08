@@ -6,7 +6,10 @@
         <!--<link href="public/app/libs/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" />
           <script src="public/app/libs/sencha-touch-debug.js"></script> -->
             <!--<link href="public/app/libs/st2/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" />-->
-        <link href="public/app/libs/st2/resources/css/android.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="public/app/libs/st2/resources/css/sencha-touch.css" type="text/css" title="senchatouch" id="senchatouch" />
+        <link rel="stylesheet" href="public/app/libs/st2/resources/css/android.css" type="text/css" title="android" id="android" disabled="true" />
+        <link rel="stylesheet" href="public/app/libs/st2/resources/css/apple.css" type="text/css" title="apple" id="apple" disabled="true" />
+        <link rel="stylesheet" href="public/app/libs/st2/resources/css/bb6.css" type="text/css" title="blackberry" id="blackberry" disabled="true" />
         
         <!--<script src="public/app/libs/st2/sencha-touch-all-debug.js"></script>-->
         <script src="public/app/libs/st2/sencha-touch-all.js"></script>

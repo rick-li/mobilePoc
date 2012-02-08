@@ -13,22 +13,22 @@
           title: 'Test'
         }
       ]
-      /*
-          initialize: ->
-              console.log 'main init'
-              cvMenu = Ext.create 'cv.view.Menu'
-              @setItems ([
-                      {
-                       docked: 'top'
-                       xtype: 'toolbar'
-                       #layout: 'hbox'
-                       title: 'CitiVelocity'
-                       #items: [{xtype:'searchfield',name: 'searchfield',placeholder: 'Search...'}]
-                      }
-                      {docked: 'top', items:[cvMenu]}
-                  ])
-              @callParent(arguments)
-      */
+    },
+    initialize: function() {
+      var cvMenu;
+      console.log('main init');
+      cvMenu = Ext.create('cv.view.Menu');
+      this.setItems([
+        {
+          docked: 'top',
+          xtype: 'toolbar',
+          title: 'CitiVelocity'
+        }, {
+          docked: 'top',
+          items: [cvMenu]
+        }
+      ]);
+      return this.callParent(arguments);
     }
   });
 

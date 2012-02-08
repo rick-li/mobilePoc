@@ -7,8 +7,8 @@ Ext.define("cv.view.Main",
         items: [
             {docked: 'top', xtype: 'toolbar', title: 'Test'}
         ]
-    initialize: ->
         ###
+    initialize: ->
         console.log 'main init'
         cvMenu = Ext.create 'cv.view.Menu'
         @setItems ([
@@ -21,6 +21,6 @@ Ext.define("cv.view.Main",
                 }
                 {docked: 'top', items:[cvMenu]}
             ])
-        ###
         @callParent(arguments)
+        ###
 )
