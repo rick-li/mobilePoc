@@ -7,7 +7,7 @@ Ext.setup
     onReady: ->
         console.log('sencha ready')
 ###
-Ext.Loader.setConfig({enabled:true})
+Ext.Loader.setConfig({enabled:false})
 #Ext.Loader.setConfig({enabled:true,paths:{'cv': './public/app/sencha/app'}})
 Ext.application
     name: 'cv'

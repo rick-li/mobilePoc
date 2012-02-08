@@ -8,20 +8,14 @@
         <!--<link href="public/app/libs/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" />
           <script src="public/app/libs/sencha-touch-debug.js"></script> -->
         <link href="public/app/libs/st2/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" />
-        <script src="public/app/libs/st2/sencha-touch-all-debug.js"></script>
+        <!--<script src="public/app/libs/st2/sencha-touch-all-debug.js"></script>-->
+        <script src="public/app/libs/st2/sencha-touch-all.js"></script>
 
-        <script src="public/app/sencha/controller/Page.js"></script>
-        <script src="public/app/sencha/view/Main.js"></script>
-        <script src="public/app/sencha/view/Menu.js"></script>
-        <script src="public/app/sencha/view/Page.js"></script>
         <script src="senchaApp.js"></script>
-        <!--<script src="public/app/sencha/menu.js"></script>
-        <script src="public/app/sencha/page.js"></script>
-        <script src="public/app/sencha/controller.js"></script>
-        <script src="public/app/sencha/portlet.js"></script>
-        <script src="public/app/sencha/research.js"></script>
-        <script src="public/app/sencha/video.js"></script>
-            -->
+        <script src="app/controller/Page.js"></script>
+        <script src="app/view/Main.js"></script>
+        <script src="app/view/Menu.js"></script>
+        <script src="app/view/Page.js"></script>
     </head>
     <body>
     </body>

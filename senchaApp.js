@@ -10,7 +10,7 @@
   */
 
   Ext.Loader.setConfig({
-    enabled: true
+    enabled: false
   });
 
   Ext.application({

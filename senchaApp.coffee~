@@ -17,7 +17,7 @@ Ext.application
     views: ['Main', 'Menu', 'Page']
     launch: ->
         console.log('launch')
-        Ext.create('Main')
+        Ext.create('cv.view.Main')
         ###
         @viewport = new cv.Viewport(
             application: this
