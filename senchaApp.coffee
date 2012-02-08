@@ -1,18 +1,24 @@
 Ext.ns('cv', 'cv.views', 'cv.controllers')
 
 #TODO to introduce a eventbus component to decouple the components
-#
+###
 Ext.setup
     statusBarStyle: 'black'
     onReady: ->
         console.log('sencha ready')
-
-Ext.regApplication
+###
+Ext.Loader.setConfig({enabled:true})
+#Ext.Loader.setConfig({enabled:true,paths:{'cv': './public/app/sencha/app'}})
+Ext.application
     name: 'cv'
-    defaultTarget: 'viewport'
+    #defaultTarget: 'viewport'
     #defaultUrl: 'page/index/MarketBuzz'
+    controllers: ['Page']
+    views: ['Main', 'Menu', 'Page']
     launch: ->
         console.log('launch')
+        Ext.create('cv.view.Main')
+        ###
         @viewport = new cv.Viewport(
             application: this
         )
@@ -24,26 +30,8 @@ Ext.regApplication
             action: 'index'
             id: 'MarketBuzz'
             historyUrl: 'page/index/MarketBuzz'
+        ###
 
-cv.Viewport = Ext.extend(Ext.Panel,
-    id: 'viewport'
-    fullscreen: true
-    layout: 'card'
-    initComponent: ->
-        Ext.apply( this,
-            dockedItems: [
-                {
-                 dock: 'top'
-                 xtype: 'toolbar'
-                 layout: 'hbox'
-                 title: 'CitiVelocity'
-                 #items: [{xtype:'searchfield',name: 'searchfield',placeholder: 'Search...'}]
-                }
-                {dock: 'top', xtype: 'cvMenu'}
-            ]
-        )
-        cv.Viewport.superclass.initComponent.apply(this, arguments)
-)
 
 
 cv.util = {

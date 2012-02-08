@@ -1,18 +1,21 @@
 #page cache
-cv.pages = {}
-cv.portlets = {}
 renderPage = (pageId)->
     #render page here
-cv.Page = Ext.extend(Ext.Panel,
-    pageId: ''
+Ext.define('cv.view.Page',
+    extend: 'Ext.Panel'
+    config:
+        pageId: ''
+    ###
     constructor: (config)->
         @pageId = config?.pageId
         console.log 'constructor pageid '+@pageId
         cv.Page.superclass.constructor.call(this, config)
-    initComponent: ->
-        console.log 'init component'
-        if @pageId != 'MarketBuzz'
-            @html = '<h1>this is '+@pageId+ ' Page.'
+    ###
+    initialize: ->
+        console.log 'init Page'
+        #if @getPageId != 'MarketBuzz'
+        @setHtml  '<h1>this is '+@getPageId()+ ' Page.'
+        ###
         else
             #read json and render the portlets
             portlets = @getPortlets()
@@ -23,8 +26,8 @@ cv.Page = Ext.extend(Ext.Panel,
                 #align: 'stretch'
                 scroll: 'vertical'
             )
-
-        cv.Page.superclass.initComponent.call(this)
+        ###
+        @callParent(arguments)
     getPortlets: ->
         console.log('get portlets')
         #research for the moment

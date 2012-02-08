@@ -1,18 +1,19 @@
-cv.Menu = Ext.extend(Ext.Toolbar,
-    height: 40
-    itemId: 'cvMenu'
-    layout: 'fit'
-    scroll: 'horizontal'
-    initComponent: ->
-        Ext.apply(this,
-            items:[
+Ext.define('cv.view.Menu',
+    extend: 'Ext.Toolbar'
+    config:
+        height: 40
+        layout: 'fit'
+        scrollable: 'horizontal'
+    initialize: ->
+        @setItems(
+            [
                 id: 'menuBarButtons'
                 itemId: 'menuBarButtons'
                 xtype: 'segmentedbutton'
                 items: @getMenuItems()
             ]
         )
-        cv.Menu.superclass.initComponent.apply(this, arguments)
+        @callParent(arguments)
     
     getMenuItems: ->
         #hardcode menu itmes for the time being
@@ -22,7 +23,8 @@ cv.Menu = Ext.extend(Ext.Toolbar,
         # => to rebind this to foreach callback
         menus.forEach (page, i)=>
             #press the default one  TODO, should have a page id
-            menuItems.push({id: page, text: page, handler: @menuTapHandler})
+            menuItems.push({id: page, text: page })
+            #menuItems.push({id: page, text: page, handler: @menuTapHandler})
             menuItems[0]['pressed'] = true
         console.log menuItems
         return menuItems
@@ -37,4 +39,4 @@ cv.Menu = Ext.extend(Ext.Toolbar,
         )
 )
 #cv.views.menu = new cv.Menu()
-Ext.reg('cvMenu', cv.Menu)
+#Ext.reg('cvMenu', cv.Menu)

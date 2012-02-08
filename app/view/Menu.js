@@ -1,22 +1,22 @@
 (function() {
 
-  cv.Menu = Ext.extend(Ext.Toolbar, {
-    height: 40,
-    itemId: 'cvMenu',
-    layout: 'fit',
-    scroll: 'horizontal',
-    initComponent: function() {
-      Ext.apply(this, {
-        items: [
-          {
-            id: 'menuBarButtons',
-            itemId: 'menuBarButtons',
-            xtype: 'segmentedbutton',
-            items: this.getMenuItems()
-          }
-        ]
-      });
-      return cv.Menu.superclass.initComponent.apply(this, arguments);
+  Ext.define('cv.view.Menu', {
+    extend: 'Ext.Toolbar',
+    config: {
+      height: 40,
+      layout: 'fit',
+      scrollable: 'horizontal'
+    },
+    initialize: function() {
+      this.setItems([
+        {
+          id: 'menuBarButtons',
+          itemId: 'menuBarButtons',
+          xtype: 'segmentedbutton',
+          items: this.getMenuItems()
+        }
+      ]);
+      return this.callParent(arguments);
     },
     getMenuItems: function() {
       var menuItems, menus,
@@ -26,8 +26,7 @@
       menus.forEach(function(page, i) {
         menuItems.push({
           id: page,
-          text: page,
-          handler: _this.menuTapHandler
+          text: page
         });
         return menuItems[0]['pressed'] = true;
       });
@@ -44,7 +43,5 @@
       });
     }
   });
-
-  Ext.reg('cvMenu', cv.Menu);
 
 }).call(this);
