@@ -13,9 +13,8 @@
           title: 'Test'
         }
       ]
-    },
-    initialize: function() {
       /*
+          initialize: ->
               console.log 'main init'
               cvMenu = Ext.create 'cv.view.Menu'
               @setItems ([
@@ -28,7 +27,8 @@
                       }
                       {docked: 'top', items:[cvMenu]}
                   ])
-      */      return this.callParent(arguments);
+              @callParent(arguments)
+      */
     }
   });
 
