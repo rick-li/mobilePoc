@@ -1,19 +1,3 @@
-
-/*
-Ext.define 'cv.controller.Research',
-    extends: 'Ext.app.Controller'
-    detail: (options)->
-        pubId = options.pubId
-        console.log('research controller '+pubId)
-        if not @researchArticles
-            @researchArticles = []
-        if not @researchArticles[pubId]
-            record = cv.researchStore.findRecord('pubId', pubId)
-            console.log 'record is '
-            @researchArticles[pubId] = new cv.ResearchDetail({record: record})
-        Ext.getCmp('viewport').setActiveItem(@researchArticles[pubId], {type: 'slide', direction: 'left'})
-*/
-
 (function() {
 
   Ext.define('cv.controller.Page', {

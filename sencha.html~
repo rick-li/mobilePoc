@@ -16,12 +16,15 @@
 
         <script src="senchaApp.js"></script>
         <script src="app/controller/Page.js"></script>
+        <script src="app/controller/Research.js"></script>
         <script src="app/view/Main.js"></script>
         <script src="app/view/Menu.js"></script>
         <script src="app/view/Page.js"></script>
+        <script src="app/view/Portlet.js"></script>
+        <script src="app/view/ResearchPortlet.js"></script>
+        <script src="app/model/Research.js"></script>
     </head>
     <body>
-        loading
     </body>
 </html>
 

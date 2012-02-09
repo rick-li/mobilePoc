@@ -1,16 +1,5 @@
 ###
-Ext.define 'cv.controller.Research',
-    extends: 'Ext.app.Controller'
-    detail: (options)->
-        pubId = options.pubId
-        console.log('research controller '+pubId)
-        if not @researchArticles
-            @researchArticles = []
-        if not @researchArticles[pubId]
-            record = cv.researchStore.findRecord('pubId', pubId)
-            console.log 'record is '
-            @researchArticles[pubId] = new cv.ResearchDetail({record: record})
-        Ext.getCmp('viewport').setActiveItem(@researchArticles[pubId], {type: 'slide', direction: 'left'})
+
 ###
             
 Ext.define 'cv.controller.Page',
@@ -45,9 +34,3 @@ Ext.define 'cv.controller.Page',
         console.log 'launch controller'
         #sync up the menu button here
         #
-###    
-Ext.Router.draw (map)->
-    map.connect('page/index/:id', {controller: 'page', action: 'index'})
-    map.connect('research/:category/:pubId', {controller: 'research', action: 'detail'})
-    map.connect(':controller/:action')
-###

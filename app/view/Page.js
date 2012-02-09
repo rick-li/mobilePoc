@@ -6,7 +6,8 @@
   Ext.define('cv.view.Page', {
     extend: 'Ext.Panel',
     config: {
-      pageId: ''
+      pageId: '',
+      scrollable: 'vertical'
     },
     /*
         constructor: (config)->
@@ -15,37 +16,23 @@
             cv.Page.superclass.constructor.call(this, config)
     */
     initialize: function() {
+      var portlets;
       console.log('init Page');
-      this.setHtml('<h1>this is ' + this.getPageId() + ' Page.');
-      /*
-              else
-                  #read json and render the portlets
-                  portlets = @getPortlets()
-                  #portlets = []
-                  Ext.apply(this,
-                      items: portlets
-                      #layout: 'vbox'
-                      #align: 'stretch'
-                      scroll: 'vertical'
-                  )
-      */
+      if (this.getPageId() !== 'MarketBuzz') {
+        this.setHtml('<h1>this is ' + this.getPageId() + ' Page.');
+      } else {
+        portlets = this.getPortlets();
+        this.setItems(portlets);
+      }
       return this.callParent(arguments);
     },
     getPortlets: function() {
       var result;
       console.log('get portlets');
       result = [];
-      result.push(new cv.ResearchPortlet({
-        title: 'Daily Research'
-      }));
-      result.push(new cv.ResearchPortlet({
-        title: 'Daily Research'
-      }));
-      result.push(new cv.ResearchPortlet({
-        title: 'Daily Research'
-      }));
-      result.push(new cv.VideoPortlet({
-        title: 'CitiVelocity Video'
+      result.push(new cv.view.ResearchPortlet({
+        title: 'Daily Research',
+        height: 200
       }));
       return result;
     }

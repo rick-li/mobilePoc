@@ -13,26 +13,18 @@
     enabled: false
   });
 
-  Ext.application({
+  cv.app = Ext.application({
     name: 'cv',
-    controllers: ['Page'],
-    views: ['Main', 'Menu', 'Page'],
+    controllers: ['Page', 'Research'],
+    views: ['Main', 'Menu', 'Page', 'ResearchPortlet'],
+    models: ['Research'],
     launch: function() {
       console.log('launch');
-      return Ext.create('cv.view.Main');
-      /*
-              @viewport = new cv.Viewport(
-                  application: this
-              )
-              
-              #render default page
-              #hardcode to MarketBuzz 
-              Ext.dispatch
-                  controller: 'page'
-                  action: 'index'
-                  id: 'MarketBuzz'
-                  historyUrl: 'page/index/MarketBuzz'
-      */
+      Ext.create('cv.view.Main');
+      if (location.href.indexOf('#') === -1) {
+        console.log('redirect to default page');
+        return this.redirectTo('page/MarketBuzz');
+      }
     }
   });
 

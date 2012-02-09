@@ -9,28 +9,18 @@ Ext.setup
 ###
 Ext.Loader.setConfig({enabled:false})
 #Ext.Loader.setConfig({enabled:true,paths:{'cv': './public/app/sencha/app'}})
-Ext.application
+cv.app = Ext.application
     name: 'cv'
-    #defaultTarget: 'viewport'
-    #defaultUrl: 'page/index/MarketBuzz'
-    controllers: ['Page']
-    views: ['Main', 'Menu', 'Page']
+    controllers: ['Page', 'Research']
+    views: ['Main', 'Menu', 'Page', 'ResearchPortlet']
+    models: ['Research']
     launch: ->
         console.log('launch')
         Ext.create('cv.view.Main')
-        ###
-        @viewport = new cv.Viewport(
-            application: this
-        )
-        
-        #render default page
-        #hardcode to MarketBuzz 
-        Ext.dispatch
-            controller: 'page'
-            action: 'index'
-            id: 'MarketBuzz'
-            historyUrl: 'page/index/MarketBuzz'
-        ###
+        if(location.href.indexOf('#') == -1)
+            #TODO get default page
+            console.log('redirect to default page')
+            @redirectTo('page/MarketBuzz')
 
 
 
