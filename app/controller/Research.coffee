@@ -6,7 +6,7 @@ Ext.define 'cv.controller.Research',
             researchBack: '#researchBack'
         control:
             researchList:
-                select: 'redirect'
+                itemtap: 'redirect'
             researchBack:
                 tap: ->
                     console.log 'research back'
@@ -28,8 +28,9 @@ Ext.define 'cv.controller.Research',
         if not @researchArticles[pubId]
             record = cv.researchStore.findRecord('pubId', pubId)
             console.log 'detail is '
-            detail = @researchArticles[pubId] = Ext.create('cv.view.ResearchDetail',{record: record})
-            console.log detail
+            @researchArticles[pubId] = Ext.create('cv.view.ResearchDetail',{record: record})
+        detail = @researchArticles[pubId]
+        console.log detail
         Ext.getCmp('viewport').setActiveItem(detail, {type: 'slide', direction: 'left'})
     launch: ->
         console.log 'launch research controller'
