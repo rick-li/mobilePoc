@@ -8,7 +8,7 @@ Ext.define('cv.view.ResearchDetail',
         @setItems([
             {
                 xtype: 'toolbar'
-                title: @getRecord().get('headLine')
+                title: {xtype:'title', title: @getRecord().get('headLine')}
                 items:[{text:'Back', id:'researchBack'}]
             },{
                 tpl: '{synopsis}'
