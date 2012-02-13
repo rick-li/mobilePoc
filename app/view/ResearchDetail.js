@@ -11,7 +11,10 @@
       this.setItems([
         {
           xtype: 'toolbar',
-          title: this.getRecord().get('headLine'),
+          title: {
+            xtype: 'title',
+            title: this.getRecord().get('headLine')
+          },
           items: [
             {
               text: 'Back',

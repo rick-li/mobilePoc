@@ -9,7 +9,7 @@
       },
       control: {
         researchList: {
-          select: 'redirect'
+          itemtap: 'redirect'
         },
         researchBack: {
           tap: function() {
@@ -38,11 +38,12 @@
       if (!this.researchArticles[pubId]) {
         record = cv.researchStore.findRecord('pubId', pubId);
         console.log('detail is ');
-        detail = this.researchArticles[pubId] = Ext.create('cv.view.ResearchDetail', {
+        this.researchArticles[pubId] = Ext.create('cv.view.ResearchDetail', {
           record: record
         });
-        console.log(detail);
       }
+      detail = this.researchArticles[pubId];
+      console.log(detail);
       return Ext.getCmp('viewport').setActiveItem(detail, {
         type: 'slide',
         direction: 'left'
