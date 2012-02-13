@@ -23,6 +23,20 @@ Ext.define 'cv.controller.Research',
         @redirectTo('research/'+pubId)
     showDetail: (pubId)->
         console.log('research controller '+pubId)
+        if window.device
+            record = cv.researchStore.findRecord('pubId', pubId)
+            fileLink = record.get('fileLink')
+            fileName = fileLink
+            if fileName.indexOf('/') != -1
+                fileName = fileLink.substring(fileLink.lastIndexOf(fileLink)+1)
+            new Downloader().downloadFile(fileLink, {dirName:'/sdcard/cv', overwrite: true}, (result)->
+                console.log(JSON.stringify(result))
+                if result.progress == 100
+                    new PdfPlayer().play(fileName)
+            ,->
+                alert('download file '+fileLink+' failed.')
+            )
+            return
         if not @researchArticles
             @researchArticles = []
         if not @researchArticles[pubId]

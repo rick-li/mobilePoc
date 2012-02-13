@@ -32,8 +32,26 @@
       return this.redirectTo('research/' + pubId);
     },
     showDetail: function(pubId) {
-      var detail, record;
+      var detail, fileLink, fileName, record;
       console.log('research controller ' + pubId);
+      if (window.device) {
+        record = cv.researchStore.findRecord('pubId', pubId);
+        fileLink = record.get('fileLink');
+        fileName = fileLink;
+        if (fileName.indexOf('/') !== -1) {
+          fileName = fileLink.substring(fileLink.lastIndexOf(fileLink) + 1);
+        }
+        new Downloader().downloadFile(fileLink, {
+          dirName: '/sdcard/cv',
+          overwrite: true
+        }, function(result) {
+          console.log(JSON.stringify(result));
+          if (result.progress === 100) return new PdfPlayer().play(fileName);
+        }, function() {
+          return alert('download file ' + fileLink + ' failed.');
+        });
+        return;
+      }
       if (!this.researchArticles) this.researchArticles = [];
       if (!this.researchArticles[pubId]) {
         record = cv.researchStore.findRecord('pubId', pubId);
