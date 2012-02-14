@@ -15,8 +15,8 @@
 
   cv.app = Ext.application({
     name: 'cv',
-    controllers: ['Page', 'Research'],
-    views: ['Main', 'Menu', 'Page', 'ResearchPortlet'],
+    controllers: ['Main', 'Page', 'Research'],
+    views: ['Main', 'Menu', 'Page', 'MarketBuzz', 'ResearchPortlet'],
     models: ['Research'],
     launch: function() {
       console.log('launch');

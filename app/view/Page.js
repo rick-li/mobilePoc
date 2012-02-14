@@ -16,13 +16,11 @@
             cv.Page.superclass.constructor.call(this, config)
     */
     initialize: function() {
-      var portlets;
       console.log('init Page');
       if (this.getPageId() !== 'MarketBuzz') {
         this.setHtml('<h1>this is ' + this.getPageId() + ' Page.');
       } else {
-        portlets = this.getPortlets();
-        this.setItems(portlets);
+        this.setItems([Ext.create('cv.view.MarketBuzz')]);
       }
       return this.callParent(arguments);
     },
@@ -30,10 +28,6 @@
       var result;
       console.log('get portlets');
       result = [];
-      result.push(new cv.view.ResearchPortlet({
-        title: 'Daily Research',
-        height: 200
-      }));
       return result;
     }
   });
