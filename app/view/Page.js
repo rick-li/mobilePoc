@@ -34,6 +34,9 @@
         title: 'Daily Research',
         height: 200
       }));
+      result.push(new cv.view.VideoPortlet({
+        title: 'CitiVelocity Video'
+      }));
       return result;
     }
   });

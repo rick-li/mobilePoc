@@ -3,7 +3,7 @@
   Ext.define('cv.view.ResearchPortlet', {
     extend: 'cv.view.Portlet',
     config: {
-      height: 100
+      height: 200
     },
     initialize: function() {
       return this.callParent(arguments);

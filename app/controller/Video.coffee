@@ -26,7 +26,7 @@ Ext.define 'cv.controller.Video',
         console.log('video controller '+alertId)
         if window.device
           #use url in jsonData instead: videoURL
-          new VideoPlayer().play("http://broken-links.com/tests/media/BigBuck.m4v");
+          new VideoPlayer().play("http://broken-links.com/tests/media/BigBuck.m4v")
         else
           if not @videoResources
               @videoResources = []
