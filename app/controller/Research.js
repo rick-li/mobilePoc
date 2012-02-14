@@ -39,11 +39,11 @@
         fileLink = record.get('fileLink');
         fileName = fileLink;
         if (fileName.indexOf('/') !== -1) {
-          fileName = fileLink.substring(fileLink.lastIndexOf(fileLink) + 1);
+          fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
         }
         new Downloader().downloadFile(fileLink, {
           dirName: '/sdcard/cv',
-          overwrite: true
+          overwrite: false
         }, function(result) {
           console.log(JSON.stringify(result));
           if (result.progress === 100) return new PdfPlayer().play(fileName);

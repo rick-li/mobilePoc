@@ -18,15 +18,15 @@ Ext.define('cv.view.Page',
             @setHtml  '<h1>this is '+@getPageId()+ ' Page.'
         else
             #read json and render the portlets
-            portlets = @getPortlets()
-            @.setItems(portlets)
+            #portlets = @getPortlets()
+            @.setItems([Ext.create('cv.view.MarketBuzz')])
         @callParent(arguments)
     getPortlets: ->
         console.log('get portlets')
         #research for the moment
         result = []
         #result.push new cv.view.Portlet({title: "test"})
-        result.push new cv.view.ResearchPortlet({title: 'Daily Research',height:200})
+        #result.push new cv.view.ResearchPortlet({title: 'Daily Research',height:200})
         #result.push new cv.ResearchPortlet({title: 'Daily Research'})
         #result.push new cv.ResearchPortlet({title: 'Daily Research'})
         result.push new cv.view.VideoPortlet({title: 'CitiVelocity Video' })
