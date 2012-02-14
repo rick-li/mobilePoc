@@ -11,7 +11,7 @@ Ext.Loader.setConfig({enabled:false})
 #Ext.Loader.setConfig({enabled:true,paths:{'cv': './public/app/sencha/app'}})
 cv.app = Ext.application
     name: 'cv'
-    controllers: ['Main','Page', 'Research']
+    controllers: ['Main','Page', 'Research', 'Video']
     views: ['Main', 'Menu', 'Page', 'MarketBuzz', 'ResearchPortlet']
     models: ['Research']
     launch: ->

@@ -4,7 +4,7 @@
     extend: 'cv.view.Portlet',
     config: {
       id: 'VideoPortlet',
-      height: 100,
+      height: 200,
       xtype: 'VideoPortlet'
     },
     initialize: function() {

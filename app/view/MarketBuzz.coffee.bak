@@ -32,8 +32,8 @@ Ext.define('cv.view.MarketBuzz',
         @.cvVideoPortal1 = Ext.create('cv.view.VideoPortlet',{title: 'CitiVelocity Video 1' })
     getPortalItems: (orientation)->
         console.log 'marketBuzz getPortalItems'
-        if orientation is 'landscape'
-            return @getLandscapeItems()
+        #if orientation is 'landscape'
+         #   return @getLandscapeItems()
         return @getPortraitItems()
     getLandscapeItems: ->
         #Ext.layout.AbstractBox(@.cvResearchPortal1,1)

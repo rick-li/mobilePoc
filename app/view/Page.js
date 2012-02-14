@@ -28,6 +28,9 @@
       var result;
       console.log('get portlets');
       result = [];
+      result.push(new cv.view.VideoPortlet({
+        title: 'CitiVelocity Video'
+      }));
       return result;
     }
   });

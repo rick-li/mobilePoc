@@ -29,6 +29,6 @@ Ext.define('cv.view.Page',
         #result.push new cv.view.ResearchPortlet({title: 'Daily Research',height:200})
         #result.push new cv.ResearchPortlet({title: 'Daily Research'})
         #result.push new cv.ResearchPortlet({title: 'Daily Research'})
-        #result.push new cv.VideoPortlet({title: 'CitiVelocity Video' })
+        result.push new cv.view.VideoPortlet({title: 'CitiVelocity Video' })
         return result
 )

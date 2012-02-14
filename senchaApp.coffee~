@@ -9,7 +9,7 @@ Ext.setup
 ###
 Ext.Loader.setConfig({enabled:false})
 #Ext.Loader.setConfig({enabled:true,paths:{'cv': './public/app/sencha/app'}})
-app = Ext.application
+cv.app = Ext.application
     name: 'cv'
     controllers: ['Page', 'Research']
     views: ['Main', 'Menu', 'Page', 'ResearchPortlet']

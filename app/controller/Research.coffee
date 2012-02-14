@@ -28,8 +28,9 @@ Ext.define 'cv.controller.Research',
             fileLink = record.get('fileLink')
             fileName = fileLink
             if fileName.indexOf('/') != -1
-                fileName = fileLink.substring(fileLink.lastIndexOf(fileLink)+1)
-            new Downloader().downloadFile(fileLink, {dirName:'/sdcard/cv', overwrite: true}, (result)->
+                fileName = fileLink.substring(fileLink.lastIndexOf('/')+1)
+            
+            new Downloader().downloadFile(fileLink, {dirName:'/sdcard/cv', overwrite: false}, (result)->
                 console.log(JSON.stringify(result))
                 if result.progress == 100
                     new PdfPlayer().play(fileName)

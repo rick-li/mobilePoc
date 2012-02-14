@@ -36,15 +36,18 @@
     preCreatePortal: function() {
       this.cvResearchPortal1 = Ext.create('cv.view.ResearchPortlet', {
         id: 'cvResearchPortal1',
-        title: 'Daily Research1'
+        title: 'Daily Research 1'
       });
       this.cvResearchPortal2 = Ext.create('cv.view.ResearchPortlet', {
         id: 'cvResearchPortal2',
-        title: 'Daily Research2'
+        title: 'Daily Research 2'
       });
-      return this.cvResearchPortal3 = Ext.create('cv.view.ResearchPortlet', {
+      this.cvResearchPortal3 = Ext.create('cv.view.ResearchPortlet', {
         id: 'cvResearchPortal3',
-        title: 'Daily Research3'
+        title: 'Daily Research 3'
+      });
+      return this.cvVideoPortal1 = Ext.create('cv.view.VideoPortlet', {
+        title: 'CitiVelocity Video 1'
       });
     },
     getPortalItems: function(orientation) {
@@ -58,12 +61,12 @@
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvResearchPortal1]
+          items: [this.cvVideoPortal1]
         }, {
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvResearchPortal2]
+          items: [this.cvResearchPortal1, this.cvResearchPortal2]
         }, {
           xtype: 'panel',
           flex: 1,
@@ -76,14 +79,14 @@
       return [
         {
           xtype: 'panel',
-          flex: 2,
+          flex: 1,
           layout: 'vbox',
-          items: [this.cvResearchPortal1]
+          items: [this.cvVideoPortal1]
         }, {
           xtype: 'panel',
           flex: 2,
           layout: 'vbox',
-          items: [this.cvResearchPortal2, this.cvResearchPortal3]
+          items: [this.cvResearchPortal1, this.cvResearchPortal2, this.cvResearchPortal3]
         }
       ];
     },
