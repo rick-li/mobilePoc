@@ -12,7 +12,7 @@ Ext.define('cv.view.MarketBuzz',
                     console.log obj
                     orientation = Ext.Viewport.determineOrientation()
                     console.log orientation
-                    newPortalItems = obj.getPortalItems(orientation)
+                    newPortalItems = obj.getPortalItems('orientation')
                     obj.removeAll(false, true);
                     obj.setItems(newPortalItems);
                 buffer: 500

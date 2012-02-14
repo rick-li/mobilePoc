@@ -18,7 +18,7 @@
             console.log(orientation);
             newPortalItems = obj.getPortalItems(orientation);
             obj.removeAll(false, true);
-            return obj.setItems(newPageItems);
+            return obj.setItems(newPortalItems);
           },
           buffer: 500,
           scope: this
