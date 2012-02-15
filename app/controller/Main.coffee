@@ -5,7 +5,8 @@ Ext.define 'cv.controller.Main',
     init:->
         console.log 'init main controller'
         @callParent()
-        Ext.Viewport.on('orientationchange',@onOrientationChange)
+        if Ext.os.is.Tablet
+            Ext.Viewport.on('orientationchange',@onOrientationChange)
     onOrientationChange: (viewport, orientation, width, height)->
         console.log 'Orientation Change: ' + orientation + ";width:" + width + ";height:" + height
         cvMarketBuzz = Ext.getCmp('cvMarketBuzz')

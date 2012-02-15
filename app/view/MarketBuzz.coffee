@@ -22,14 +22,32 @@ Ext.define('cv.view.MarketBuzz',
     initialize: ->
         console.log 'MarketBuzz initialize'
         @preCreatePortal()
-        orientation = Ext.Viewport.determineOrientation()
-        @setItems(@getPortalItems(orientation));
+        if Ext.os.is.Phone
+            @setItems(@getPhonePortalItems());
+        else
+            orientation = Ext.Viewport.determineOrientation()
+            @setItems(@getPortalItems(orientation));
         @callParent()
     preCreatePortal: ->
         @.cvResearchPortal1 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortal1',title: 'Daily Research 1'})
         @.cvResearchPortal2 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortal2',title: 'Daily Research 2'})
         @.cvResearchPortal3 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortal3',title: 'Daily Research 3'})
         @.cvVideoPortal1 = Ext.create('cv.view.VideoPortlet',{title: 'CitiVelocity Video 1' })
+    getPhonePortalItems: ->
+        console.log 'marketBuzz getPhonePortalItems'
+        return [
+            {
+                xtype: 'panel'
+                flex: 1
+                layout: 'vbox'
+                items : [
+                    @.cvVideoPortal1
+                    @.cvResearchPortal1
+                    @.cvResearchPortal2
+                    @.cvResearchPortal3
+                ]
+            }
+        ]
     getPortalItems: (orientation)->
         console.log 'marketBuzz getPortalItems'
         if orientation is 'landscape'
