@@ -8,6 +8,12 @@
       layout: 'card',
       items: []
     },
+    /*
+        okBtnHandler: ->
+            cvMarketBuzz = Ext.getCmp('cvMarketBuzz')
+            if cvMarketBuzz
+                cvMarketBuzz.fireEvent('doOrientationChange', cvMarketBuzz)
+    */
     initialize: function() {
       var cvMenu;
       console.log('main init');
