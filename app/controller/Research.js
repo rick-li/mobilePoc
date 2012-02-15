@@ -4,7 +4,7 @@
     extend: 'Ext.app.Controller',
     config: {
       refs: {
-        researchList: '#researchPortlet list',
+        researchList: 'research list',
         researchBack: '#researchBack'
       },
       control: {
@@ -32,7 +32,7 @@
       return this.redirectTo('research/' + pubId);
     },
     showDetail: function(pubId) {
-      var detail, fileLink, fileName, record;
+      var detail, fileLink, fileName, mask, record;
       console.log('research controller ' + pubId);
       if (window.device) {
         record = cv.researchStore.findRecord('pubId', pubId);
@@ -41,12 +41,17 @@
         if (fileName.indexOf('/') !== -1) {
           fileName = fileLink.substring(fileLink.lastIndexOf('/') + 1);
         }
+        mask = Ext.create('Ext.LoadMask');
+        Ext.Viewport.add(mask);
         new Downloader().downloadFile(fileLink, {
           dirName: '/sdcard/cv',
           overwrite: false
         }, function(result) {
           console.log(JSON.stringify(result));
-          if (result.progress === 100) return new PdfPlayer().play(fileName);
+          if (result.progress === 100) {
+            mask.destroy();
+            return new PdfPlayer().play(fileName);
+          }
         }, function() {
           return alert('download file ' + fileLink + ' failed.');
         });

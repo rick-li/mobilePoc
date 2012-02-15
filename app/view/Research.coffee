@@ -1,5 +1,6 @@
 Ext.define('cv.view.ResearchPortlet',
     extend: 'cv.view.Portlet'
+    xtype: 'research'
     config:
         height: 100
     initialize: ->

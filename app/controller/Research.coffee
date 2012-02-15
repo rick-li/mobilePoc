@@ -2,7 +2,7 @@ Ext.define 'cv.controller.Research',
     extend: 'Ext.app.Controller'
     config:
         refs:
-            researchList: '#researchPortlet list'
+            researchList: 'research list'
             researchBack: '#researchBack'
         control:
             researchList:
@@ -29,10 +29,12 @@ Ext.define 'cv.controller.Research',
             fileName = fileLink
             if fileName.indexOf('/') != -1
                 fileName = fileLink.substring(fileLink.lastIndexOf('/')+1)
-            
+            mask = Ext.create('Ext.LoadMask')
+            Ext.Viewport.add(mask)
             new Downloader().downloadFile(fileLink, {dirName:'/sdcard/cv', overwrite: false}, (result)->
                 console.log(JSON.stringify(result))
                 if result.progress == 100
+                    mask.destroy()
                     new PdfPlayer().play(fileName)
             ,->
                 alert('download file '+fileLink+' failed.')

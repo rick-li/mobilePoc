@@ -2,10 +2,10 @@
 
   Ext.define('cv.view.ResearchPortlet', {
     extend: 'cv.view.Portlet',
+    xtype: 'research',
     config: {
       id: 'researchPortlet',
-      height: 100,
-      xtype: 'researchPortlet'
+      height: 100
     },
     initialize: function() {
       this.add(this.createList());

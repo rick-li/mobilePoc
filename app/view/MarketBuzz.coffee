@@ -22,7 +22,7 @@ Ext.define('cv.view.MarketBuzz',
     initialize: ->
         console.log 'MarketBuzz initialize'
         @preCreatePortal()
-        Ext.os.is.Phone = true
+        #Ext.os.is.Phone = true
         if Ext.os.is.Phone
             @setItems(@getPhonePortalItems())
         else

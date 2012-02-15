@@ -1,9 +1,9 @@
 Ext.define('cv.view.ResearchPortlet',
     extend: 'cv.view.Portlet'
+    xtype: 'research'
     config:
         id: 'researchPortlet'
         height: 100
-        xtype: 'researchPortlet'
     initialize: ->
         @add(@createList())
         @callParent(arguments)
