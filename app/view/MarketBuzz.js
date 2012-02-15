@@ -29,6 +29,7 @@
       var orientation;
       console.log('MarketBuzz initialize');
       this.preCreatePortal();
+      Ext.os.is.Phone = true;
       if (Ext.os.is.Phone) {
         this.setItems(this.getPhonePortalItems());
       } else {

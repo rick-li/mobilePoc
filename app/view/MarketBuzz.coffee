@@ -2,7 +2,7 @@ Ext.define('cv.view.MarketBuzz',
     extend: 'Ext.Panel'
     config:
         id: 'cvMarketBuzz'
-        layout: 
+        layout:
             type: 'hbox'
         listeners: [
             {
@@ -13,8 +13,8 @@ Ext.define('cv.view.MarketBuzz',
                     orientation = Ext.Viewport.determineOrientation()
                     console.log orientation
                     newPortalItems = obj.getPortalItems(orientation)
-                    obj.removeAll(false, true);
-                    obj.setItems(newPortalItems);
+                    obj.removeAll(false, true)
+                    obj.setItems(newPortalItems)
                 buffer: 500
                 scope: this
             }
@@ -22,11 +22,12 @@ Ext.define('cv.view.MarketBuzz',
     initialize: ->
         console.log 'MarketBuzz initialize'
         @preCreatePortal()
+        Ext.os.is.Phone = true
         if Ext.os.is.Phone
-            @setItems(@getPhonePortalItems());
+            @setItems(@getPhonePortalItems())
         else
             orientation = Ext.Viewport.determineOrientation()
-            @setItems(@getPortalItems(orientation));
+            @setItems(@getPortalItems(orientation))
         @callParent()
     preCreatePortal: ->
         @.cvResearchPortal1 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortal1',title: 'Daily Research 1'})

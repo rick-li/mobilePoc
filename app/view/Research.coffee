@@ -1,7 +1,7 @@
 Ext.define('cv.view.ResearchPortlet',
     extend: 'cv.view.Portlet'
     config:
-        height: 200
+        height: 100
     initialize: ->
         @callParent(arguments)
     createList: ->

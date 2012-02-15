@@ -2,7 +2,7 @@ Ext.define('cv.view.VideoPortlet',
     extend: 'cv.view.Portlet'
     config:
         id: 'VideoPortlet'
-        height: 200
+        height: 100
         xtype: 'VideoPortlet'
     initialize: ->
         console.log 'init video'
