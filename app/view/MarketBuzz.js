@@ -29,8 +29,12 @@
       var orientation;
       console.log('MarketBuzz initialize');
       this.preCreatePortal();
-      orientation = Ext.Viewport.determineOrientation();
-      this.setItems(this.getPortalItems(orientation));
+      if (Ext.os.is.Phone) {
+        this.setItems(this.getPhonePortalItems());
+      } else {
+        orientation = Ext.Viewport.determineOrientation();
+        this.setItems(this.getPortalItems(orientation));
+      }
       return this.callParent();
     },
     preCreatePortal: function() {
@@ -49,6 +53,17 @@
       return this.cvVideoPortal1 = Ext.create('cv.view.VideoPortlet', {
         title: 'CitiVelocity Video 1'
       });
+    },
+    getPhonePortalItems: function() {
+      console.log('marketBuzz getPhonePortalItems');
+      return [
+        {
+          xtype: 'panel',
+          flex: 1,
+          layout: 'vbox',
+          items: [this.cvVideoPortal1, this.cvResearchPortal1, this.cvResearchPortal2, this.cvResearchPortal3]
+        }
+      ];
     },
     getPortalItems: function(orientation) {
       console.log('marketBuzz getPortalItems');

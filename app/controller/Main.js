@@ -8,7 +8,9 @@
     init: function() {
       console.log('init main controller');
       this.callParent();
-      return Ext.Viewport.on('orientationchange', this.onOrientationChange);
+      if (Ext.os.is.Tablet) {
+        return Ext.Viewport.on('orientationchange', this.onOrientationChange);
+      }
     },
     onOrientationChange: function(viewport, orientation, width, height) {
       var cvMarketBuzz;
