@@ -50,7 +50,7 @@
           console.log(JSON.stringify(result));
           if (result.progress === 100) {
             mask.destroy();
-            return new PdfPlayer().play(fileName);
+            return new PdfViewer().play(fileName);
           }
         }, function() {
           return alert('download file ' + fileLink + ' failed.');

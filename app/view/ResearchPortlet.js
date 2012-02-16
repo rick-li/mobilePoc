@@ -5,7 +5,7 @@
     xtype: 'research',
     config: {
       id: 'researchPortlet',
-      height: 100
+      height: 200
     },
     initialize: function() {
       this.add(this.createList());

@@ -7,6 +7,7 @@ Ext.define 'cv.controller.Video',
         control:
             videoList:
                 select: 'redirect'
+            #video back is for desktop browser and other platform that supports html5 video tag only
             videoBack:
                 tap: ->
                     console.log 'video back'

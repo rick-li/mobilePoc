@@ -35,7 +35,7 @@ Ext.define 'cv.controller.Research',
                 console.log(JSON.stringify(result))
                 if result.progress == 100
                     mask.destroy()
-                    new PdfPlayer().play(fileName)
+                    new PdfViewer().play(fileName)
             ,->
                 alert('download file '+fileLink+' failed.')
             )
