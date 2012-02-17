@@ -1,7 +1,7 @@
 /* line 5, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .listitem {
   backgound-color: +radial-gradient(top, #aaaaaa, #eeffee);
-  height: 53px;
+  height: 54px;
   font: 11px arial,sans-serif;
 }
 
@@ -30,16 +30,17 @@
   color: #434343;
   height: 15px;
   overflow: hidden;
+  padding-left: 2px;
   clear: both;
   float: left;
 }
 
-/* line 36, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 37, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem {
   height: 70px;
 }
 
-/* line 39, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 40, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem .headLine {
   font: bold 14px arial,sans-serif;
   color: #003298;

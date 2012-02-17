@@ -4,7 +4,7 @@ $content-bg-color: #EFE;
  
   .listitem{
   	backgound-color: +radial-gradient(color-stops(#aaa, $content-bg-color), top);
-  	height: 53px;
+  	height: 54px;
   	font: 11px arial,sans-serif;
   }
   
@@ -29,6 +29,7 @@ $content-bg-color: #EFE;
   	color: #434343;
   	height: 15px;
   	overflow: hidden;
+  	padding-left:2px;
   	clear: both;
   	float: left;
   }
