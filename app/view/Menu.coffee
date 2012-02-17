@@ -2,7 +2,6 @@ Ext.define('cv.view.Menu',
     extend: 'Ext.Toolbar'
     config:
         height: 40
-        layout: 'fit'
         scrollable: 'horizontal'
     initialize: ->
         @setItems(

@@ -6,8 +6,7 @@
   Ext.define('cv.view.Page', {
     extend: 'Ext.Panel',
     config: {
-      pageId: '',
-      scrollable: 'vertical'
+      pageId: ''
     },
     /*
         constructor: (config)->

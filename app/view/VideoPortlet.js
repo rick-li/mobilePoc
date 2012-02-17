@@ -15,7 +15,7 @@
     createList: function() {
       var list;
       list = new Ext.List({
-        height: this.getHeight(),
+        pinHeaders: true,
         itemTpl: '<img style="float:left;" src="public/app/libs/resources/images/video_head.jpg"><div class="" style="font-size:20px;">{analystName}</div><div class="">{analystType}</div>',
         store: cv.videoStore
       });

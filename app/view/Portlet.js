@@ -4,7 +4,8 @@
     extend: 'Ext.Panel',
     config: {
       portletType: '',
-      title: ''
+      title: '',
+      layout: 'fit'
     },
     initialize: function() {
       this.add({

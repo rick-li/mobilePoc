@@ -5,7 +5,8 @@
     xtype: 'research',
     config: {
       id: 'researchPortlet',
-      height: 200
+      height: 200,
+      layout: 'fit'
     },
     initialize: function() {
       this.add(this.createList());
@@ -14,9 +15,9 @@
     createList: function() {
       var list;
       list = new Ext.List({
-        height: this.getHeight(),
         itemTpl: '<div class="headLine">{headLine}</div><div class="synopsis">{synopsis}</div>',
-        store: cv.researchStore
+        store: cv.researchStore,
+        pinHeaders: true
       });
       return list;
     }
