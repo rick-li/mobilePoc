@@ -1,0 +1,29 @@
+/* line 5, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+.listitem {
+  backgound-color: +radial-gradient(top, #aaaaaa, #eeffee);
+  height: 60px;
+  font: 11px arial,sans-serif;
+}
+
+/* line 11, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+.listitem .headLine {
+  font-weight: bold;
+  font-size: 13px;
+  color: #003298;
+}
+
+/* line 17, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+.listitem .author {
+  font-weight: bold;
+  color: #434343;
+}
+
+/* line 22, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+.listitem .date {
+  color: #7F7F7F;
+}
+
+/* line 26, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+.listitem .content {
+  color: #434343;
+}

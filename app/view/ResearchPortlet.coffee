@@ -10,8 +10,9 @@ Ext.define('cv.view.ResearchPortlet',
     createList: ->
         list = new Ext.List(
             height: @getHeight()
-            itemTpl: '<div class="headLine">{headLine}</div><div class="synopsis">{synopsis}</div>'
+            itemTpl: '<div class="headLine">{headLine}</div><div class="content">{synopsis}</div>'
             store: cv.researchStore
+            itemCls: 'listitem'
         )
         return list
 

@@ -3,17 +3,22 @@ $body-bg-color: #000;
  $base-color: #333;
  $base-gradient: 'matte';
  $active-color: #B2DF1E;
-  
+  /*
   $tabs-dark: $base-color;
-  $tabs-light: #555;
+  $tabs-light: #FFF;
    
    $tabs-bottom-radius: .4em;
    $tabs-bottom-gradient: 'bevel';
    $tabs-bar-gradient: 'matte';
    $tabs-bottom-active-gradient: 'recessed';
-    
-    $toolbar-gradient: 'glossy';
-     
+  */  
+    $toolbar-gradient: 'bevel';
+//$list-active-color: #003298;
+//$list-bg-color: hsla(100, 50%, 70%, 1);
+/*
+@import 'cv';
+@include cv-list;*/
+
      @import 'sencha-touch/default/all';
      @include sencha-panel;
      @include sencha-buttons;
@@ -28,4 +33,3 @@ $body-bg-color: #000;
      @include sencha-layout;
      @include sencha-form;
      @include sencha-sheet;
-      

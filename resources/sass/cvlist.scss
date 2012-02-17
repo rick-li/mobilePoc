@@ -1,0 +1,29 @@
+$content-bg-color: #EFE;
+//@mixin cv-list{
+  
+ 
+  .listitem{
+  	backgound-color: +radial-gradient(color-stops(#aaa, $content-bg-color), top);
+  	height: 60px;
+  	font: 11px arial,sans-serif;
+  }
+  
+  .listitem .headLine{
+  	font-weight: bold;
+  	font-size: 13px;
+  	color: #003298;
+  }
+  
+  .listitem .author{
+  	font-weight: bold; 
+  	color: #434343;
+  }
+  
+  .listitem .date{ 
+  	color: #7F7F7F;
+  }
+  
+  .listitem .content{
+  	color: #434343;
+  }
+//}

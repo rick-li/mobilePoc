@@ -11,8 +11,9 @@ Ext.define('cv.view.VideoPortlet',
     createList: ->
         list = new Ext.List(
             height: @getHeight()
-            itemTpl: '<img style="float:left;" src="public/app/libs/resources/images/video_head.jpg"><div class="" style="font-size:20px;">{analystName}</div><div class="">{analystType}</div>'
+            itemTpl: '<img style="float:left;" src="public/app/libs/resources/images/video_head.jpg"><div class="headLine">{analystName}</div><div class="content">{analystType}</div>'
             store: cv.videoStore
+            itemCls: 'listitem'
         )
         return list
 

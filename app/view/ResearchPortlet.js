@@ -15,8 +15,9 @@
       var list;
       list = new Ext.List({
         height: this.getHeight(),
-        itemTpl: '<div class="headLine">{headLine}</div><div class="synopsis">{synopsis}</div>',
-        store: cv.researchStore
+        itemTpl: '<div class="headLine">{headLine}</div><div class="content">{synopsis}</div>',
+        store: cv.researchStore,
+        itemCls: 'listitem'
       });
       return list;
     }

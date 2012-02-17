@@ -4,13 +4,15 @@
     extend: 'Ext.Panel',
     config: {
       portletType: '',
-      title: ''
+      title: '',
+      cls: 'portal'
     },
     initialize: function() {
       this.add({
         docked: 'top',
         xtype: 'toolbar',
-        title: this.getTitle()
+        title: this.getTitle(),
+        cls: 'portalTitle'
       });
       return this.callParent(arguments);
     }
