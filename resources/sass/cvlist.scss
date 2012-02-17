@@ -4,7 +4,7 @@ $content-bg-color: #EFE;
  
   .listitem{
   	backgound-color: +radial-gradient(color-stops(#aaa, $content-bg-color), top);
-  	height: 60px;
+  	height: 53px;
   	font: 11px arial,sans-serif;
   }
   
@@ -17,13 +17,28 @@ $content-bg-color: #EFE;
   .listitem .author{
   	font-weight: bold; 
   	color: #434343;
+  	float: left;
   }
   
-  .listitem .date{ 
+  .listitem .pubDate{ 
   	color: #7F7F7F;
+  	float: right;
   }
   
   .listitem .content{
   	color: #434343;
+  	height: 15px;
+  	overflow: hidden;
+  	clear: both;
+  	float: left;
+  }
+  
+  .videolistitem{
+     height: 70px;
+  }
+  .videolistitem .headLine{
+    font: bold 14px arial,sans-serif;
+    color: #003298;
+    line-height: 40px;
   }
 //}

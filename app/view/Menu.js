@@ -4,7 +4,6 @@
     extend: 'Ext.Toolbar',
     config: {
       height: 40,
-      layout: 'fit',
       scrollable: 'horizontal'
     },
     initialize: function() {

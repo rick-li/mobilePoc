@@ -4,6 +4,7 @@ Ext.define('cv.view.Portlet',
         portletType: ''
         title: ''
         cls: 'portal'
+        layout: 'fit'
     initialize: ->
         @add({docked: 'top', xtype: 'toolbar', title: @getTitle(), cls: 'portalTitle'})
         #@add({docked: 'top', xtype: 'toolbar', title: @getTitle(), cls: 'portalTitle',layout: {align: 'start',pack: 'justify'},centered:false})

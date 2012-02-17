@@ -15,10 +15,10 @@
     createList: function() {
       var list;
       list = new Ext.List({
-        height: this.getHeight(),
-        itemTpl: '<img style="float:left;" src="public/app/libs/resources/images/video_head.jpg"><div class="headLine">{analystName}</div><div class="content">{analystType}</div>',
+        itemTpl: '<img style="float:left;" src="resources/img/ana_demo.jpg"><div class="headLine">{analystName}</div>',
+        pinHeaders: true,
         store: cv.videoStore,
-        itemCls: 'listitem'
+        itemCls: 'videolistitem'
       });
       return list;
     }

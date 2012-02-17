@@ -5,7 +5,8 @@
     config: {
       portletType: '',
       title: '',
-      cls: 'portal'
+      cls: 'portal',
+      layout: 'fit'
     },
     initialize: function() {
       this.add({
