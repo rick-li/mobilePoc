@@ -11,7 +11,8 @@ Ext.define('cv.view.MarketBuzz',
                 fn: (obj) ->
                     console.log 'marketBuzz doOrientationChange'
                     console.log obj
-                    orientation = Ext.Viewport.determineOrientation()
+                    #orientation = Ext.Viewport.determineOrientation()
+                    orientation = cv.util.getOrientation()
                     console.log orientation
                     newPortalItems = obj.getPortalItems(orientation)
                     obj.removeAll(false, true)
@@ -26,7 +27,8 @@ Ext.define('cv.view.MarketBuzz',
             @setItems(@getPhonePortalItems())
         else
             #@preCreatePortal()
-            orientation = Ext.Viewport.determineOrientation()
+            #orientation = Ext.Viewport.determineOrientation()
+            orientation = cv.util.getOrientation()
             @setItems(@getPortalItems(orientation))
         @callParent()
     getPortalItems: (orientation)->
