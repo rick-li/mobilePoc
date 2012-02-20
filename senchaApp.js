@@ -15,12 +15,12 @@
 
   Cv.app = Ext.application({
     name: 'Cv',
-    controllers: ['Main', 'Page', 'Research', 'Video'],
-    views: ['Main', 'Menu', 'Page', 'MarketBuzz', 'ResearchPortlet'],
+    profiles: ['Phone', 'Tablet'],
+    controllers: ['Research', 'Video'],
+    views: ['Main', 'Menu', 'Page', 'ResearchPortlet'],
     models: ['Research'],
     launch: function() {
       console.log('launch');
-      Ext.create('Cv.view.Main');
       if (location.href.indexOf('#') === -1) {
         console.log('redirect to default page');
         return this.redirectTo('page/MarketBuzz');

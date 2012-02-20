@@ -4,14 +4,18 @@
     extend: 'Ext.app.Profile',
     config: {
       name: 'phone',
-      controllers: ['Main', 'Page']
+      controllers: ['Page'],
+      views: ['MarketBuzz']
     },
     isActive: function() {
       return Ext.os.is.Phone;
     },
     launch: function() {
       console.log(Date.now() + ' Cv.profile.Phone launch');
-      return this.callParent();
+      this.callParent();
+      return Ext.create('Cv.view.Main', {
+        height: 600
+      });
     }
   });
 

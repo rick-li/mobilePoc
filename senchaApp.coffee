@@ -11,12 +11,13 @@ Ext.Loader.setConfig({enabled:false})
 #Ext.Loader.setConfig({enabled:true,paths:{'cv': './public/app/sencha/app'}})
 Cv.app = Ext.application
     name: 'Cv'
-    controllers: ['Main','Page', 'Research', 'Video']
-    views: ['Main', 'Menu', 'Page', 'MarketBuzz', 'ResearchPortlet']
+    profiles: ['Phone','Tablet']
+    controllers: ['Research', 'Video']
+    views: ['Main', 'Menu', 'Page', 'ResearchPortlet']
     models: ['Research']
     launch: ->
         console.log('launch')
-        Ext.create('Cv.view.Main')
+        #Ext.create('Cv.view.Main')
         if(location.href.indexOf('#') == -1)
             #TODO get default page
             console.log('redirect to default page')
