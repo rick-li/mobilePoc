@@ -2,7 +2,7 @@ $content-bg-color: #EFE;
 //@mixin cv-list{
  
   .x-list-item{
-  	background: url("../images/red-caret-right.png") no-repeat scroll right center;
+  	background: url("../images/red-caret-right.png") no-repeat scroll 98% center ;
   }
   .x-list-item .x-list-item-label {
     width: 95%;
@@ -11,6 +11,12 @@ $content-bg-color: #EFE;
     white-space: nowrap !important;
     overflow:hidden !important;
   }
+  
+  .x-list .x-list-item.x-item-selected{
+    background: url("../images/red-caret-right.png") no-repeat scroll 98% center #729fdc;
+    text-shadow: none;
+  }
+  
   .listitem{
   	backgound-color: +radial-gradient(color-stops(#aaa, $content-bg-color), top);
   	height: 54px;
