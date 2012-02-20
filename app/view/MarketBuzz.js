@@ -1,13 +1,12 @@
 (function() {
 
   Ext.define('cv.view.MarketBuzz', {
-    extend: 'Ext.Panel',
+    extend: 'cv.view.Page',
     config: {
       id: 'cvMarketBuzz',
       layout: {
         type: 'hbox'
       },
-      height: 500,
       listeners: [
         {
           event: 'doOrientationChange',
