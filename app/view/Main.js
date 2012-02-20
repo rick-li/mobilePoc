@@ -22,7 +22,7 @@
         {
           docked: 'top',
           xtype: 'toolbar',
-          title: 'CitiVelocity'
+          html: '<div style="margin-left:42%;"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>'
         }, {
           docked: 'top',
           items: [cvMenu]
