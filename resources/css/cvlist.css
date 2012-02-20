@@ -1,6 +1,6 @@
 /* line 4, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .x-list-item {
-  background: url("../images/red-caret-right.png") no-repeat scroll right center;
+  background: url("../images/red-caret-right.png") no-repeat scroll 98% center;
 }
 
 /* line 7, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
@@ -14,21 +14,27 @@
   overflow: hidden !important;
 }
 
-/* line 14, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+/* line 15, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+.x-list .x-list-item.x-item-selected {
+  background: url("../images/red-caret-right.png") no-repeat scroll 98% center #729fdc;
+  text-shadow: none;
+}
+
+/* line 20, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem {
   backgound-color: +radial-gradient(top, #aaaaaa, #eeffee);
   height: 54px;
   font: 11px arial,sans-serif;
 }
 
-/* line 20, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+/* line 26, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem .headLine {
   font-weight: bold;
   font-size: 13px;
   color: #003298;
 }
 
-/* line 26, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+/* line 32, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem .author {
   font-weight: bold;
   color: #434343;
@@ -36,7 +42,7 @@
   width: 45%;
 }
 
-/* line 33, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+/* line 39, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem .pubDate {
   color: #7F7F7F;
   float: right;
@@ -44,7 +50,7 @@
   text-align: right;
 }
 
-/* line 40, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+/* line 46, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem .content {
   color: #434343;
   height: 15px;
@@ -56,12 +62,12 @@
   width: 100%;
 }
 
-/* line 51, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+/* line 57, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem {
   height: 70px;
 }
 
-/* line 54, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+/* line 60, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem .headLine {
   font: bold 12px arial,sans-serif;
   color: #003298;
@@ -70,14 +76,14 @@
   overflow: hidden;
 }
 
-/* line 62, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+/* line 68, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem .title {
   font-size: 11px;
   font-weight: bold;
   color: #434343;
 }
 
-/* line 68, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+/* line 74, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem .pubDate {
   font-size: 10px;
   color: #7F7F7F;
