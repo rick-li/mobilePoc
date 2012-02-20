@@ -22,7 +22,15 @@
         {
           docked: 'top',
           xtype: 'toolbar',
-          html: '<div style="margin-left:42%;"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>'
+          html: '<div class="logo"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>',
+          items: [
+            {
+              xtype: 'searchfield',
+              name: 'searchfield',
+              placeholder: 'Search...',
+              cls: 'search'
+            }
+          ]
         }, {
           docked: 'top',
           items: [cvMenu]

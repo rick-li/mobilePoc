@@ -16,3 +16,16 @@
 #menuBarButtons .x-button-pressed {
   background: url("../images/arrow_red.png") no-repeat center top;
 }
+
+/* line 18, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+.logo {
+  position: absolute;
+  top: 0;
+  left: 40%;
+}
+
+/* line 24, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+.search {
+  position: absolute;
+  right: 0;
+}
