@@ -1,9 +1,10 @@
 Ext.define('cv.view.VideoPortlet',
     extend: 'cv.view.Portlet'
+    xtype: 'VideoPortlet'
     config:
-        id: 'VideoPortlet'
-        height: 200
-        xtype: 'VideoPortlet'
+        #id: 'VideoPortlet'
+        #height: 200
+        layout: 'fit'
     initialize: ->
         console.log 'init video'
         @add(@createList())
