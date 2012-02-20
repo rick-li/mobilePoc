@@ -4,17 +4,17 @@ $content-bg-color: #EFE;
   .x-list-item{
   	background: url("../images/red-caret-right.png") no-repeat scroll right center;
   }
+  .x-list-item .x-list-item-label {
+    width: 95%;
+  }
+  .x-list-item .x-list-item-label div{
+    white-space: nowrap !important;
+    overflow:hidden !important;
+  }
   .listitem{
   	backgound-color: +radial-gradient(color-stops(#aaa, $content-bg-color), top);
   	height: 54px;
   	font: 11px arial,sans-serif;
-  }
-  .listitem .x-list-item-label {
-    width: 95%;
-  }
-  .listitem .x-list-item-label div{
-    white-space: nowrap !important;
-    overflow:hidden !important;
   }
   
   .listitem .headLine{
@@ -52,10 +52,21 @@ $content-bg-color: #EFE;
      height: 70px;
   }
   .videolistitem .headLine{
-    font: bold 14px arial,sans-serif;
+    font: bold 12px arial,sans-serif;
     color: #003298;
-    line-height: 40px;
+    line-height: 20px;
     white-space: nowrap;
     overflow:hidden;
+  }
+  
+   .videolistitem .title{
+    font-size: 11px; 
+    font-weight: bold;
+    color: #434343;
+  }
+  
+   .videolistitem .pubDate{ 
+    font-size: 10px; 
+    color: #7F7F7F;
   }
 //}
