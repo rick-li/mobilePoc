@@ -26,9 +26,7 @@
       pages = this.getPages();
       if (!pages[pageId]) {
         if (pageId === 'MarketBuzz') {
-          pages[pageId] = Ext.create('Cv.view.MarketBuzz', {
-            pageId: pageId
-          });
+          pages[pageId] = this.createMarketBuzz(pageId);
         } else {
           pages[pageId] = Ext.create('Cv.view.Page', {
             pageId: pageId,
@@ -44,8 +42,9 @@
         direction: 'right'
       });
     },
+    createMarketBuzz: function(pageId) {},
     launch: function() {
-      return console.log('launch controller');
+      return console.log('launch Page controller');
     }
   });
 

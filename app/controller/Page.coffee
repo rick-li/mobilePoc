@@ -20,7 +20,7 @@ Ext.define 'Cv.controller.Page',
         pages = @getPages()
         if not pages[pageId]
             if pageId is 'MarketBuzz'
-                pages[pageId] = Ext.create('Cv.view.MarketBuzz',{pageId: pageId})
+                pages[pageId] = @createMarketBuzz(pageId)
             else
                 pages[pageId] = Ext.create('Cv.view.Page',{pageId: pageId,html:"It's "+pageId+" page."})
 
@@ -29,7 +29,7 @@ Ext.define 'Cv.controller.Page',
         activeMenuBtn = menuBar.child('#'+pageId)
         menuBar.setPressedButtons(activeMenuBtn)
         Ext.getCmp('viewport').setActiveItem(pages[pageId], {type: 'slide', direction: 'right'})
+    createMarketBuzz: (pageId)->
+        return undefined#Ext.create('Cv.view.MarketBuzz',{pageId: pageId});
     launch:->
-        console.log 'launch controller'
-        #sync up the menu button here
-        #
+        console.log 'launch Page controller'
