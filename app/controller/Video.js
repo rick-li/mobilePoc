@@ -4,7 +4,7 @@
     extend: 'Ext.app.Controller',
     config: {
       refs: {
-        videoList: '#VideoPortlet list',
+        videoList: 'VideoPortlet list',
         videoBack: '#videoBack'
       },
       control: {
