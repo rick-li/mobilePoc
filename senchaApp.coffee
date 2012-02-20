@@ -12,8 +12,8 @@ Ext.Loader.setConfig({enabled:false})
 Cv.app = Ext.application
     name: 'Cv'
     controllers: ['Main','Page', 'Research', 'Video']
-    views: ['Main', 'Menu', 'Page', 'MarketBuzz', 'ResearchPortlet']
-    models: ['Research']
+    views: ['Main', 'Menu', 'Page', 'MarketBuzz', 'ResearchPortlet','VideoPortlet']
+    models: ['Research','Video']
     launch: ->
         console.log('launch')
         Ext.create('Cv.view.Main')
