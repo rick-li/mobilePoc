@@ -24,7 +24,7 @@ Ext.define("Cv.view.Main",
                  #layout: 'hbox'
                  #title: 'CitiVelocity'
                  #items: [{xtype: 'button', ui: 'ok', text: 'ok', handler: @okBtnHandler}]
-                 items: [{xtype:'searchfield',name: 'searchfield',placeholder: 'Search...',cls: 'search'}]
+                 items: [{xtype:'searchfield',name: 'searchfield',placeholder: 'Search...',cls: 'search'},{ui: 'back',text: 'back'}]
                 }
                 {docked: 'top', items:[cvMenu]}
             ])

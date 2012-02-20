@@ -29,6 +29,9 @@
               name: 'searchfield',
               placeholder: 'Search...',
               cls: 'search'
+            }, {
+              ui: 'back',
+              text: 'back'
             }
           ]
         }, {
