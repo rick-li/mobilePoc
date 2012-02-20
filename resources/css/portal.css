@@ -1,13 +1,18 @@
-/* line 1, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 1, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 .portal {
   backgound-color: #EFE;
   /*height:200px;*/
   border: 0;
 }
 
-/* line 7, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 7, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 .portal .portalTitle {
   height: 35px;
   color: #FFCC00;
   font: bold 14px arial,sans-serif;
+}
+
+/* line 14, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+#menuBarButtons .x-button-pressed {
+  background: url("../images/arrow_red.png") no-repeat center top;
 }
