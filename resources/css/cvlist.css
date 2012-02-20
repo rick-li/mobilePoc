@@ -4,21 +4,21 @@
 }
 
 /* line 7, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+.x-list-item .x-list-item-label {
+  width: 95%;
+}
+
+/* line 10, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+.x-list-item .x-list-item-label div {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+}
+
+/* line 14, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem {
   backgound-color: +radial-gradient(top, #aaaaaa, #eeffee);
   height: 54px;
   font: 11px arial,sans-serif;
-}
-
-/* line 12, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
-.listitem .x-list-item-label {
-  width: 95%;
-}
-
-/* line 15, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
-.listitem .x-list-item-label div {
-  white-space: nowrap !important;
-  overflow: hidden !important;
 }
 
 /* line 20, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
@@ -63,9 +63,22 @@
 
 /* line 54, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem .headLine {
-  font: bold 14px arial,sans-serif;
+  font: bold 12px arial,sans-serif;
   color: #003298;
-  line-height: 40px;
+  line-height: 20px;
   white-space: nowrap;
   overflow: hidden;
+}
+
+/* line 62, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+.videolistitem .title {
+  font-size: 11px;
+  font-weight: bold;
+  color: #434343;
+}
+
+/* line 68, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+.videolistitem .pubDate {
+  font-size: 10px;
+  color: #7F7F7F;
 }
