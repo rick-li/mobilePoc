@@ -23,8 +23,6 @@ Cv.app = Ext.application
             console.log('redirect to default page')
             @redirectTo('page/MarketBuzz')
 
-
-
 Cv.util = {
     getCurrentHashUrl: ->
         return location.href.substring(location.href.indexOf('#')+1)
