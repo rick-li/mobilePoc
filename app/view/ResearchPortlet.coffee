@@ -1,5 +1,5 @@
-Ext.define('cv.view.ResearchPortlet',
-    extend: 'cv.view.Portlet'
+Ext.define('Cv.view.ResearchPortlet',
+    extend: 'Cv.view.Portlet'
     xtype: 'ResearchPortlet'
     config:
         #id: 'researchPortlet'
@@ -13,7 +13,7 @@ Ext.define('cv.view.ResearchPortlet',
             #height: @getHeight()
             itemTpl: '<div class="headLine">{headLine}</div><div><div class="author">{OBOPreferredName}</div><div class="pubDate">{formatedPubDate}</div></div><div class="content">{synopsis}</div>'
             itemCls: 'listitem'
-            store: cv.researchStore
+            store: Cv.researchStore
             pinHeaders: true
             #scrollable: true
         )

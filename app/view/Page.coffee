@@ -1,7 +1,7 @@
 #page cache
 renderPage = (pageId)->
     #render page here
-Ext.define('cv.view.Page',
+Ext.define('Cv.view.Page',
     extend: 'Ext.Panel'
     config:
         pageId: ''
@@ -10,8 +10,7 @@ Ext.define('cv.view.Page',
     constructor: (config)->
         @pageId = config?.pageId
         console.log 'constructor pageid '+@pageId
-        cv.Page.superclass.constructor.call(this, config)
-    ###
+        Cv.Page.superclass.constructor.call(this, config)
     initialize: ->
         console.log 'init Page'
         if @getPageId() != 'MarketBuzz'
@@ -19,16 +18,7 @@ Ext.define('cv.view.Page',
         else
             #read json and render the portlets
             #portlets = @getPortlets()
-            @.setItems([Ext.create('cv.view.MarketBuzz')])
+            @.setItems([Ext.create('Cv.view.MarketBuzz')])
         @callParent(arguments)
-    getPortlets: ->
-        console.log('get portlets')
-        #research for the moment
-        result = []
-        #result.push new cv.view.Portlet({title: "test"})
-        #result.push new cv.view.ResearchPortlet({title: 'Daily Research',height:200})
-        #result.push new cv.ResearchPortlet({title: 'Daily Research'})
-        #result.push new cv.ResearchPortlet({title: 'Daily Research'})
-        result.push new cv.view.VideoPortlet({title: 'CitiVelocity Video' })
-        return result
+   ###
 )

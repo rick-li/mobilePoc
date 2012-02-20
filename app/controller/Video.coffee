@@ -1,4 +1,4 @@
-Ext.define 'cv.controller.Video',
+Ext.define 'Cv.controller.Video',
     extend: 'Ext.app.Controller'
     config:
         refs:
@@ -11,7 +11,7 @@ Ext.define 'cv.controller.Video',
             videoBack:
                 tap: ->
                     console.log 'video back'
-                    historyActions = cv.app.getHistory().getActions()
+                    historyActions = Cv.app.getHistory().getActions()
                     console.log historyActions
                     lastAction = historyActions[historyActions.length-2]
                     @redirectTo(lastAction.getUrl())
@@ -19,7 +19,7 @@ Ext.define 'cv.controller.Video',
         routes:
             'video/:alertId': 'showDetail'
     redirect: (list)->
-        #@lastUrl = cv.util.getCurrentHashUrl()
+        #@lastUrl = Cv.util.getCurrentHashUrl()
         alertId = list.getSelection()[0].get('alertId')
         console.log 'list'+list
         @redirectTo('video/'+alertId)
@@ -32,9 +32,9 @@ Ext.define 'cv.controller.Video',
           if not @videoResources
               @videoResources = []
           if not @videoResources[alertId]
-              record = cv.videoStore.findRecord('alertId', alertId)
+              record = Cv.videoStore.findRecord('alertId', alertId)
               console.log 'detail is '
-              detail = @videoResources[alertId] = Ext.create('cv.view.VideoDetail',{record: record})
+              detail = @videoResources[alertId] = Ext.create('Cv.view.VideoDetail',{record: record})
               console.log detail
         Ext.getCmp('viewport').setActiveItem(detail, {type: 'slide', direction: 'left'})
      launch: ->

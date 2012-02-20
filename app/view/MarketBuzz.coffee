@@ -1,10 +1,9 @@
-Ext.define('cv.view.MarketBuzz',
-    extend: 'Ext.Panel'
+Ext.define('Cv.view.MarketBuzz',
+    extend: 'Cv.view.Page'
     config:
         id: 'cvMarketBuzz'
         layout:
             type: 'hbox'
-        height: 500
         listeners: [
             {
                 event: 'doOrientationChange'
@@ -12,7 +11,7 @@ Ext.define('cv.view.MarketBuzz',
                     console.log 'marketBuzz doOrientationChange'
                     console.log obj
                     #orientation = Ext.Viewport.determineOrientation()
-                    orientation = cv.util.getOrientation()
+                    orientation = Cv.util.getOrientation()
                     console.log orientation
                     newPortalItems = obj.getPortalItems(orientation)
                     obj.removeAll(false, true)
@@ -28,7 +27,7 @@ Ext.define('cv.view.MarketBuzz',
         else
             #@preCreatePortal()
             #orientation = Ext.Viewport.determineOrientation()
-            orientation = cv.util.getOrientation()
+            orientation = Cv.util.getOrientation()
             @setItems(@getPortalItems(orientation))
         @callParent()
     getPortalItems: (orientation)->
@@ -38,10 +37,10 @@ Ext.define('cv.view.MarketBuzz',
         return @getPortraitItems()
     ###
     preCreatePortal: ->
-        @.cvResearchPortlet1 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet1',title: 'Daily Research 1'})
-        @.cvResearchPortlet2 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet2',title: 'Daily Research 2'})
-        @.cvResearchPortlet3 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet3',title: 'Daily Research 3'})
-        @.cvVideoPortlet1 = Ext.create('cv.view.VideoPortlet',{id:'cvVideoPortlet1', title: 'CitiVelocity Video 1' })
+        @.cvResearchPortlet1 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet1',title: 'Daily Research 1'})
+        @.cvResearchPortlet2 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet2',title: 'Daily Research 2'})
+        @.cvResearchPortlet3 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet3',title: 'Daily Research 3'})
+        @.cvVideoPortlet1 = Ext.create('Cv.view.VideoPortlet',{id:'cvVideoPortlet1', title: 'CitiVelocity Video 1' })
     ###
     getRelatedPortal: ->
         @.cvResearchPortlet1 = Ext.getCmp('cvResearchPortlet1')

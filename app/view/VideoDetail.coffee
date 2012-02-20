@@ -1,4 +1,4 @@
-Ext.define('cv.view.VideoDetail',
+Ext.define('Cv.view.VideoDetail',
     extend: 'Ext.Panel'
     config:
         record: ''

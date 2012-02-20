@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.view.Portlet', {
+  Ext.define('Cv.view.Portlet', {
     extend: 'Ext.Panel',
     config: {
       portletType: '',

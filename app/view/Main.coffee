@@ -1,4 +1,4 @@
-Ext.define("cv.view.Main",
+Ext.define("Cv.view.Main",
     extend: 'Ext.Panel'
     config:
         id: 'viewport'
@@ -15,7 +15,7 @@ Ext.define("cv.view.Main",
     ###
     initialize: ->
         console.log 'main init'
-        cvMenu = Ext.create 'cv.view.Menu'
+        cvMenu = Ext.create 'Cv.view.Menu'
         @setItems ([
                 {
                  docked: 'top'

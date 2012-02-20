@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.ns('cv', 'cv.views', 'cv.controllers');
+  Ext.ns('Cv', 'Cv.views', 'Cv.controllers');
 
   /*
   Ext.setup
@@ -13,14 +13,14 @@
     enabled: false
   });
 
-  cv.app = Ext.application({
-    name: 'cv',
+  Cv.app = Ext.application({
+    name: 'Cv',
     controllers: ['Main', 'Page', 'Research', 'Video'],
     views: ['Main', 'Menu', 'Page', 'MarketBuzz', 'ResearchPortlet'],
     models: ['Research'],
     launch: function() {
       console.log('launch');
-      Ext.create('cv.view.Main');
+      Ext.create('Cv.view.Main');
       if (location.href.indexOf('#') === -1) {
         console.log('redirect to default page');
         return this.redirectTo('page/MarketBuzz');
@@ -28,7 +28,7 @@
     }
   });
 
-  cv.util = {
+  Cv.util = {
     getCurrentHashUrl: function() {
       return location.href.substring(location.href.indexOf('#') + 1);
     },

@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.controller.Page', {
+  Ext.define('Cv.controller.Page', {
     extend: 'Ext.app.Controller',
     config: {
       pages: {},
@@ -25,9 +25,16 @@
       console.log('page index id: ' + pageId);
       pages = this.getPages();
       if (!pages[pageId]) {
-        pages[pageId] = new cv.view.Page({
-          pageId: pageId
-        });
+        if (pageId === 'MarketBuzz') {
+          pages[pageId] = Ext.create('Cv.view.MarketBuzz', {
+            pageId: pageId
+          });
+        } else {
+          pages[pageId] = Ext.create('Cv.view.Page', {
+            pageId: pageId,
+            html: "It's " + pageId + " page."
+          });
+        }
       }
       menuBar = Ext.getCmp('menuBarButtons');
       activeMenuBtn = menuBar.child('#' + pageId);

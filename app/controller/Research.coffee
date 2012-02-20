@@ -1,4 +1,4 @@
-Ext.define 'cv.controller.Research',
+Ext.define 'Cv.controller.Research',
     extend: 'Ext.app.Controller'
     config:
         refs:
@@ -10,7 +10,7 @@ Ext.define 'cv.controller.Research',
             researchBack:
                 tap: ->
                     console.log 'research back'
-                    historyActions = cv.app.getHistory().getActions()
+                    historyActions = Cv.app.getHistory().getActions()
                     console.log historyActions
                     lastAction = historyActions[historyActions.length-2]
                     @redirectTo(lastAction.getUrl())
@@ -18,13 +18,13 @@ Ext.define 'cv.controller.Research',
         routes:
             'research/:pubId': 'showDetail'
     redirect: (list)->
-        #@lastUrl = cv.util.getCurrentHashUrl()
+        #@lastUrl = Cv.util.getCurrentHashUrl()
         pubId = list.getSelection()[0].get('pubId')
         @redirectTo('research/'+pubId)
     showDetail: (pubId)->
         console.log('research controller '+pubId)
         if window.device
-            record = cv.researchStore.findRecord('pubId', pubId)
+            record = Cv.researchStore.findRecord('pubId', pubId)
             fileLink = record.get('fileLink')
             fileName = fileLink
             if fileName.indexOf('/') != -1
@@ -45,9 +45,9 @@ Ext.define 'cv.controller.Research',
         if not @researchArticles
             @researchArticles = []
         if not @researchArticles[pubId]
-            record = cv.researchStore.findRecord('pubId', pubId)
+            record = Cv.researchStore.findRecord('pubId', pubId)
             console.log 'detail is '
-            @researchArticles[pubId] = Ext.create('cv.view.ResearchDetail',{record: record})
+            @researchArticles[pubId] = Ext.create('Cv.view.ResearchDetail',{record: record})
         detail = @researchArticles[pubId]
         console.log detail
         Ext.getCmp('viewport').setActiveItem(detail, {type: 'slide', direction: 'left'})

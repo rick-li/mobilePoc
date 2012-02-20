@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.view.ResearchDetail', {
+  Ext.define('Cv.view.ResearchDetail', {
     extend: 'Ext.Panel',
     config: {
       record: ''

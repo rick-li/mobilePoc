@@ -1,5 +1,5 @@
-Ext.define('cv.view.VideoPortlet',
-    extend: 'cv.view.Portlet'
+Ext.define('Cv.view.VideoPortlet',
+    extend: 'Cv.view.Portlet'
     xtype: 'VideoPortlet'
     config:
         #id: 'VideoPortlet'
@@ -15,7 +15,7 @@ Ext.define('cv.view.VideoPortlet',
             itemTpl: '<img style="float:left;" src="resources/img/ana_demo.jpg"><div class="headLine">{analystName}</div><div class="title">{title}</div><div class="pubDate">{formatedDate}</div>'
             #scrollable: true
             pinHeaders: true
-            store: cv.videoStore
+            store: Cv.videoStore
             itemCls: 'videolistitem'
         )
         return list
