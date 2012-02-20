@@ -1,24 +1,34 @@
-/* line 5, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 4, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+.x-list-item {
+  background: url("../images/red-caret-right.png") no-repeat scroll right center;
+}
+
+/* line 7, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem {
   backgound-color: +radial-gradient(top, #aaaaaa, #eeffee);
   height: 54px;
   font: 11px arial,sans-serif;
 }
 
-/* line 11, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 12, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
+.listitem .x-list-item-label {
+  width: 95%;
+}
+
+/* line 15, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem .x-list-item-label div {
   white-space: nowrap !important;
   overflow: hidden !important;
 }
 
-/* line 16, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 20, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem .headLine {
   font-weight: bold;
   font-size: 13px;
   color: #003298;
 }
 
-/* line 22, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 26, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem .author {
   font-weight: bold;
   color: #434343;
@@ -26,7 +36,7 @@
   width: 45%;
 }
 
-/* line 29, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 33, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem .pubDate {
   color: #7F7F7F;
   float: right;
@@ -34,7 +44,7 @@
   text-align: right;
 }
 
-/* line 36, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 40, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .listitem .content {
   color: #434343;
   height: 15px;
@@ -43,14 +53,15 @@
   clear: both;
   float: left;
   white-space: nowrap;
+  width: 100%;
 }
 
-/* line 46, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 51, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem {
   height: 70px;
 }
 
-/* line 49, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 54, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem .headLine {
   font: bold 14px arial,sans-serif;
   color: #003298;
