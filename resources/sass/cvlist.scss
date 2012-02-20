@@ -4,8 +4,13 @@ $content-bg-color: #EFE;
  
   .listitem{
   	backgound-color: +radial-gradient(color-stops(#aaa, $content-bg-color), top);
-  	height: 53px;
+  	height: 54px;
   	font: 11px arial,sans-serif;
+  }
+  
+  .listitem .x-list-item-label div{
+    white-space: nowrap !important;
+    overflow:hidden !important;
   }
   
   .listitem .headLine{
@@ -18,19 +23,24 @@ $content-bg-color: #EFE;
   	font-weight: bold; 
   	color: #434343;
   	float: left;
+  	width: 45%;
   }
   
   .listitem .pubDate{ 
   	color: #7F7F7F;
   	float: right;
+  	width: 45%;
+  	text-align: right;
   }
   
   .listitem .content{
   	color: #434343;
   	height: 15px;
   	overflow: hidden;
+  	padding-left:2px;
   	clear: both;
   	float: left;
+  	white-space: nowrap;
   }
   
   .videolistitem{
@@ -40,5 +50,7 @@ $content-bg-color: #EFE;
     font: bold 14px arial,sans-serif;
     color: #003298;
     line-height: 40px;
+    white-space: nowrap;
+    overflow:hidden;
   }
 //}

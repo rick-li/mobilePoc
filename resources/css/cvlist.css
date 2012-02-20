@@ -1,47 +1,60 @@
 /* line 5, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .listitem {
   backgound-color: +radial-gradient(top, #aaaaaa, #eeffee);
-  height: 53px;
+  height: 54px;
   font: 11px arial,sans-serif;
 }
 
 /* line 11, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+.listitem .x-list-item-label div {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+}
+
+/* line 16, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .listitem .headLine {
   font-weight: bold;
   font-size: 13px;
   color: #003298;
 }
 
-/* line 17, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 22, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .listitem .author {
   font-weight: bold;
   color: #434343;
   float: left;
+  width: 45%;
 }
 
-/* line 23, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 29, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .listitem .pubDate {
   color: #7F7F7F;
   float: right;
+  width: 45%;
+  text-align: right;
 }
 
-/* line 28, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 36, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .listitem .content {
   color: #434343;
   height: 15px;
   overflow: hidden;
+  padding-left: 2px;
   clear: both;
   float: left;
+  white-space: nowrap;
 }
 
-/* line 36, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 46, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem {
   height: 70px;
 }
 
-/* line 39, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 49, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .videolistitem .headLine {
   font: bold 14px arial,sans-serif;
   color: #003298;
   line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
 }

@@ -4,6 +4,7 @@ Ext.define('cv.view.MarketBuzz',
         id: 'cvMarketBuzz'
         layout:
             type: 'hbox'
+        height: 500
         listeners: [
             {
                 event: 'doOrientationChange'
@@ -21,19 +22,46 @@ Ext.define('cv.view.MarketBuzz',
         ]
     initialize: ->
         console.log 'MarketBuzz initialize'
-        @preCreatePortal()
-        #Ext.os.is.Phone = true
         if Ext.os.is.Phone
             @setItems(@getPhonePortalItems())
         else
+            #@preCreatePortal()
             orientation = Ext.Viewport.determineOrientation()
             @setItems(@getPortalItems(orientation))
         @callParent()
+    getPortalItems: (orientation)->
+        console.log 'marketBuzz getPortalItems'
+        if orientation is 'landscape'
+            return @getLandscapeItems()
+        return @getPortraitItems()
+    ###
     preCreatePortal: ->
-        @.cvResearchPortal1 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortal1',title: 'Daily Research 1'})
-        @.cvResearchPortal2 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortal2',title: 'Daily Research 2'})
-        @.cvResearchPortal3 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortal3',title: 'Daily Research 3'})
-        @.cvVideoPortal1 = Ext.create('cv.view.VideoPortlet',{title: 'CitiVelocity Video 1' })
+        @.cvResearchPortlet1 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet1',title: 'Daily Research 1'})
+        @.cvResearchPortlet2 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet2',title: 'Daily Research 2'})
+        @.cvResearchPortlet3 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet3',title: 'Daily Research 3'})
+        @.cvVideoPortlet1 = Ext.create('cv.view.VideoPortlet',{id:'cvVideoPortlet1', title: 'CitiVelocity Video 1' })
+    ###
+    getRelatedPortal: ->
+        @.cvResearchPortlet1 = Ext.getCmp('cvResearchPortlet1')
+        @.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2')
+        @.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3')
+        @.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1')
+        if @.cvResearchPortlet1
+            Ext.layout.AbstractBox(@.cvResearchPortlet1,1)
+        else
+            @.cvResearchPortlet1 = {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet1', title: 'Daily Research 1'}
+        if @.cvResearchPortlet2
+            Ext.layout.AbstractBox(@.cvResearchPortlet2,1)
+        else
+            @.cvResearchPortlet2 = {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet2', title: 'Daily Research 2'}
+        if @.cvResearchPortlet3
+            Ext.layout.AbstractBox(@.cvResearchPortlet3,1)
+        else
+            @.cvResearchPortlet3 = {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet3', title: 'Daily Research 3'}
+        if @.cvVideoPortlet1
+            Ext.layout.AbstractBox(@.cvVideoPortlet1,1)
+        else
+            @.cvVideoPortlet1 = {xtype:'VideoPortlet',flex: 1, id: 'cvVideoPortlet1', title: 'Video 1'}
     getPhonePortalItems: ->
         console.log 'marketBuzz getPhonePortalItems'
         return [
@@ -42,82 +70,43 @@ Ext.define('cv.view.MarketBuzz',
                 flex: 1
                 layout: 'vbox'
                 items : [
-                    @.cvVideoPortal1
-                    @.cvResearchPortal1
-                    @.cvResearchPortal2
-                    @.cvResearchPortal3
+                    {xtype:'VideoPortlet',flex: 1, id: 'cvVideoPortlet1', title: 'Video 1'}
+                    {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet1', title: 'Daily Research 1'}
+                    {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet2', title: 'Daily Research 2'}
+                    {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet3', title: 'Daily Research 3'}
                 ]
             }
         ]
-    getPortalItems: (orientation)->
-        console.log 'marketBuzz getPortalItems'
-        if orientation is 'landscape'
-            return @getLandscapeItems()
-        return @getPortraitItems()
     getLandscapeItems: ->
-        #Ext.layout.AbstractBox(@.cvResearchPortal1,1)
-        #Ext.layout.AbstractBox(@.cvResearchPortal2,2)
-        #Ext.layout.AbstractBox(@.cvResearchPortal3,1)
+        console.log 'marketBuzz getLandscapeItems'
+        @getRelatedPortal()
         return [
+            @.cvVideoPortlet1
             {
                 xtype: 'panel'
                 flex: 1
                 layout: 'vbox'
                 items : [
-                    @.cvVideoPortal1
+                    @.cvResearchPortlet1
+                    @.cvResearchPortlet2
                 ]
             }
-            {
-                xtype: 'panel'
-                flex: 1
-                layout: 'vbox'
-                items : [
-                    @.cvResearchPortal1
-                    @.cvResearchPortal2
-                ]
-            }
-            {
-                xtype: 'panel'
-                flex: 1
-                layout: 'vbox'
-                items : [
-                    @.cvResearchPortal3
-                ]
-            }
+            @.cvResearchPortlet3
         ]
     getPortraitItems: ->
-        #Ext.layout.AbstractBox(@.cvResearchPortal1,1)
-        #Ext.layout.AbstractBox(@.cvResearchPortal2,1)
-        #Ext.layout.AbstractBox(@.cvResearchPortal3,1)
-        #@.cvResearchPortal1.setHeight('400')
+        console.log 'marketBuzz getLandscapeItems'
+        @getRelatedPortal()
         return [
-            {
-                xtype: 'panel'
-                flex: 1
-                layout: 'vbox'
-                items : [
-                    @.cvVideoPortal1
-                ]
-            }
+            @.cvVideoPortlet1
             {
                 xtype: 'panel'
                 flex: 2
                 layout: 'vbox'
                 items : [
-                    @.cvResearchPortal1
-                    @.cvResearchPortal2
-                    @.cvResearchPortal3
+                    @.cvResearchPortlet1
+                    @.cvResearchPortlet2
+                    @.cvResearchPortlet3
                 ]
             }
         ]
-    getPortlets: ->
-        console.log('get portlets')
-        #research for the moment
-        result = []
-        #result.push new cv.view.Portlet({title: "test"})
-        result.push new cv.view.ResearchPortlet({title: 'Daily Research',height:200})
-        #result.push new cv.ResearchPortlet({title: 'Daily Research'})
-        #result.push new cv.ResearchPortlet({title: 'Daily Research'})
-        #result.push new cv.VideoPortlet({title: 'CitiVelocity Video' })
-        return result
 )
