@@ -53,6 +53,7 @@
             return new PdfViewer().play(fileName);
           }
         }, function() {
+          mask.destroy();
           return alert('download file ' + fileLink + ' failed.');
         });
         return;

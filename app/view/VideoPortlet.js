@@ -2,10 +2,9 @@
 
   Ext.define('cv.view.VideoPortlet', {
     extend: 'cv.view.Portlet',
+    xtype: 'VideoPortlet',
     config: {
-      id: 'VideoPortlet',
-      height: 200,
-      xtype: 'VideoPortlet'
+      layout: 'fit'
     },
     initialize: function() {
       console.log('init video');

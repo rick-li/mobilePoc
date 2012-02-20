@@ -33,10 +33,12 @@ Ext.define 'cv.controller.Research',
             Ext.Viewport.add(mask)
             new Downloader().downloadFile(fileLink, {dirName:'/sdcard/cv', overwrite: false}, (result)->
                 console.log(JSON.stringify(result))
+                #TODO display a progressbar here
                 if result.progress == 100
                     mask.destroy()
                     new PdfViewer().play(fileName)
             ,->
+                mask.destroy()
                 alert('download file '+fileLink+' failed.')
             )
             return

@@ -7,6 +7,7 @@
       layout: {
         type: 'hbox'
       },
+      height: 500,
       listeners: [
         {
           event: 'doOrientationChange',
@@ -28,7 +29,6 @@
     initialize: function() {
       var orientation;
       console.log('MarketBuzz initialize');
-      this.preCreatePortal();
       if (Ext.os.is.Phone) {
         this.setItems(this.getPhonePortalItems());
       } else {
@@ -37,22 +37,63 @@
       }
       return this.callParent();
     },
-    preCreatePortal: function() {
-      this.cvResearchPortal1 = Ext.create('cv.view.ResearchPortlet', {
-        id: 'cvResearchPortal1',
-        title: 'Daily Research 1'
-      });
-      this.cvResearchPortal2 = Ext.create('cv.view.ResearchPortlet', {
-        id: 'cvResearchPortal2',
-        title: 'Daily Research 2'
-      });
-      this.cvResearchPortal3 = Ext.create('cv.view.ResearchPortlet', {
-        id: 'cvResearchPortal3',
-        title: 'Daily Research 3'
-      });
-      return this.cvVideoPortal1 = Ext.create('cv.view.VideoPortlet', {
-        title: 'CitiVelocity Video 1'
-      });
+    getPortalItems: function(orientation) {
+      console.log('marketBuzz getPortalItems');
+      if (orientation === 'landscape') return this.getLandscapeItems();
+      return this.getPortraitItems();
+    },
+    /*
+        preCreatePortal: ->
+            @.cvResearchPortlet1 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet1',title: 'Daily Research 1'})
+            @.cvResearchPortlet2 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet2',title: 'Daily Research 2'})
+            @.cvResearchPortlet3 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet3',title: 'Daily Research 3'})
+            @.cvVideoPortlet1 = Ext.create('cv.view.VideoPortlet',{id:'cvVideoPortlet1', title: 'CitiVelocity Video 1' })
+    */
+    getRelatedPortal: function() {
+      this.cvResearchPortlet1 = Ext.getCmp('cvResearchPortlet1');
+      this.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2');
+      this.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3');
+      this.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1');
+      if (this.cvResearchPortlet1) {
+        Ext.layout.AbstractBox(this.cvResearchPortlet1, 1);
+      } else {
+        this.cvResearchPortlet1 = {
+          xtype: 'ResearchPortlet',
+          flex: 1,
+          id: 'cvResearchPortlet1',
+          title: 'Daily Research 1'
+        };
+      }
+      if (this.cvResearchPortlet2) {
+        Ext.layout.AbstractBox(this.cvResearchPortlet2, 1);
+      } else {
+        this.cvResearchPortlet2 = {
+          xtype: 'ResearchPortlet',
+          flex: 1,
+          id: 'cvResearchPortlet2',
+          title: 'Daily Research 2'
+        };
+      }
+      if (this.cvResearchPortlet3) {
+        Ext.layout.AbstractBox(this.cvResearchPortlet3, 1);
+      } else {
+        this.cvResearchPortlet3 = {
+          xtype: 'ResearchPortlet',
+          flex: 1,
+          id: 'cvResearchPortlet3',
+          title: 'Daily Research 3'
+        };
+      }
+      if (this.cvVideoPortlet1) {
+        return Ext.layout.AbstractBox(this.cvVideoPortlet1, 1);
+      } else {
+        return this.cvVideoPortlet1 = {
+          xtype: 'VideoPortlet',
+          flex: 1,
+          id: 'cvVideoPortlet1',
+          title: 'Video 1'
+        };
+      }
     },
     getPhonePortalItems: function() {
       console.log('marketBuzz getPhonePortalItems');
@@ -61,59 +102,55 @@
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvVideoPortal1, this.cvResearchPortal1, this.cvResearchPortal2, this.cvResearchPortal3]
+          items: [
+            {
+              xtype: 'VideoPortlet',
+              flex: 1,
+              id: 'cvVideoPortlet1',
+              title: 'Video 1'
+            }, {
+              xtype: 'ResearchPortlet',
+              flex: 1,
+              id: 'cvResearchPortlet1',
+              title: 'Daily Research 1'
+            }, {
+              xtype: 'ResearchPortlet',
+              flex: 1,
+              id: 'cvResearchPortlet2',
+              title: 'Daily Research 2'
+            }, {
+              xtype: 'ResearchPortlet',
+              flex: 1,
+              id: 'cvResearchPortlet3',
+              title: 'Daily Research 3'
+            }
+          ]
         }
       ];
     },
-    getPortalItems: function(orientation) {
-      console.log('marketBuzz getPortalItems');
-      if (orientation === 'landscape') return this.getLandscapeItems();
-      return this.getPortraitItems();
-    },
     getLandscapeItems: function() {
+      console.log('marketBuzz getLandscapeItems');
+      this.getRelatedPortal();
       return [
-        {
+        this.cvVideoPortlet1, {
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvVideoPortal1]
-        }, {
-          xtype: 'panel',
-          flex: 1,
-          layout: 'vbox',
-          items: [this.cvResearchPortal1, this.cvResearchPortal2]
-        }, {
-          xtype: 'panel',
-          flex: 1,
-          layout: 'vbox',
-          items: [this.cvResearchPortal3]
-        }
+          items: [this.cvResearchPortlet1, this.cvResearchPortlet2]
+        }, this.cvResearchPortlet3
       ];
     },
     getPortraitItems: function() {
+      console.log('marketBuzz getLandscapeItems');
+      this.getRelatedPortal();
       return [
-        {
-          xtype: 'panel',
-          flex: 1,
-          layout: 'vbox',
-          items: [this.cvVideoPortal1]
-        }, {
+        this.cvVideoPortlet1, {
           xtype: 'panel',
           flex: 2,
           layout: 'vbox',
-          items: [this.cvResearchPortal1, this.cvResearchPortal2, this.cvResearchPortal3]
+          items: [this.cvResearchPortlet1, this.cvResearchPortlet2, this.cvResearchPortlet3]
         }
       ];
-    },
-    getPortlets: function() {
-      var result;
-      console.log('get portlets');
-      result = [];
-      result.push(new cv.view.ResearchPortlet({
-        title: 'Daily Research',
-        height: 200
-      }));
-      return result;
     }
   });
 
