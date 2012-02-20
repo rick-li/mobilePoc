@@ -1,4 +1,4 @@
-Ext.ns('cv', 'cv.views', 'cv.controllers')
+Ext.ns('Cv', 'Cv.views', 'Cv.controllers')
 
 #TODO to introduce a eventbus component to decouple the components
 ###
@@ -9,14 +9,14 @@ Ext.setup
 ###
 Ext.Loader.setConfig({enabled:false})
 #Ext.Loader.setConfig({enabled:true,paths:{'cv': './public/app/sencha/app'}})
-cv.app = Ext.application
-    name: 'cv'
+Cv.app = Ext.application
+    name: 'Cv'
     controllers: ['Main','Page', 'Research', 'Video']
     views: ['Main', 'Menu', 'Page', 'MarketBuzz', 'ResearchPortlet']
     models: ['Research']
     launch: ->
         console.log('launch')
-        Ext.create('cv.view.Main')
+        Ext.create('Cv.view.Main')
         if(location.href.indexOf('#') == -1)
             #TODO get default page
             console.log('redirect to default page')
@@ -24,7 +24,7 @@ cv.app = Ext.application
 
 
 
-cv.util = {
+Cv.util = {
     getCurrentHashUrl: ->
         return location.href.substring(location.href.indexOf('#')+1)
     getOrientation: ->

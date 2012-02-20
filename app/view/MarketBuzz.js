@@ -1,7 +1,7 @@
 (function() {
 
-  Ext.define('cv.view.MarketBuzz', {
-    extend: 'cv.view.Page',
+  Ext.define('Cv.view.MarketBuzz', {
+    extend: 'Cv.view.Page',
     config: {
       id: 'cvMarketBuzz',
       layout: {
@@ -14,7 +14,7 @@
             var newPortalItems, orientation;
             console.log('marketBuzz doOrientationChange');
             console.log(obj);
-            orientation = cv.util.getOrientation();
+            orientation = Cv.util.getOrientation();
             console.log(orientation);
             newPortalItems = obj.getPortalItems(orientation);
             obj.removeAll(false, true);
@@ -31,7 +31,7 @@
       if (Ext.os.is.Phone) {
         this.setItems(this.getPhonePortalItems());
       } else {
-        orientation = cv.util.getOrientation();
+        orientation = Cv.util.getOrientation();
         this.setItems(this.getPortalItems(orientation));
       }
       return this.callParent();
@@ -43,10 +43,10 @@
     },
     /*
         preCreatePortal: ->
-            @.cvResearchPortlet1 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet1',title: 'Daily Research 1'})
-            @.cvResearchPortlet2 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet2',title: 'Daily Research 2'})
-            @.cvResearchPortlet3 = Ext.create('cv.view.ResearchPortlet',{id: 'cvResearchPortlet3',title: 'Daily Research 3'})
-            @.cvVideoPortlet1 = Ext.create('cv.view.VideoPortlet',{id:'cvVideoPortlet1', title: 'CitiVelocity Video 1' })
+            @.cvResearchPortlet1 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet1',title: 'Daily Research 1'})
+            @.cvResearchPortlet2 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet2',title: 'Daily Research 2'})
+            @.cvResearchPortlet3 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet3',title: 'Daily Research 3'})
+            @.cvVideoPortlet1 = Ext.create('Cv.view.VideoPortlet',{id:'cvVideoPortlet1', title: 'CitiVelocity Video 1' })
     */
     getRelatedPortal: function() {
       this.cvResearchPortlet1 = Ext.getCmp('cvResearchPortlet1');

@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define("cv.view.Main", {
+  Ext.define("Cv.view.Main", {
     extend: 'Ext.Panel',
     config: {
       id: 'viewport',
@@ -17,7 +17,7 @@
     initialize: function() {
       var cvMenu;
       console.log('main init');
-      cvMenu = Ext.create('cv.view.Menu');
+      cvMenu = Ext.create('Cv.view.Menu');
       this.setItems([
         {
           docked: 'top',

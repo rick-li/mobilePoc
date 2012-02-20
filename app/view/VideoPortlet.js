@@ -1,7 +1,7 @@
 (function() {
 
-  Ext.define('cv.view.VideoPortlet', {
-    extend: 'cv.view.Portlet',
+  Ext.define('Cv.view.VideoPortlet', {
+    extend: 'Cv.view.Portlet',
     xtype: 'VideoPortlet',
     config: {
       layout: 'fit'
@@ -16,7 +16,7 @@
       list = new Ext.List({
         itemTpl: '<img style="float:left;" src="resources/img/ana_demo.jpg"><div class="headLine">{analystName}</div><div class="title">{title}</div><div class="pubDate">{formatedDate}</div>',
         pinHeaders: true,
-        store: cv.videoStore,
+        store: Cv.videoStore,
         itemCls: 'videolistitem'
       });
       return list;

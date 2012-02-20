@@ -1,4 +1,4 @@
-Ext.define('cv.view.Menu',
+Ext.define('Cv.view.Menu',
     extend: 'Ext.Toolbar'
     config:
         height: 40
@@ -37,5 +37,5 @@ Ext.define('cv.view.Menu',
             historyUrl: 'page/index/'+button.id
         )
 )
-#cv.views.menu = new cv.Menu()
-#Ext.reg('cvMenu', cv.Menu)
+#Cv.views.menu = new Cv.Menu()
+#Ext.reg('cvMenu', Cv.Menu)

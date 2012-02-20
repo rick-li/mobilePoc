@@ -1,5 +1,5 @@
-Ext.define('cv.view.ResearchPortlet',
-    extend: 'cv.view.Portlet'
+Ext.define('Cv.view.ResearchPortlet',
+    extend: 'Cv.view.Portlet'
     xtype: 'research'
     config:
         height: 200
@@ -8,7 +8,7 @@ Ext.define('cv.view.ResearchPortlet',
     createList: ->
         list = new Ext.List(
             itemTpl: '<div>{headLine}</div><div>{synopsis}</div>'
-            store: cv.researchStore
+            store: Cv.researchStore
         )
         return list
 )

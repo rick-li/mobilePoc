@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.controller.Main', {
+  Ext.define('Cv.controller.Main', {
     extend: 'Ext.app.Controller',
     config: {
       id: 'cvControllerMain'
