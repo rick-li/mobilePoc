@@ -15,7 +15,7 @@
             var newPortalItems, orientation;
             console.log('marketBuzz doOrientationChange');
             console.log(obj);
-            orientation = Ext.Viewport.determineOrientation();
+            orientation = cv.util.getOrientation();
             console.log(orientation);
             newPortalItems = obj.getPortalItems(orientation);
             obj.removeAll(false, true);
@@ -32,7 +32,7 @@
       if (Ext.os.is.Phone) {
         this.setItems(this.getPhonePortalItems());
       } else {
-        orientation = Ext.Viewport.determineOrientation();
+        orientation = cv.util.getOrientation();
         this.setItems(this.getPortalItems(orientation));
       }
       return this.callParent();

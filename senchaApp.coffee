@@ -27,5 +27,9 @@ cv.app = Ext.application
 cv.util = {
     getCurrentHashUrl: ->
         return location.href.substring(location.href.indexOf('#')+1)
+    getOrientation: ->
+        if Ext.Viewport.getWindowHeight() >= Ext.Viewport.getWindowWidth()
+            return Ext.Viewport.PORTRAIT
+        return Ext.Viewport.LANDSCAPE
 
 }

@@ -31,6 +31,12 @@
   cv.util = {
     getCurrentHashUrl: function() {
       return location.href.substring(location.href.indexOf('#') + 1);
+    },
+    getOrientation: function() {
+      if (Ext.Viewport.getWindowHeight() >= Ext.Viewport.getWindowWidth()) {
+        return Ext.Viewport.PORTRAIT;
+      }
+      return Ext.Viewport.LANDSCAPE;
     }
   };
 
