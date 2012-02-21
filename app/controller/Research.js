@@ -4,7 +4,7 @@
     extend: 'Ext.app.Controller',
     config: {
       refs: {
-        researchList: 'ResearchPortlet list',
+        researchList: 'ResearchPortlet dataview',
         researchBack: '#researchBack'
       },
       control: {

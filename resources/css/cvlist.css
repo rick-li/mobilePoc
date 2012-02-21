@@ -1,6 +1,6 @@
 /* line 5, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item {
-  backgound-color: +radial-gradient(top, #aaaaaa, #434343);
+  backgound-image: -webkit-linear-gradient(#aaaaaa, #cbcdcb 50%, #edeeed 55%, #efefef);
   background: url("../images/red-caret-right.png") no-repeat scroll 100% center;
   height: 80px;
   font: 12px arial,sans-serif;

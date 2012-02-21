@@ -3,7 +3,7 @@ $content_font_color: #434343;
 //@mixin cv-list{
 
   .cv-list-item{
-  	backgound-color: +radial-gradient(color-stops(#aaa, $content_font_color), top);
+  	backgound-image: -webkit-linear-gradient(#AAAAAA, #CBCDCB 50%, #EDEEED 55%, #EFEFEF);
   	background: url("../images/red-caret-right.png") no-repeat scroll 100% center ;
   	height: 80px;
   	font: 12px arial,sans-serif;
