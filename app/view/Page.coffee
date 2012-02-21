@@ -5,7 +5,7 @@ Ext.define('Cv.view.Page',
     extend: 'Ext.Panel'
     config:
         pageId: ''
-        scrollable: 'vertical'
+        #scrollable: 'vertical'
     ###
     constructor: (config)->
         @pageId = config?.pageId
