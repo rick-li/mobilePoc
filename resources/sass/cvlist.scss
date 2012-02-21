@@ -5,12 +5,12 @@ $content_font_color: #434343;
   .cv-list-item{
   	backgound-image: -webkit-linear-gradient(#AAAAAA, #CBCDCB 50%, #EDEEED 55%, #EFEFEF);
   	background: url("../images/red-caret-right.png") no-repeat scroll 100% center ;
-  	height: 80px;
-  	font: 12px arial,sans-serif;
+  	height: 100px;
+  	font: 13px arial,sans-serif;
   	width: 98%;
     
     .cv-list-item-content{
-      padding: 8px 15px 0 4px;
+      padding: 10px 15px 0 4px;
       div{
         white-space: nowrap !important;
         overflow:hidden !important;
@@ -20,40 +20,42 @@ $content_font_color: #434343;
       }
       .headLine{
         font-weight: bold;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 24px;
         color: $title_font_color;
-        padding-left: 26px;
+        padding-left: 27px;
         height: 26px;
       }
       .author{
-        font-weight: bold; 
+        font-weight: bold;
+        font-size: 14px; 
         color: $content_font_color;
         float: left;
         width: 45%;
-        padding-top: 4px;
+        padding: 6px 0 0 2px;
       }
       .pubDate{ 
         color: #7F7F7F;
+        font-size: 14px;
         float: right;
         width: 45%;
         text-align: right;
-        padding-top: 4px;
+        padding-top: 6px;
       }
       .content{
         color: $content_font_color;
-        height: 21px;
+        height: 30px;
         overflow: hidden;
-        padding:5px 0 0 2px;
+        padding:10px 0 0 3px;
         clear: both;
         float: left;
         white-space: nowrap;
         width: 100%;
       }
       .title{
-        font-size: 12px; 
         font-weight: bold;
         color: $content_font_color;
+        padding: 7px 0 0 3px;
       }
     }
   }

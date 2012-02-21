@@ -2,13 +2,13 @@
 .cv-list-item {
   backgound-image: -webkit-linear-gradient(#aaaaaa, #cbcdcb 50%, #edeeed 55%, #efefef);
   background: url("../images/red-caret-right.png") no-repeat scroll 100% center;
-  height: 80px;
-  font: 12px arial,sans-serif;
+  height: 100px;
+  font: 13px arial,sans-serif;
   width: 98%;
 }
 /* line 12, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content {
-  padding: 8px 15px 0 4px;
+  padding: 10px 15px 0 4px;
 }
 /* line 14, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content div {
@@ -22,42 +22,44 @@
 /* line 21, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .headLine {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #003298;
-  padding-left: 26px;
+  padding-left: 27px;
   height: 26px;
 }
 /* line 29, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .author {
   font-weight: bold;
+  font-size: 14px;
   color: #434343;
   float: left;
   width: 45%;
-  padding-top: 4px;
+  padding: 6px 0 0 2px;
 }
-/* line 36, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 37, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .pubDate {
   color: #7F7F7F;
+  font-size: 14px;
   float: right;
   width: 45%;
   text-align: right;
-  padding-top: 4px;
+  padding-top: 6px;
 }
-/* line 43, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 45, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .content {
   color: #434343;
-  height: 21px;
+  height: 30px;
   overflow: hidden;
-  padding: 5px 0 0 2px;
+  padding: 10px 0 0 3px;
   clear: both;
   float: left;
   white-space: nowrap;
   width: 100%;
 }
-/* line 53, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 55, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .title {
-  font-size: 12px;
   font-weight: bold;
   color: #434343;
+  padding: 7px 0 0 3px;
 }
