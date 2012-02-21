@@ -2,7 +2,7 @@ Ext.define 'Cv.controller.Video',
     extend: 'Ext.app.Controller'
     config:
         refs:
-            videoList: '#VideoPortlet list'
+            videoList: 'VideoPortlet dataview'
             videoBack: '#videoBack'
         control:
             videoList:

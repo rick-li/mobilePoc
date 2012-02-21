@@ -13,7 +13,7 @@ Cv.app = Ext.application
     name: 'Cv'
     profiles: ['Phone','Tablet']
     controllers: ['Research', 'Video']
-    views: ['Main', 'Menu', 'Page', 'ResearchPortlet']
+    views: ['Menu', 'Page', 'ResearchPortlet','CmCarousel']
     models: ['Research']
     launch: ->
         console.log('launch')
@@ -22,8 +22,6 @@ Cv.app = Ext.application
             #TODO get default page
             console.log('redirect to default page')
             @redirectTo('page/MarketBuzz')
-
-
 
 Cv.util = {
     getCurrentHashUrl: ->

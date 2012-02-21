@@ -45,6 +45,7 @@
       this.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2');
       this.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3');
       this.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1');
+      this.cvCarousel = Ext.getCmp('cvCarousel');
       if (this.cvResearchPortlet1) {
         Ext.layout.AbstractBox(this.cvResearchPortlet1, 1);
       } else {
@@ -65,24 +66,24 @@
           title: 'Daily Research 2'
         };
       }
-      if (this.cvResearchPortlet3) {
-        Ext.layout.AbstractBox(this.cvResearchPortlet3, 1);
-      } else {
-        this.cvResearchPortlet3 = {
-          xtype: 'ResearchPortlet',
-          flex: 1,
-          id: 'cvResearchPortlet3',
-          title: 'Daily Research 3'
-        };
-      }
       if (this.cvVideoPortlet1) {
-        return Ext.layout.AbstractBox(this.cvVideoPortlet1, 1);
+        Ext.layout.AbstractBox(this.cvVideoPortlet1, 1);
       } else {
-        return this.cvVideoPortlet1 = {
+        this.cvVideoPortlet1 = {
           xtype: 'VideoPortlet',
           flex: 1,
           id: 'cvVideoPortlet1',
           title: 'Video 1'
+        };
+      }
+      if (this.cvCarousel) {
+        return Ext.layout.AbstractBox(this.cvCarousel, 1);
+      } else {
+        return this.cvCarousel = {
+          xtype: 'CmCarousel',
+          flex: 1,
+          id: 'cvCarousel',
+          title: 'Citi Minute'
         };
       }
     },
@@ -95,18 +96,28 @@
           flex: 1,
           layout: 'vbox',
           items: [this.cvResearchPortlet1, this.cvResearchPortlet2]
-        }, this.cvResearchPortlet3
+        }, {
+          xtype: 'panel',
+          flex: 1,
+          layout: 'vbox',
+          items: [this.cvCarousel]
+        }
       ];
     },
     getPortraitItems: function() {
       console.log('marketBuzz getLandscapeItems');
       this.getRelatedPortal();
       return [
-        this.cvVideoPortlet1, {
+        {
           xtype: 'panel',
           flex: 2,
           layout: 'vbox',
-          items: [this.cvResearchPortlet1, this.cvResearchPortlet2, this.cvResearchPortlet3]
+          items: [this.cvCarousel, this.cvVideoPortlet1]
+        }, {
+          xtype: 'panel',
+          flex: 2,
+          layout: 'vbox',
+          items: [this.cvResearchPortlet1, this.cvResearchPortlet2]
         }
       ];
     }
