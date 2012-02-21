@@ -19,13 +19,13 @@ $content-bg-color: #EFE;
   
   .listitem{
   	backgound-color: +radial-gradient(color-stops(#aaa, $content-bg-color), top);
-  	height: 54px;
-  	font: 11px arial,sans-serif;
+  	height: 62px;
+  	font: 12px arial,sans-serif;
   }
   
   .listitem .headLine{
   	font-weight: bold;
-  	font-size: 13px;
+  	font-size: 14px;
   	color: #003298;
   }
   
@@ -45,9 +45,9 @@ $content-bg-color: #EFE;
   
   .listitem .content{
   	color: #434343;
-  	height: 15px;
+  	height: 16px;
   	overflow: hidden;
-  	padding-left:2px;
+  	padding:2px 0 0 2px;
   	clear: both;
   	float: left;
   	white-space: nowrap;
@@ -58,7 +58,7 @@ $content-bg-color: #EFE;
      height: 70px;
   }
   .videolistitem .headLine{
-    font: bold 12px arial,sans-serif;
+    font: bold 14px arial,sans-serif;
     color: #003298;
     line-height: 20px;
     white-space: nowrap;
@@ -66,13 +66,13 @@ $content-bg-color: #EFE;
   }
   
    .videolistitem .title{
-    font-size: 11px; 
+    font-size: 12px; 
     font-weight: bold;
     color: #434343;
   }
   
    .videolistitem .pubDate{ 
-    font-size: 10px; 
+    font-size: 11px; 
     color: #7F7F7F;
   }
 //}
