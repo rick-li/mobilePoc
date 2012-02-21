@@ -19,6 +19,7 @@ Ext.define('Cv.view.ResearchPortlet',
             scrollable: 
               direction: 'vertical'
               directionLock: true
+            scrollToTopOnRefresh: false
         )
         #console.log list.getViewItems()
         return list

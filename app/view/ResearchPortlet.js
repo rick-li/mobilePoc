@@ -21,7 +21,8 @@
         scrollable: {
           direction: 'vertical',
           directionLock: true
-        }
+        },
+        scrollToTopOnRefresh: false
       });
       return list;
     }
