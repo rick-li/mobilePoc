@@ -1,25 +1,31 @@
 /* line 5, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+.x-list {
+  background-color: #EEE !important;
+}
+
+/* line 8, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item {
-  backgound-image: -webkit-linear-gradient(#aaaaaa, #cbcdcb 50%, #edeeed 55%, #efefef);
-  background: url("../images/red-caret-right.png") no-repeat scroll 100% center;
+  background-image: -webkit-linear-gradient(#cccccc, #ddccdd, #ededee, #eeeeee);
   height: 100px;
   font: 13px arial,sans-serif;
-  width: 98%;
-}
-/* line 12, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
-.cv-list-item .cv-list-item-content {
-  padding: 10px 15px 0 4px;
+  width: 100%;
 }
 /* line 14, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+.cv-list-item .cv-list-item-content {
+  background: url("../images/red-caret-right.png") no-repeat scroll 100% center transparent;
+  width: 98%;
+  padding: 10px 15px 0 4px;
+}
+/* line 18, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content div {
   white-space: nowrap !important;
   overflow: hidden !important;
 }
-/* line 18, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 22, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .cv-list-item-download {
   background: url("../images/download-icon.png") no-repeat scroll 0 0 transparent;
 }
-/* line 21, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 25, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .headLine {
   font-weight: bold;
   font-size: 16px;
@@ -28,7 +34,7 @@
   padding-left: 27px;
   height: 26px;
 }
-/* line 29, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 33, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .author {
   font-weight: bold;
   font-size: 14px;
@@ -37,7 +43,7 @@
   width: 45%;
   padding: 6px 0 0 2px;
 }
-/* line 37, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 41, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .pubDate {
   color: #7F7F7F;
   font-size: 14px;
@@ -46,7 +52,7 @@
   text-align: right;
   padding-top: 6px;
 }
-/* line 45, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 49, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .content {
   color: #434343;
   height: 30px;
@@ -57,7 +63,7 @@
   white-space: nowrap;
   width: 100%;
 }
-/* line 55, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
+/* line 59, C:/software/git/mobilePoc/resources/sass/cvlist.scss */
 .cv-list-item .cv-list-item-content .title {
   font-weight: bold;
   color: #434343;
