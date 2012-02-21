@@ -18,14 +18,18 @@ Ext.define("Cv.view.Main",
                 {
                  docked: 'top'
                  xtype: 'toolbar'
-                 html:  '<div class="logo"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>'
+                 #html:  '<div class="logo"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>'
                  #layout: 'hbox'
                  #title: 'CitiVelocity'
                  #items: [{xtype: 'button', ui: 'ok', text: 'ok', handler: @okBtnHandler}]
-                 items: @getSpecialItems()
+                 items: @getSubItems()
                 }
                 {docked: 'top', items:[Ext.create 'Cv.view.Menu']}
             ]
+    getSubItems: ->
+      subItems = @getSpecialItems(); 
+      subItems.push {xtype:'image',centered:true,src:'resources/images/CitiV_Logo_Top.png',minWidth: 233,minHeight:30}
+      return subItems
     getSpecialItems: ->
         return []
     initialize: ->
