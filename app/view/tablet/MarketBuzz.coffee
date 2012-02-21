@@ -2,6 +2,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
     extend: 'Cv.view.MarketBuzz'
     config:
         id: 'cvTabletMarketBuzz'
+        scrollable: 'vertical'
         listeners: [
             {
                 event: 'doOrientationChange'

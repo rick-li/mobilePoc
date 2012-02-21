@@ -9,15 +9,19 @@ Ext.define('Cv.view.ResearchPortlet',
         @add(@createList())
         @callParent(arguments)
     createList: ->
-        list = new Ext.List(
-            #height: @getHeight()
-            itemTpl: '<div class="headLine">{headLine}</div><div><div class="author">{OBOPreferredName}</div><div class="pubDate">{formatedPubDate}</div></div><div class="content">{synopsis}</div>'
-            itemCls: 'listitem'
+        list = Ext.create('Ext.DataView'
+            baseCls: Ext.baseCSSPrefix + 'list'
+            cls: 'cv-dataview'
+            itemTpl: '<div class="cv-list-item-content"><div class="cv-list-item-download"><div class="headLine">{headLine}</div></div><div><div class="author">{OBOPreferredName}</div><div class="pubDate">{formatedPubDate}</div></div><div class="content">{synopsis}</div></div>'
+            itemCls: 'cv-list-item'
             store: Cv.researchStore
-            pinHeaders: true
-            #scrollable: true
+            #pinHeaders: true
+            scrollable: 
+              direction: 'vertical'
+              directionLock: true
+            scrollToTopOnRefresh: false
         )
+        #console.log list.getViewItems()
         return list
 
 )
-

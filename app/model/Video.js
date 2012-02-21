@@ -9,7 +9,7 @@
 
   Cv.videoStore = new Ext.data.JsonStore({
     model: 'Cv.model.Video',
-    data: videoData.list
+    data: videoTestData.list
   });
 
 }).call(this);

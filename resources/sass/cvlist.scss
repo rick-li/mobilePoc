@@ -1,78 +1,63 @@
-$content-bg-color: #EFE;
+$title_font_color: #003298;
+$content_font_color: #434343;
 //@mixin cv-list{
- 
-  .x-list-item{
-  	background: url("../images/red-caret-right.png") no-repeat scroll 98% center ;
+
+  .cv-list-item{
+  	backgound-image: -webkit-linear-gradient(#AAAAAA, #CBCDCB 50%, #EDEEED 55%, #EFEFEF);
+  	background: url("../images/red-caret-right.png") no-repeat scroll 100% center ;
+  	height: 100px;
+  	font: 13px arial,sans-serif;
+  	width: 98%;
+    
+    .cv-list-item-content{
+      padding: 10px 15px 0 4px;
+      div{
+        white-space: nowrap !important;
+        overflow:hidden !important;
+      }
+      .cv-list-item-download{
+        background: url("../images/download-icon.png") no-repeat scroll 0 0 transparent;
+      }
+      .headLine{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: $title_font_color;
+        padding-left: 27px;
+        height: 26px;
+      }
+      .author{
+        font-weight: bold;
+        font-size: 14px; 
+        color: $content_font_color;
+        float: left;
+        width: 45%;
+        padding: 6px 0 0 2px;
+      }
+      .pubDate{ 
+        color: #7F7F7F;
+        font-size: 14px;
+        float: right;
+        width: 45%;
+        text-align: right;
+        padding-top: 6px;
+      }
+      .content{
+        color: $content_font_color;
+        height: 30px;
+        overflow: hidden;
+        padding:10px 0 0 3px;
+        clear: both;
+        float: left;
+        white-space: nowrap;
+        width: 100%;
+      }
+      .title{
+        font-weight: bold;
+        color: $content_font_color;
+        padding: 7px 0 0 3px;
+      }
+    }
   }
-  .x-list-item .x-list-item-label {
-    width: 95%;
-  }
-  .x-list-item .x-list-item-label div{
-    white-space: nowrap !important;
-    overflow:hidden !important;
-  }
-  
-  .x-list .x-list-item.x-item-selected{
-    background: url("../images/red-caret-right.png") no-repeat scroll 98% center #729fdc;
-    text-shadow: none;
-  }
-  
-  .listitem{
-  	backgound-color: +radial-gradient(color-stops(#aaa, $content-bg-color), top);
-  	height: 54px;
-  	font: 11px arial,sans-serif;
-  }
-  
-  .listitem .headLine{
-  	font-weight: bold;
-  	font-size: 13px;
-  	color: #003298;
-  }
-  
-  .listitem .author{
-  	font-weight: bold; 
-  	color: #434343;
-  	float: left;
-  	width: 45%;
-  }
-  
-  .listitem .pubDate{ 
-  	color: #7F7F7F;
-  	float: right;
-  	width: 45%;
-  	text-align: right;
-  }
-  
-  .listitem .content{
-  	color: #434343;
-  	height: 15px;
-  	overflow: hidden;
-  	padding-left:2px;
-  	clear: both;
-  	float: left;
-  	white-space: nowrap;
-  	width: 100%;
-  }
-  
-  .videolistitem{
-     height: 70px;
-  }
-  .videolistitem .headLine{
-    font: bold 12px arial,sans-serif;
-    color: #003298;
-    line-height: 20px;
-    white-space: nowrap;
-    overflow:hidden;
-  }
-  
-   .videolistitem .title{
-    font-size: 11px; 
-    font-weight: bold;
-    color: #434343;
-  }
-  
-   .videolistitem .pubDate{ 
-    font-size: 10px; 
-    color: #7F7F7F;
-  }
+
 //}
