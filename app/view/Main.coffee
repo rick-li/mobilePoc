@@ -13,20 +13,23 @@ Ext.define("Cv.view.Main",
         if cvMarketBuzz
             cvMarketBuzz.fireEvent('doOrientationChange', cvMarketBuzz)
     ###
-    initialize: ->
-        console.log 'main init'
-        cvMenu = Ext.create 'Cv.view.Menu'
-        @setItems ([
+    getTitleItems: ->
+        return [
                 {
                  docked: 'top'
                  xtype: 'toolbar'
-                 html:  '<div style="margin-left:42%;"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>'
+                 html:  '<div class="logo"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>'
                  #layout: 'hbox'
                  #title: 'CitiVelocity'
                  #items: [{xtype: 'button', ui: 'ok', text: 'ok', handler: @okBtnHandler}]
-                 #items: [{xtype:'searchfield',name: 'searchfield',placeholder: 'Search...'}]
+                 items: @getSpecialItems()
                 }
-                {docked: 'top', items:[cvMenu]}
-            ])
-        @callParent(arguments)
+                {docked: 'top', items:[Ext.create 'Cv.view.Menu']}
+            ]
+    getSpecialItems: ->
+        return []
+    initialize: ->
+        console.log 'main init'
+        @setItems(@getTitleItems())
+        @callParent()
 )

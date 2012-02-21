@@ -14,3 +14,18 @@
 #menuBarButtons .x-button-pressed{
   background: url("../images/arrow_red.png") no-repeat center top;
 }
+
+.logo {
+    position:absolute;
+    top:0;
+    left: 40%
+}
+
+.search{
+    position:absolute;
+    right: 40%
+}
+
+.cv-dataview .x-dataview-inner{
+  width: 100%;
+}

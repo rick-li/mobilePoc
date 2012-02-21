@@ -2,7 +2,7 @@ Ext.define 'Cv.controller.Research',
     extend: 'Ext.app.Controller'
     config:
         refs:
-            researchList: 'research list'
+            researchList: 'ResearchPortlet dataview'
             researchBack: '#researchBack'
         control:
             researchList:
@@ -53,3 +53,4 @@ Ext.define 'Cv.controller.Research',
         Ext.getCmp('viewport').setActiveItem(detail, {type: 'slide', direction: 'left'})
     launch: ->
         console.log 'launch research controller'
+

@@ -13,7 +13,7 @@
     onOrientationChange: function(viewport, orientation, width, height) {
       var cvMarketBuzz;
       console.log('Orientation Change: ' + orientation + ";width:" + width + ";height:" + height);
-      cvMarketBuzz = Ext.getCmp('cvMarketBuzz');
+      cvMarketBuzz = Ext.getCmp('cvTabletMarketBuzz');
       if (cvMarketBuzz) {
         return cvMarketBuzz.fireEvent('doOrientationChange', cvMarketBuzz);
       }
