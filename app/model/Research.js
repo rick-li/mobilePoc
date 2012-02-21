@@ -3,7 +3,8 @@
   Ext.define('Cv.model.Research', {
     extend: 'Ext.data.Model',
     config: {
-      fields: ['pubId', 'headLine', 'synopsis', 'fileLink', 'OBOPreferredName', 'formatedPubDate']
+      fields: ['pubId', 'headLine', 'synopsis', 'fileLink', 'OBOPreferredName', 'formatedPubDate'],
+      pageSize: 5
     }
   });
 

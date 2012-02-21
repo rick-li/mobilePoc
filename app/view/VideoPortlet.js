@@ -13,11 +13,13 @@
     },
     createList: function() {
       var list;
-      list = new Ext.List({
-        itemTpl: '<img style="float:left;" src="resources/img/ana_demo.jpg"><div class="headLine">{analystName}</div><div class="title">{title}</div><div class="pubDate">{formatedDate}</div>',
+      list = Ext.create('Ext.DataView', {
+        baseCls: Ext.baseCSSPrefix + 'list',
+        cls: 'cv-dataview',
+        itemTpl: '<div class="cv-list-item-content"><img style="float:left;" src="resources/img/ana_demo.jpg"><div class="headLine" style="padding-left:0px !important;">{analystName}</div><div class="title">{title}</div><div class="pubDate">{formatedDate}</div></div>',
         pinHeaders: true,
         store: Cv.videoStore,
-        itemCls: 'videolistitem'
+        itemCls: 'cv-list-item'
       });
       return list;
     }

@@ -1,78 +1,61 @@
-$content-bg-color: #EFE;
+$title_font_color: #003298;
+$content_font_color: #434343;
 //@mixin cv-list{
- 
-  .x-list-item{
-  	background: url("../images/red-caret-right.png") no-repeat scroll 98% center ;
-  }
-  .x-list-item .x-list-item-label {
-    width: 95%;
-  }
-  .x-list-item .x-list-item-label div{
-    white-space: nowrap !important;
-    overflow:hidden !important;
-  }
-  
-  .x-list .x-list-item.x-item-selected{
-    background: url("../images/red-caret-right.png") no-repeat scroll 98% center #729fdc;
-    text-shadow: none;
-  }
-  
-  .listitem{
-  	backgound-color: +radial-gradient(color-stops(#aaa, $content-bg-color), top);
-  	height: 62px;
+
+  .cv-list-item{
+  	backgound-color: +radial-gradient(color-stops(#aaa, $content_font_color), top);
+  	background: url("../images/red-caret-right.png") no-repeat scroll 100% center ;
+  	height: 80px;
   	font: 12px arial,sans-serif;
+  	width: 98%;
+    
+    .cv-list-item-content{
+      padding: 8px 15px 0 4px;
+      div{
+        white-space: nowrap !important;
+        overflow:hidden !important;
+      }
+      .cv-list-item-download{
+        background: url("../images/download-icon.png") no-repeat scroll 0 0 transparent;
+      }
+      .headLine{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        color: $title_font_color;
+        padding-left: 26px;
+        height: 26px;
+      }
+      .author{
+        font-weight: bold; 
+        color: $content_font_color;
+        float: left;
+        width: 45%;
+        padding-top: 4px;
+      }
+      .pubDate{ 
+        color: #7F7F7F;
+        float: right;
+        width: 45%;
+        text-align: right;
+        padding-top: 4px;
+      }
+      .content{
+        color: $content_font_color;
+        height: 21px;
+        overflow: hidden;
+        padding:5px 0 0 2px;
+        clear: both;
+        float: left;
+        white-space: nowrap;
+        width: 100%;
+      }
+      .title{
+        font-size: 12px; 
+        font-weight: bold;
+        color: $content_font_color;
+      }
+    }
   }
-  
-  .listitem .headLine{
-  	font-weight: bold;
-  	font-size: 14px;
-  	color: #003298;
-  }
-  
-  .listitem .author{
-  	font-weight: bold; 
-  	color: #434343;
-  	float: left;
-  	width: 45%;
-  }
-  
-  .listitem .pubDate{ 
-  	color: #7F7F7F;
-  	float: right;
-  	width: 45%;
-  	text-align: right;
-  }
-  
-  .listitem .content{
-  	color: #434343;
-  	height: 16px;
-  	overflow: hidden;
-  	padding:2px 0 0 2px;
-  	clear: both;
-  	float: left;
-  	white-space: nowrap;
-  	width: 100%;
-  }
-  
-  .videolistitem{
-     height: 70px;
-  }
-  .videolistitem .headLine{
-    font: bold 14px arial,sans-serif;
-    color: #003298;
-    line-height: 20px;
-    white-space: nowrap;
-    overflow:hidden;
-  }
-  
-   .videolistitem .title{
-    font-size: 12px; 
-    font-weight: bold;
-    color: #434343;
-  }
-  
-   .videolistitem .pubDate{ 
-    font-size: 11px; 
-    color: #7F7F7F;
-  }
+
 //}
