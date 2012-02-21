@@ -3,11 +3,11 @@ Ext.define('Cv.profile.Phone'
     config: 
         name: 'phone'
         controllers: ['Page']
-        views: ['MarketBuzz']
+        views: ['Main','MarketBuzz']
     isActive: ->
         return Ext.os.is.Phone;
     launch: ->
         console.log Date.now() + ' Cv.profile.Phone launch'
         @callParent()
-        Ext.create('Cv.view.Main',{height: 600})
+        Ext.create('Cv.view.phone.Main',{height: 600})
 )

@@ -14,32 +14,26 @@
             if cvMarketBuzz
                 cvMarketBuzz.fireEvent('doOrientationChange', cvMarketBuzz)
     */
-    initialize: function() {
-      var cvMenu;
-      console.log('main init');
-      cvMenu = Ext.create('Cv.view.Menu');
-      this.setItems([
+    getTitleItems: function() {
+      return [
         {
           docked: 'top',
           xtype: 'toolbar',
           html: '<div class="logo"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>',
-          items: [
-            {
-              xtype: 'searchfield',
-              name: 'searchfield',
-              placeholder: 'Search...',
-              cls: 'search'
-            }, {
-              ui: 'back',
-              text: 'back'
-            }
-          ]
+          items: this.getSpecialItems()
         }, {
           docked: 'top',
-          items: [cvMenu]
+          items: [Ext.create('Cv.view.Menu')]
         }
-      ]);
-      return this.callParent(arguments);
+      ];
+    },
+    getSpecialItems: function() {
+      return [];
+    },
+    initialize: function() {
+      console.log('main init');
+      this.setItems(this.getTitleItems());
+      return this.callParent();
     }
   });
 

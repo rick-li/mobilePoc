@@ -17,7 +17,7 @@
     name: 'Cv',
     profiles: ['Phone', 'Tablet'],
     controllers: ['Research', 'Video'],
-    views: ['Main', 'Menu', 'Page', 'ResearchPortlet'],
+    views: ['Menu', 'Page', 'ResearchPortlet', 'CmCarousel'],
     models: ['Research'],
     launch: function() {
       console.log('launch');

@@ -3,11 +3,11 @@ Ext.define('Cv.profile.Tablet'
     config: 
         name: 'tablet'
         controllers: ['Main','Page']
-        views: ['MarketBuzz']
+        views: ['Main','MarketBuzz']
     isActive: ->
         return Ext.os.is.Desktop || Ext.os.is.Tablet
     launch: ->
         console.log Date.now() + ' Cv.profile.Tablet launch'
         @callParent()
-        Ext.create('Cv.view.Main')
+        Ext.create('Cv.view.tablet.Main')
 )
