@@ -31,6 +31,7 @@ body {
 }
 
 .my-carousel-item-img {
+    margin:5px;
     background-position: center center;
 }
 
@@ -47,14 +48,13 @@ body {
 //custom style
 
 .cm-container{
-    background: url("../images/Citi_Minute_BG_Image.png") no-repeat;
+    background: url("../images/Citi_Minute_BG_Image.png");
 }
 
 .cm-carousel-text{
     font-size:12px;
     font-weight:bold;
     color:white;
-    padding-top: 5px;
     padding-left: 15px;
     line-height:20px;
 }

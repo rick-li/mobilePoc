@@ -1,9 +1,9 @@
-/* line 3, C:/software/git/mobilePoc/resources/sass/carousel.scss */
+/* line 3, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
 body {
   background-color: #000;
 }
 
-/* line 7, C:/software/git/mobilePoc/resources/sass/carousel.scss */
+/* line 7, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
 .my-carousel-item {
   background: url(images/loading.png) no-repeat center center;
 }
@@ -21,43 +21,43 @@ body {
     }
 }
 */
-/* line 25, C:/software/git/mobilePoc/resources/sass/carousel.scss */
+/* line 25, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
 .x-portrait .my-carousel-item-img {
   background-size: 100% auto;
 }
 
-/* line 29, C:/software/git/mobilePoc/resources/sass/carousel.scss */
+/* line 29, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
 .x-landscape .my-carousel-item-img {
   background-size: auto 100%;
 }
 
-/* line 33, C:/software/git/mobilePoc/resources/sass/carousel.scss */
+/* line 33, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
 .my-carousel-item-img {
+  margin: 5px;
   background-position: center center;
 }
 
-/* line 37, C:/software/git/mobilePoc/resources/sass/carousel.scss */
+/* line 38, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
 .x-carousel-indicator > * {
   background-color: white !important;
   opacity: 0.4;
 }
 
-/* line 42, C:/software/git/mobilePoc/resources/sass/carousel.scss */
+/* line 43, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
 .x-carousel-indicator > .x-carousel-indicator-active {
   opacity: 1;
 }
 
-/* line 49, C:/software/git/mobilePoc/resources/sass/carousel.scss */
+/* line 50, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
 .cm-container {
-  background: url("../images/Citi_Minute_BG_Image.png") no-repeat;
+  background: url("../images/Citi_Minute_BG_Image.png");
 }
 
-/* line 53, C:/software/git/mobilePoc/resources/sass/carousel.scss */
+/* line 54, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
 .cm-carousel-text {
   font-size: 12px;
   font-weight: bold;
   color: white;
-  padding-top: 5px;
   padding-left: 15px;
   line-height: 20px;
 }
