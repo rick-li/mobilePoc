@@ -37,7 +37,7 @@
             }, {
               xtype: 'VideoPortlet',
               id: 'cvVideoPortlet',
-              title: 'Video 1',
+              title: 'Citi Velocity Video',
               height: '300px'
             }
           ]
