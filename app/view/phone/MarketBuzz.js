@@ -3,7 +3,8 @@
   Ext.define('Cv.view.phone.MarketBuzz', {
     extend: 'Cv.view.MarketBuzz',
     config: {
-      id: 'cvPhoneMarketBuzz'
+      id: 'cvPhoneMarketBuzz',
+      scrollable: 'vertical'
     },
     getPortletItems: function() {
       console.log('marketBuzz phone getPortletItems');
@@ -15,22 +16,22 @@
           items: [
             {
               xtype: 'VideoPortlet',
-              flex: 1,
+              height: '300px',
               id: 'cvVideoPortlet1',
               title: 'Video 1'
             }, {
               xtype: 'ResearchPortlet',
-              flex: 1,
+              height: '300px',
               id: 'cvResearchPortlet1',
               title: 'Daily Research 1'
             }, {
               xtype: 'CommentaryPortlet',
-              flex: 1,
+              height: '300px',
               id: 'cvCommentaryPortlet2',
               title: 'Daily Commentary'
             }, {
               xtype: 'ResearchPortlet',
-              flex: 1,
+              height: '300px',
               id: 'cvResearchPortlet3',
               title: 'Daily Research 3'
             }
