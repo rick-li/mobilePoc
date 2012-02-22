@@ -14,25 +14,25 @@
           layout: 'vbox',
           items: [
             {
+              xtype: 'TopStoriesPortlet',
+              flex: 1,
+              id: 'cvTopStoriesPortlet',
+              title: 'Top Stories'
+            }, {
+              xtype: 'CmCarouse',
+              flex: 1,
+              id: 'cvCarouse',
+              title: 'Citi Minute'
+            }, {
+              xtype: 'ResearchPortlet',
+              flex: 1,
+              id: 'cvResearchPortlet',
+              title: 'Daily Research'
+            }, {
               xtype: 'VideoPortlet',
               flex: 1,
-              id: 'cvVideoPortlet1',
-              title: 'Video 1'
-            }, {
-              xtype: 'ResearchPortlet',
-              flex: 1,
-              id: 'cvResearchPortlet1',
-              title: 'Daily Research 1'
-            }, {
-              xtype: 'ResearchPortlet',
-              flex: 1,
-              id: 'cvResearchPortlet2',
-              title: 'Daily Research 2'
-            }, {
-              xtype: 'ResearchPortlet',
-              flex: 1,
-              id: 'cvResearchPortlet3',
-              title: 'Daily Research 3'
+              id: 'cvVideoPortlet',
+              title: 'Citi Velocity Video'
             }
           ]
         }
