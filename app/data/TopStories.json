@@ -1,0 +1,141 @@
+var topStoriesData = [
+  {
+    "topics": [
+      {
+        "docDt": "09 Feb 2012 07:47 EST",
+        "type": "COMMENTARY",
+        "docId": "12020907491278410",
+        "title": "ECB Holds Rates and Non-conventional Policy As Expected",
+        "summary": "\r  \r  ECB Holds Rates and Non-conventional Policy As Expected\r  \r  \r  \r  Published by: CitiFX Wire\r  \r  9 February 2012\r  \r  ________________________________\r  \r  (c) 2011 Citibank N.A. All rights reserved.\r  CITI and Arc Design is a registered service mark of Citigroup Inc.\r  \r  Contact: CitiFXWire",
+        "authorId": "863",
+        "contentUrl": "/geo/alerts/equity/12020907491278410.html",
+        "authorName": " Aerin  Williams",
+        "authorImageUrl": "/images/analystThumb/salesAnalyst/analyst_863.jpg",
+        "position": "1:1",
+        "order": 0,
+        "videoImage": " ",
+        "videoUrl": " ",
+        "iuo": false
+      },
+      {
+        "docDt": "06 Feb 2012 03:41 EST",
+        "type": "COMMENTARY",
+        "docId": "12020603424673510",
+        "title": "Citi Daily Planet 6th Feb 2012   (LIQUIDITY - LTRO bigger than QE1+QE2? / ASIA strategy  - low expec",
+        "summary": "THIS IS MARKET COMMENTARY                        Monday 6th Feb 2012\r                DAILY PLANET     \r  \r  Macro, Headlines and Earnings\r  LIQUIDITY: The chart below from Mo Apahbai in Hong Kong shows the relationship between Central Bank policy action and inflows into Asia. With the ECB poised to ",
+        "authorId": "1066",
+        "contentUrl": "/geo/alerts/equity/12020603424673510.html",
+        "authorName": "Nersen Pillay",
+        "authorImageUrl": "/geo/images/marketbuzz/no_analyst.gif",
+        "position": "1:1",
+        "order": 1,
+        "videoImage": " ",
+        "videoUrl": " ",
+        "iuo": false
+      }
+    ],
+    "title": "vinod",
+    "authorName": " ",
+    "summary": " ",
+    "publishAt": "21 Feb 2012 02:50 EST",
+    "seqNo": 0
+  },
+  {
+    "topics": [
+      {
+        "docDt": "18 Jan 2012 16:53 EST",
+        "type": "COMMENTARY",
+        "docId": "12012009225443010",
+        "title": "Eurozone Cheatsheet - Asia Open",
+        "summary": "\r\n\r\nEurozone Cheatsheet - Asia Open\r\n\r\nLatest Developments\r\n\r\n*         Greece continues to race against a pressing deadline. A debt payment of EUR15.2bn (bond coupon + redemption) is due in March, bringing all attention on Wednesday on debt restructuring talks, commitment for additional support fro",
+        "authorId": "863",
+        "contentUrl": "/geo/alerts/equity/12012009225443010.html",
+        "authorName": " Aerin  Williams",
+        "authorImageUrl": "/images/analystThumb/salesAnalyst/analyst_863.jpg",
+        "position": "1:1",
+        "order": 0,
+        "videoImage": " ",
+        "videoUrl": " ",
+        "iuo": false
+      },
+      {
+        "docDt": "06 Feb 2012 22:37 EST",
+        "type": "COMMENTARY",
+        "docId": "12020622380012110",
+        "title": "RBA Leaves Rates Unchanged; AUD Jumps",
+        "summary": "\r  \r  RBA Leaves Rates Unchanged; AUD Jumps\r  \r  The RBA leaves rates unchanged at 4.25%, defying market expectations for a 25bps cut. Its accompanying statement leaves the door open to further cuts, saying that if demand weakens then the inflation outlook leaves room for further easing. European ri",
+        "authorId": "912",
+        "contentUrl": "/geo/alerts/equity/12020622380012110.html",
+        "authorName": "James Thornhill",
+        "authorImageUrl": "/images/analystThumb/salesAnalyst/analyst_912.jpg",
+        "position": "1:1",
+        "order": 1,
+        "videoImage": " ",
+        "videoUrl": " ",
+        "iuo": false
+      },
+      {
+        "docDt": "07 Feb 2012 16:53 EST",
+        "type": "COMMENTARY",
+        "docId": "12020716554928910",
+        "title": "NY Wrap: Busy Day As Rates Rise",
+        "summary": "It was a  busy day in U.S. credit  markets, where spreads were mixed and good volume was  traded  across many different sectors.  Early action was centered in yesterday\u0027s new issues, which did well and tightened on the break.  Some profit taking was seen in financials, yet there were both BWICs and ",
+        "authorId": "975",
+        "contentUrl": "/geo/alerts/equity/12020716554928910.html",
+        "authorName": "Credit",
+        "authorImageUrl": "/geo/images/marketbuzz/no_analyst.gif",
+        "position": "1:1",
+        "order": 2,
+        "videoImage": " ",
+        "videoUrl": " ",
+        "iuo": false
+      }
+    ],
+    "title": "QA Top Stories",
+    "authorName": " ",
+    "summary": " ",
+    "publishAt": "21 Feb 2012 02:50 EST",
+    "seqNo": 0
+  },
+  {
+    "topics": [
+      {
+        "docDt": "28 Sep 2011 18:46 EDT",
+        "type": "RESEARCH",
+        "docId": "SGL51412",
+        "title": "The Point for Asia Pacific: Thursday, 29 September 2011: Zhuzhou CSR - Initiate at Buy: Hard-wired t",
+        "summary": " ",
+        "authorId": "8766",
+        "contentUrl": "/geo/pdf/SGL51412.pdf",
+        "authorName": "CIRA Asia",
+        "authorImageUrl": "/geo/images/marketbuzz/no_analyst.gif",
+        "position": "1:1",
+        "order": 0,
+        "videoImage": " ",
+        "videoUrl": " ",
+        "iuo": false
+      },
+      {
+        "docDt": "09 Feb 2012 12:37 EST",
+        "type": "COMMENTARY",
+        "docId": "12020912403048510",
+        "title": "Midday NY: Busy Session; Some Supply As Rates Rise",
+        "summary": "Credit markets are experiencing another busy session as spreads lean wider amid an influx of supply as Treasury rates rise. Most of the new supply is centered in the 5- 10-yr part of the curve as the long bond yield rises about 6bp to 3.20%, the highest since October.\r  \r  Banks and financials are s",
+        "authorId": "975",
+        "contentUrl": "/geo/alerts/equity/12020912403048510.html",
+        "authorName": "Credit",
+        "authorImageUrl": "/geo/images/marketbuzz/no_analyst.gif",
+        "position": "1:1",
+        "order": 1,
+        "videoImage": " ",
+        "videoUrl": " ",
+        "iuo": false
+      }
+    ],
+    "title": "EU Debt Crisis Update",
+    "authorName": " ",
+    "summary": " ",
+    "publishAt": "21 Feb 2012 02:50 EST",
+    "seqNo": 0
+  }
+]

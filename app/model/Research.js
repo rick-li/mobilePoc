@@ -10,7 +10,7 @@
 
   Cv.researchStore = new Ext.data.JsonStore({
     model: 'Cv.model.Research',
-    data: researchTestData.store.data.list
+    data: researchData.store.data.list
   });
 
 }).call(this);
