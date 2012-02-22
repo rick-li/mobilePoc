@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * PhoneGap is available under *either* the terms of the modified BSD license *or* the
  * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
@@ -27,4 +29,66 @@ PdfViewer.prototype.play = function(url) {
  */
 PhoneGap.addConstructor(function() {
     PhoneGap.addPlugin("pdfViewer", new PdfViewer());
+=======
+/*
+ * PhoneGap is available under *either* the terms of the modified BSD license *or* the
+ * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
+ *
+ * Copyright (c) 2005-2010, Nitobi Software Inc.
+ * Copyright (c) 2011, IBM Corporation
+ */
+
+/**
+ * Constructor
+ */
+function PdfViewer() {
+};
+
+/**
+ * Starts the pdf viewer intent
+ *
+ * @param url Pdf url 
+ */
+PdfViewer.prototype.play = function(url) {
+	console.log('play pdf');
+    PhoneGap.exec(null, null, "PdfViewer", "viewPdf", [url]);
+};
+
+/**
+ * Load PdfPlayer
+ */
+PhoneGap.addConstructor(function() {
+    PhoneGap.addPlugin("pdfViewer", new PdfViewer());
+>>>>>>> b7764ef3faf1b4899c3ec58583d8e0bf86b0b3d8
+=======
+/*
+ * PhoneGap is available under *either* the terms of the modified BSD license *or* the
+ * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
+ *
+ * Copyright (c) 2005-2010, Nitobi Software Inc.
+ * Copyright (c) 2011, IBM Corporation
+ */
+
+/**
+ * Constructor
+ */
+function PdfViewer() {
+};
+
+/**
+ * Starts the pdf viewer intent
+ *
+ * @param url Pdf url 
+ */
+PdfViewer.prototype.play = function(url) {
+	console.log('play pdf');
+    PhoneGap.exec(null, null, "PdfViewer", "viewPdf", [url]);
+};
+
+/**
+ * Load PdfPlayer
+ */
+PhoneGap.addConstructor(function() {
+    PhoneGap.addPlugin("pdfViewer", new PdfViewer());
+>>>>>>> b7764ef3faf1b4899c3ec58583d8e0bf86b0b3d8
 });
