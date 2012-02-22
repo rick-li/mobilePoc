@@ -9,8 +9,7 @@
           xtype: 'searchfield',
           name: 'searchfield',
           placeholder: 'Search...',
-          cls: 'search',
-          dock: 'right'
+          docked: 'right'
         }
       ];
     }

@@ -2,6 +2,7 @@
   backgound-color: #EFE;
   /*height:200px;*/
   border: 0;
+  border-right:1px solid #333;
 }
 
 .portal .portalTitle{
@@ -19,11 +20,6 @@
     position:absolute;
     top:0;
     left: 40%
-}
-
-.search{
-    position:absolute;
-    right: 40%
 }
 
 .cv-dataview .x-dataview-inner{

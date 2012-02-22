@@ -2,14 +2,18 @@ $title_font_color: #003298;
 $content_font_color: #434343;
 //@mixin cv-list{
 
+  .x-list{
+    background-color: #EEE !important;
+  }
   .cv-list-item{
-  	backgound-image: -webkit-linear-gradient(#AAAAAA, #CBCDCB 50%, #EDEEED 55%, #EFEFEF);
-  	background: url("../images/red-caret-right.png") no-repeat scroll 100% center ;
+  	background-image: -webkit-linear-gradient(#CCC, #DCD, #EDEDEE, #EEE);
   	height: 100px;
   	font: 13px arial,sans-serif;
-  	width: 98%;
+    width: 100%;
     
     .cv-list-item-content{
+    	background: url("../images/red-caret-right.png") no-repeat scroll 100% center transparent;
+    	width: 98%;
       padding: 10px 15px 0 4px;
       div{
         white-space: nowrap !important;
@@ -18,7 +22,7 @@ $content_font_color: #434343;
       .cv-list-item-download{
         background: url("../images/download-icon.png") no-repeat scroll 0 0 transparent;
       }
-      .headLine{
+      .headline{
         font-weight: bold;
         font-size: 16px;
         line-height: 24px;
@@ -34,7 +38,7 @@ $content_font_color: #434343;
         width: 45%;
         padding: 6px 0 0 2px;
       }
-      .pubDate{ 
+      .pubdate{ 
         color: #7F7F7F;
         font-size: 14px;
         float: right;

@@ -19,13 +19,24 @@
         {
           docked: 'top',
           xtype: 'toolbar',
-          html: '<div class="logo"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>',
-          items: this.getSpecialItems()
+          items: this.getSubItems()
         }, {
           docked: 'top',
           items: [Ext.create('Cv.view.Menu')]
         }
       ];
+    },
+    getSubItems: function() {
+      var subItems;
+      subItems = this.getSpecialItems();
+      subItems.push({
+        xtype: 'image',
+        centered: true,
+        src: 'resources/images/CitiV_Logo_Top.png',
+        minWidth: 233,
+        minHeight: 30
+      });
+      return subItems;
     },
     getSpecialItems: function() {
       return [];

@@ -4,7 +4,6 @@
     extend: 'Cv.view.Portlet',
     xtype: 'CmCarousel',
     config: {
-      layout: 'fit',
       height: 280
     },
     initialize: function() {
@@ -17,18 +16,34 @@
       return this.callParent();
     },
     getCrls: function() {
-      var i, img, imgs, items, ln;
+      var date, i, img, imgs, items, list, ln, title;
       console.log('get Carousel');
-      imgs = ["cm1", "cm2"];
+      list = cmData.list;
+      imgs = ["cm1", "cm2", "Citi_Minute_Horizontal_480x262"];
       i = 0;
-      ln = imgs.length;
+      ln = cmData.size;
       items = [];
       while (i < ln) {
         img = imgs[i];
+        title = list[i].title;
+        date = list[i].formatedDate;
         items.push({
-          xtype: "image",
-          cls: "my-carousel-item-img",
-          src: "resources/images/" + img + ".png"
+          xtype: 'panel',
+          layout: 'vbox',
+          cls: 'cm-container',
+          items: [
+            {
+              xtype: "image",
+              flex: '3.5',
+              cls: "my-carousel-item-img",
+              src: "resources/images/" + img + ".png"
+            }, {
+              dock: 'bottom',
+              html: '<div>' + title + '</div><div>' + date + '</div>',
+              flex: '1',
+              cls: 'cm-carousel-text'
+            }
+          ]
         });
         i++;
       }
