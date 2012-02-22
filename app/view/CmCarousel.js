@@ -16,18 +16,17 @@
       return this.callParent();
     },
     getCrls: function() {
-      var date, dates, i, img, imgs, items, ln, title, titles;
+      var date, i, img, imgs, items, list, ln, title;
       console.log('get Carousel');
-      imgs = ["cm1", "cm2"];
-      titles = ['Emerging Markets Daily: Latin America Edition', 'Norway: Annual Address: No Policy Signals, Balanced Tone'];
-      dates = ['08 Feb 12 03:54', '01 Dec 11 21:44'];
+      list = cmData.list;
+      imgs = ["cm1", "cm2", "Citi_Minute_Horizontal_480x262"];
       i = 0;
-      ln = imgs.length;
+      ln = cmData.size;
       items = [];
       while (i < ln) {
         img = imgs[i];
-        title = titles[i];
-        date = dates[i];
+        title = list[i].title;
+        date = list[i].formatedDate;
         items.push({
           xtype: 'panel',
           layout: 'vbox',
