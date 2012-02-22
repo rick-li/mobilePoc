@@ -20,6 +20,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
         ]
     getPortletItems: ()->
         console.log 'marketBuzz getPortletItems'
+        #@preCreatePortal()
         #orientation = Ext.Viewport.determineOrientation()
         orientation = Cv.util.getOrientation()
         return @getTabletItems(orientation)
@@ -28,42 +29,63 @@ Ext.define('Cv.view.tablet.MarketBuzz',
         if orientation is 'landscape'
             return @getLandscapeItems()
         return @getPortraitItems()
+    ###
+    preCreatePortal: ->
+        @.cvResearchPortlet1 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet1',title: 'Daily Research 1'})
+        @.cvResearchPortlet2 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet2',title: 'Daily Research 2'})
+        @.cvResearchPortlet3 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet3',title: 'Daily Research 3'})
+        @.cvVideoPortlet1 = Ext.create('Cv.view.VideoPortlet',{id:'cvVideoPortlet1', title: 'CitiVelocity Video 1' })
+    ###
     getRelatedPortal: ->
-        @.cvResearchPortlet = Ext.getCmp('cvResearchPortlet')
-        @.cvVideoPortlet = Ext.getCmp('cvVideoPortlet')
+        @.cvResearchPortlet1 = Ext.getCmp('cvResearchPortlet1')
+        @.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2')
+        @.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3')
+        @.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1')
         @.cvCarousel = Ext.getCmp('cvCarousel')
-        @.cvTopStoriesPortlet = Ext.getCmp('cvTopStoriesPortlet')
-        if @.cvResearchPortlet
-            Ext.layout.AbstractBox(@.cvResearchPortlet,1)
+        if @.cvResearchPortlet1
+            Ext.layout.AbstractBox(@.cvResearchPortlet1,1)
         else
-            @.cvResearchPortlet = {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet', title: 'Daily Research'}
-        if @.cvVideoPortlet
-            Ext.layout.AbstractBox(@.cvVideoPortlet,1)
+            @.cvResearchPortlet1 = {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet1', title: 'Daily Research'}
+        if @.cvCommentary
+            Ext.layout.AbstractBox(@.cvCommentary,1)
         else
-            @.cvVideoPortlet = {xtype:'VideoPortlet',flex: 1, id: 'cvVideoPortlet', title: 'Citi Velocity Video'}
+            @.cvCommentary = {xtype:'CommentaryPortlet',flex: 1, id: 'cvCommentary', title: 'Daily Commentary'}
+        #if @.cvResearchPortlet3
+            #Ext.layout.AbstractBox(@.cvResearchPortlet3,1)
+        #else
+            #@.cvResearchPortlet3 = {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet3', title: 'Daily Research 3'}
+        if @.cvVideoPortlet1
+            Ext.layout.AbstractBox(@.cvVideoPortlet1,1)
+        else
+            @.cvVideoPortlet1 = {xtype:'VideoPortlet',flex: 1, id: 'cvVideoPortlet1', title: 'Video 1'}
         if @.cvCarousel
             Ext.layout.AbstractBox(@.cvCarousel,1)
         else
             @.cvCarousel = {xtype:'CmCarousel',flex: 1, id: 'cvCarousel', title: 'Citi Minute'}
-        if @.cvTopStoriesPortlet
-            Ext.layout.AbstractBox(@.cvTopStoriesPortlet,1)
-        else
-            @.cvTopStoriesPortlet = {xtype:'TopStoriesPortlet',flex: 1, id: 'cvTopStoriesPortlet', title: 'Top Stories'}
     getLandscapeItems: ->
         console.log 'marketBuzz getLandscapeItems'
         @getRelatedPortal()
         return [
-            @.cvTopStoriesPortlet
-            @.cvResearchPortlet
+            @.cvVideoPortlet1
+            {
+                xtype: 'panel'
+                flex: 1
+                layout: 'vbox'
+                items : [
+                    @.cvResearchPortlet1
+                    @.cvCommentary
+                ]
+            }
             {
                 xtype: 'panel'
                 flex: 1
                 layout: 'vbox'
                 items : [
                     @.cvCarousel
-                    @.cvVideoPortlet
+                    #@.cvResearchPortlet3
                 ]
             }
+            
         ]
     getPortraitItems: ->
         console.log 'marketBuzz getLandscapeItems'
@@ -71,20 +93,21 @@ Ext.define('Cv.view.tablet.MarketBuzz',
         return [
             {
                 xtype: 'panel'
-                flex: 1
+                flex: 2
                 layout: 'vbox'
                 items : [
-                    @.cvTopStoriesPortlet
-                    @.cvResearchPortlet
+                    @.cvCarousel
+                    @.cvVideoPortlet1
                 ]
             }
             {
                 xtype: 'panel'
-                flex: 1
+                flex: 2
                 layout: 'vbox'
                 items : [
-                    @.cvCarousel
-                    @.cvVideoPortlet
+                    @.cvResearchPortlet1
+                    @.cvResearchPortlet2
+                    #@.cvResearchPortlet3
                 ]
             }
         ]
