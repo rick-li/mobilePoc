@@ -34,8 +34,10 @@
       return this.getPortraitItems();
     },
     getRelatedPortal: function() {
-      this.cvResearchPortlet = Ext.getCmp('cvResearchPortlet');
-      this.cvVideoPortlet = Ext.getCmp('cvVideoPortlet');
+      this.cvResearchPortlet1 = Ext.getCmp('cvResearchPortlet');
+      this.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2');
+      this.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3');
+      this.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1');
       this.cvCarousel = Ext.getCmp('cvCarousel');
       this.cvTopStoriesPortlet = Ext.getCmp('cvTopStoriesPortlet');
       this.cvCommentary = Ext.getCmp('cvCommentary');
@@ -98,12 +100,12 @@
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvResearchPortlet]
+          items: [this.cvResearchPortlet, this.cvCommentary]
         }, {
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvCarousel, this.cvVideoPortlet]
+          items: [this.cvCarousel]
         }
       ];
     },
@@ -113,12 +115,12 @@
       return [
         {
           xtype: 'panel',
-          flex: 1,
+          flex: 2,
           layout: 'vbox',
-          items: [this.cvTopStoriesPortlet]
+          items: [this.cvTopStoriesPortlet, this.cvCommentary]
         }, {
           xtype: 'panel',
-          flex: 1,
+          flex: 2,
           layout: 'vbox',
           items: [this.cvResearchPortlet, this.cvCarousel, this.cvVideoPortlet]
         }
