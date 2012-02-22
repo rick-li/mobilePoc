@@ -28,10 +28,8 @@ Ext.define('Cv.view.tablet.MarketBuzz',
             return @getLandscapeItems()
         return @getPortraitItems()
     getRelatedPortal: ->
-        @.cvResearchPortlet1 = Ext.getCmp('cvResearchPortlet')
-        @.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2')
-        @.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3')
-        @.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1')
+        @.cvResearchPortlet = Ext.getCmp('cvResearchPortlet')
+        @.cvVideoPortlet = Ext.getCmp('cvVideoPortlet')
         @.cvCarousel = Ext.getCmp('cvCarousel')
         @.cvTopStoriesPortlet = Ext.getCmp('cvTopStoriesPortlet')
         @.cvCommentary = Ext.getCmp('cvCommentary')
@@ -79,7 +77,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
                 layout: 'vbox'
                 items : [
                     @.cvCarousel
-                    #@.cvResearchPortlet3
+                    @.cvVideoPortlet
                 ]
             }
             
