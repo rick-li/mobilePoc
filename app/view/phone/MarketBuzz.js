@@ -24,10 +24,10 @@
               id: 'cvResearchPortlet1',
               title: 'Daily Research 1'
             }, {
-              xtype: 'ResearchPortlet',
+              xtype: 'CommentaryPortlet',
               flex: 1,
-              id: 'cvResearchPortlet2',
-              title: 'Daily Research 2'
+              id: 'cvCommentaryPortlet2',
+              title: 'Daily Commentary'
             }, {
               xtype: 'ResearchPortlet',
               flex: 1,

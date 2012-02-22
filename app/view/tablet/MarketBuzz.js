@@ -53,17 +53,17 @@
           xtype: 'ResearchPortlet',
           flex: 1,
           id: 'cvResearchPortlet1',
-          title: 'Daily Research 1'
+          title: 'Daily Research'
         };
       }
-      if (this.cvResearchPortlet2) {
-        Ext.layout.AbstractBox(this.cvResearchPortlet2, 1);
+      if (this.cvCommentary) {
+        Ext.layout.AbstractBox(this.cvCommentary, 1);
       } else {
-        this.cvResearchPortlet2 = {
-          xtype: 'ResearchPortlet',
+        this.cvCommentary = {
+          xtype: 'CommentaryPortlet',
           flex: 1,
-          id: 'cvResearchPortlet2',
-          title: 'Daily Research 2'
+          id: 'cvCommentary',
+          title: 'Daily Commentary'
         };
       }
       if (this.cvVideoPortlet1) {
@@ -95,7 +95,7 @@
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvResearchPortlet1, this.cvResearchPortlet2]
+          items: [this.cvResearchPortlet1, this.cvCommentary]
         }, {
           xtype: 'panel',
           flex: 1,

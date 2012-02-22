@@ -45,11 +45,11 @@ Ext.define('Cv.view.tablet.MarketBuzz',
         if @.cvResearchPortlet1
             Ext.layout.AbstractBox(@.cvResearchPortlet1,1)
         else
-            @.cvResearchPortlet1 = {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet1', title: 'Daily Research 1'}
-        if @.cvResearchPortlet2
-            Ext.layout.AbstractBox(@.cvResearchPortlet2,1)
+            @.cvResearchPortlet1 = {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet1', title: 'Daily Research'}
+        if @.cvCommentary
+            Ext.layout.AbstractBox(@.cvCommentary,1)
         else
-            @.cvResearchPortlet2 = {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet2', title: 'Daily Research 2'}
+            @.cvCommentary = {xtype:'CommentaryPortlet',flex: 1, id: 'cvCommentary', title: 'Daily Commentary'}
         #if @.cvResearchPortlet3
             #Ext.layout.AbstractBox(@.cvResearchPortlet3,1)
         #else
@@ -73,7 +73,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
                 layout: 'vbox'
                 items : [
                     @.cvResearchPortlet1
-                    @.cvResearchPortlet2
+                    @.cvCommentary
                 ]
             }
             {
