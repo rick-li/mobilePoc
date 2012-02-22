@@ -98,7 +98,7 @@
           items: [this.cvResearchPortlet1, this.cvResearchPortlet2]
         }, {
           xtype: 'panel',
-          flex: 1,
+          flex: 0.7,
           layout: 'vbox',
           items: [this.cvCarousel]
         }

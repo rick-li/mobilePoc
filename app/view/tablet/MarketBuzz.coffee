@@ -78,7 +78,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
             }
             {
                 xtype: 'panel'
-                flex: 1
+                flex: 0.7
                 layout: 'vbox'
                 items : [
                     @.cvCarousel
