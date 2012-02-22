@@ -4,7 +4,6 @@
     extend: 'Cv.view.Portlet',
     xtype: 'CmCarousel',
     config: {
-      layout: 'fit',
       height: 280
     },
     initialize: function() {
@@ -17,18 +16,31 @@
       return this.callParent();
     },
     getCrls: function() {
-      var i, img, imgs, items, ln;
+      var i, img, imgs, items, ln, title, titles;
       console.log('get Carousel');
       imgs = ["cm1", "cm2"];
+      titles = ['Emerging Markets Daily: Latin America Edition', 'Norway: Annual Address: No Policy Signals, Balanced Tone'];
       i = 0;
       ln = imgs.length;
       items = [];
       while (i < ln) {
         img = imgs[i];
+        title = titles[i];
         items.push({
-          xtype: "image",
-          cls: "my-carousel-item-img",
-          src: "resources/images/" + img + ".png"
+          xtype: 'panel',
+          layout: 'vbox',
+          items: [
+            {
+              xtype: "image",
+              flex: '2',
+              cls: "my-carousel-item-img",
+              src: "resources/images/" + img + ".png"
+            }, {
+              dock: 'bottom',
+              html: title,
+              flex: '1'
+            }
+          ]
         });
         i++;
       }
