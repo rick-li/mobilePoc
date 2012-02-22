@@ -1,4 +1,4 @@
-/* line 1, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+/* line 1, C:/software/git/mobilePoc/resources/sass/portal.scss */
 .portal {
   backgound-color: #EFE;
   /*height:200px;*/
@@ -6,26 +6,26 @@
   border-right: 1px solid #333;
 }
 
-/* line 8, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+/* line 8, C:/software/git/mobilePoc/resources/sass/portal.scss */
 .portal .portalTitle {
   height: 35px;
   color: #FFCC00;
   font: bold 14px arial,sans-serif;
 }
 
-/* line 15, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+/* line 15, C:/software/git/mobilePoc/resources/sass/portal.scss */
 #menuBarButtons .x-button-pressed {
   background: url("../images/arrow_red.png") no-repeat center top;
 }
 
-/* line 19, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+/* line 19, C:/software/git/mobilePoc/resources/sass/portal.scss */
 .logo {
   position: absolute;
   top: 0;
   left: 40%;
 }
 
-/* line 25, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+/* line 25, C:/software/git/mobilePoc/resources/sass/portal.scss */
 .cv-dataview .x-dataview-inner {
   width: 100%;
 }
