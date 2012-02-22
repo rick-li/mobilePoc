@@ -19,9 +19,9 @@
               id: 'cvTopStoriesPortlet',
               title: 'Top Stories'
             }, {
-              xtype: 'CmCarouse',
+              xtype: 'CmCarousel',
               flex: 1,
-              id: 'cvCarouse',
+              id: 'cvCarousel',
               title: 'Citi Minute'
             }, {
               xtype: 'ResearchPortlet',

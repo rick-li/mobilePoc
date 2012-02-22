@@ -31,7 +31,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
     getRelatedPortal: ->
         @.cvResearchPortlet = Ext.getCmp('cvResearchPortlet')
         @.cvVideoPortlet = Ext.getCmp('cvVideoPortlet')
-        @.cvCarouse = Ext.getCmp('cvCarouse')
+        @.cvCarousel = Ext.getCmp('cvCarousel')
         @.cvTopStoriesPortlet = Ext.getCmp('cvTopStoriesPortlet')
         if @.cvResearchPortlet
             Ext.layout.AbstractBox(@.cvResearchPortlet,1)
@@ -41,10 +41,10 @@ Ext.define('Cv.view.tablet.MarketBuzz',
             Ext.layout.AbstractBox(@.cvVideoPortlet,1)
         else
             @.cvVideoPortlet = {xtype:'VideoPortlet',flex: 1, id: 'cvVideoPortlet', title: 'Citi Velocity Video'}
-        if @.cvCarouse
-            Ext.layout.AbstractBox(@.cvCarouse,1)
+        if @.cvCarousel
+            Ext.layout.AbstractBox(@.cvCarousel,1)
         else
-            @.cvCarouse = {xtype:'CmCarouse',flex: 1, id: 'cvCarouse', title: 'Citi Minute'}
+            @.cvCarousel = {xtype:'CmCarousel',flex: 1, id: 'cvCarousel', title: 'Citi Minute'}
         if @.cvTopStoriesPortlet
             Ext.layout.AbstractBox(@.cvTopStoriesPortlet,1)
         else
@@ -60,11 +60,10 @@ Ext.define('Cv.view.tablet.MarketBuzz',
                 flex: 1
                 layout: 'vbox'
                 items : [
-                    @.cvCarouse
+                    @.cvCarousel
                     @.cvVideoPortlet
                 ]
             }
-            
         ]
     getPortraitItems: ->
         console.log 'marketBuzz getLandscapeItems'

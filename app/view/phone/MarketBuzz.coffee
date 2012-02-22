@@ -11,7 +11,7 @@ Ext.define('Cv.view.phone.MarketBuzz',
                 layout: 'vbox'
                 items : [
                     {xtype:'TopStoriesPortlet',flex: 1, id: 'cvTopStoriesPortlet', title: 'Top Stories'}
-                    {xtype:'CmCarouse',flex: 1, id: 'cvCarouse', title: 'Citi Minute'}
+                    {xtype:'CmCarousel',flex: 1, id: 'cvCarousel', title: 'Citi Minute'}
                     {xtype:'ResearchPortlet',flex: 1, id: 'cvResearchPortlet', title: 'Daily Research'}
                     {xtype:'VideoPortlet',flex: 1, id: 'cvVideoPortlet', title: 'Citi Velocity Video'}
                 ]
