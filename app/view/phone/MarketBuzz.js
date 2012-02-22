@@ -14,25 +14,30 @@
           layout: 'vbox',
           items: [
             {
-              xtype: 'VideoPortlet',
+              xtype: 'CmCarousel',
               flex: 1,
-              id: 'cvVideoPortlet1',
-              title: 'Video 1'
+              id: 'cvCarousel',
+              title: 'Citi Minute'
             }, {
-              xtype: 'ResearchPortlet',
+              xtype: 'TopStoriesPortlet',
               flex: 1,
-              id: 'cvResearchPortlet1',
-              title: 'Daily Research 1'
+              id: 'cvTopStoriesPortlet',
+              title: 'Top Stories'
             }, {
               xtype: 'CommentaryPortlet',
               flex: 1,
-              id: 'cvCommentaryPortlet2',
+              id: 'cvCommentaryPortlet',
               title: 'Daily Commentary'
             }, {
               xtype: 'ResearchPortlet',
               flex: 1,
-              id: 'cvResearchPortlet3',
-              title: 'Daily Research 3'
+              id: 'cvResearchPortlet',
+              title: 'Daily Research'
+            }, {
+              xtype: 'VideoPortlet',
+              flex: 1,
+              id: 'cvVideoPortlet',
+              title: 'Video 1'
             }
           ]
         }

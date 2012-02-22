@@ -33,26 +33,19 @@
       if (orientation === 'landscape') return this.getLandscapeItems();
       return this.getPortraitItems();
     },
-    /*
-        preCreatePortal: ->
-            @.cvResearchPortlet1 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet1',title: 'Daily Research 1'})
-            @.cvResearchPortlet2 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet2',title: 'Daily Research 2'})
-            @.cvResearchPortlet3 = Ext.create('Cv.view.ResearchPortlet',{id: 'cvResearchPortlet3',title: 'Daily Research 3'})
-            @.cvVideoPortlet1 = Ext.create('Cv.view.VideoPortlet',{id:'cvVideoPortlet1', title: 'CitiVelocity Video 1' })
-    */
     getRelatedPortal: function() {
-      this.cvResearchPortlet1 = Ext.getCmp('cvResearchPortlet1');
-      this.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2');
-      this.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3');
-      this.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1');
+      this.cvResearchPortlet = Ext.getCmp('cvResearchPortlet');
+      this.cvVideoPortlet = Ext.getCmp('cvVideoPortlet');
       this.cvCarousel = Ext.getCmp('cvCarousel');
-      if (this.cvResearchPortlet1) {
-        Ext.layout.AbstractBox(this.cvResearchPortlet1, 1);
+      this.cvTopStoriesPortlet = Ext.getCmp('cvTopStoriesPortlet');
+      this.cvCommentary = Ext.getCmp('cvCommentary');
+      if (this.cvResearchPortlet) {
+        Ext.layout.AbstractBox(this.cvResearchPortlet, 1);
       } else {
-        this.cvResearchPortlet1 = {
+        this.cvResearchPortlet = {
           xtype: 'ResearchPortlet',
           flex: 1,
-          id: 'cvResearchPortlet1',
+          id: 'cvResearchPortlet',
           title: 'Daily Research'
         };
       }
@@ -66,24 +59,34 @@
           title: 'Daily Commentary'
         };
       }
-      if (this.cvVideoPortlet1) {
-        Ext.layout.AbstractBox(this.cvVideoPortlet1, 1);
+      if (this.cvVideoPortlet) {
+        Ext.layout.AbstractBox(this.cvVideoPortlet, 1);
       } else {
-        this.cvVideoPortlet1 = {
+        this.cvVideoPortlet = {
           xtype: 'VideoPortlet',
           flex: 1,
-          id: 'cvVideoPortlet1',
-          title: 'Video 1'
+          id: 'cvVideoPortlet',
+          title: 'Citi Velocity Video'
         };
       }
       if (this.cvCarousel) {
-        return Ext.layout.AbstractBox(this.cvCarousel, 1);
+        Ext.layout.AbstractBox(this.cvCarousel, 1);
       } else {
-        return this.cvCarousel = {
+        this.cvCarousel = {
           xtype: 'CmCarousel',
           flex: 1,
           id: 'cvCarousel',
           title: 'Citi Minute'
+        };
+      }
+      if (this.cvTopStoriesPortlet) {
+        return Ext.layout.AbstractBox(this.cvTopStoriesPortlet, 1);
+      } else {
+        return this.cvTopStoriesPortlet = {
+          xtype: 'TopStoriesPortlet',
+          flex: 1,
+          id: 'cvTopStoriesPortlet',
+          title: 'Top Stories'
         };
       }
     },
@@ -91,16 +94,16 @@
       console.log('marketBuzz getLandscapeItems');
       this.getRelatedPortal();
       return [
-        this.cvVideoPortlet1, {
+        this.cvTopStoriesPortlet, {
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvResearchPortlet1, this.cvCommentary]
+          items: [this.cvResearchPortlet]
         }, {
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvCarousel]
+          items: [this.cvCarousel, this.cvVideoPortlet]
         }
       ];
     },
@@ -110,14 +113,14 @@
       return [
         {
           xtype: 'panel',
-          flex: 2,
+          flex: 1,
           layout: 'vbox',
-          items: [this.cvCarousel, this.cvVideoPortlet1]
+          items: [this.cvTopStoriesPortlet]
         }, {
           xtype: 'panel',
-          flex: 2,
+          flex: 1,
           layout: 'vbox',
-          items: [this.cvResearchPortlet1, this.cvResearchPortlet2]
+          items: [this.cvResearchPortlet, this.cvCarousel, this.cvVideoPortlet]
         }
       ];
     }
