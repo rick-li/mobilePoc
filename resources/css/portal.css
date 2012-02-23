@@ -38,3 +38,18 @@
   width: 14px;
   margin-top: 15px !important;
 }
+
+/* line 38, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+.phone_searchfield {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 43, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
+.overlay_panel {
+  top: 0px !important;
+  left: 0px !important;
+  width: 100%;
+  height: 45px;
+}

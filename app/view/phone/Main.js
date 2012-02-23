@@ -7,28 +7,41 @@
       return this.callParent();
     },
     getSpecialItems: function() {
-      var isShow, overlay;
-      overlay = this.add([
-        {
-          xtype: 'searchfield',
-          name: 'searchfield',
-          placeholder: 'Search...',
-          docked: 'bottom',
-          modal: true,
-          hidden: true
-        }
-      ]);
-      isShow = false;
+      var overlay;
+      overlay = new Ext.Panel({
+        styleHtmlContent: true,
+        docked: 'bottom',
+        modal: true,
+        cls: 'overlay_panel',
+        hideOnMaskTap: true,
+        items: [
+          {
+            xtype: 'searchfield',
+            name: 'searchfield',
+            cls: 'phone_searchfield',
+            placeholder: 'Search...'
+          }, {
+            xtype: 'button',
+            docked: 'right',
+            text: 'Cancel',
+            style: 'margin-left:70px;font-size:14px;font-weight:bold;font:arial,sans-serif;',
+            listeners: {
+              tap: function(button) {
+                return overlay.hide();
+              }
+            }
+          }
+        ]
+      });
       return [
         {
-          xtype: 'button',
           cls: 'phoneSearchIcon',
           docked: 'right',
           listeners: {
             tap: function(button) {
               console.log('tap main');
               console.log(overlay);
-              return console.log(isShow);
+              return overlay.showBy(button);
             }
           }
         }
