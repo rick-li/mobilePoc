@@ -8,7 +8,7 @@
       views: ['Main', 'MarketBuzz']
     },
     isActive: function() {
-      return Ext.os.is.Desktop || Ext.os.is.Tablet;
+      return  Ext.os.is.Tablet;
     },
     launch: function() {
       console.log(Date.now() + ' Cv.profile.Tablet launch');
