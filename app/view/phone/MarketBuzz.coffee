@@ -15,7 +15,7 @@ Ext.define('Cv.view.phone.MarketBuzz',
                     {xtype:'TopStoriesPortlet', id: 'cvTopStoriesPortlet', title: 'Top Stories',height: '300px'}
                     {xtype:'CommentaryPortlet', id: 'cvCommentaryPortlet', title: 'Daily Commentary',height: '300px'}
                     {xtype:'ResearchPortlet', id: 'cvResearchPortlet', title: 'Daily Research',height: '300px'}
-                    {xtype:'VideoPortlet', id: 'cvVideoPortlet', title: 'Video 1',height: '300px'}
+                    {xtype:'VideoPortlet', id: 'cvVideoPortlet', title: 'Citi Velocity Video',height: '300px'}
                 ]
             }
         ]

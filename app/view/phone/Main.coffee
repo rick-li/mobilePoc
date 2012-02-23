@@ -7,6 +7,7 @@ Ext.define("Cv.view.phone.Main",
     
     
     getSpecialItems: ->
+
         [{
             cls: 'searchIcon'
         

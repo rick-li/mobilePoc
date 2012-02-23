@@ -34,10 +34,8 @@
       return this.getPortraitItems();
     },
     getRelatedPortal: function() {
-      this.cvResearchPortlet1 = Ext.getCmp('cvResearchPortlet');
-      this.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2');
-      this.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3');
-      this.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1');
+      this.cvResearchPortlet = Ext.getCmp('cvResearchPortlet');
+      this.cvVideoPortlet = Ext.getCmp('cvVideoPortlet');
       this.citiMinute = Ext.getCmp('citiMinute');
       this.cvTopStoriesPortlet = Ext.getCmp('cvTopStoriesPortlet');
       this.cvCommentary = Ext.getCmp('cvCommentary');
@@ -105,7 +103,7 @@
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.citiMinute]
+          items: [this.citiMinute, this.cvVideoPortlet]
         }
       ];
     },

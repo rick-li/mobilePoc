@@ -30,8 +30,10 @@ $content_font_color: #434343;
         font-size: 16px;
         line-height: 24px;
         color: $title_font_color;
-        padding-left: 27px;
         height: 26px;
+      }
+      .cv-list-item-download .headline{
+        padding-left: 27px;
       }
       .author{
         font-weight: bold;
@@ -66,6 +68,9 @@ $content_font_color: #434343;
       }
     }
   }
+  .x-list .cv-list-item.x-item-selected{
+    text-shadow: none;
+  }
   .cv-topstories .cv-list-item{
     height: 200px;
     
@@ -95,6 +100,7 @@ $content_font_color: #434343;
     }
     .content{
       padding-left: 14px;
+      color: $title_font_color;
     }
     .content.cv-list-item-commentary,.content.cv-list-item-research{
       background-position-y: 10px;
