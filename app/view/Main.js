@@ -19,6 +19,7 @@
         {
           docked: 'top',
           xtype: 'toolbar',
+          minHeight: 22,
           items: this.getSubItems()
         }, {
           docked: 'top',
@@ -27,18 +28,6 @@
       ];
     },
     getSubItems: function() {
-      var subItems;
-      subItems = this.getSpecialItems();
-      subItems.push({
-        xtype: 'image',
-        centered: true,
-        src: 'resources/images/CitiV_Logo_Top.png',
-        minWidth: 233,
-        minHeight: 30
-      });
-      return subItems;
-    },
-    getSpecialItems: function() {
       return [];
     },
     initialize: function() {

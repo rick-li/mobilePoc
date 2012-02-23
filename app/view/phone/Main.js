@@ -6,14 +6,16 @@
       console.log('main phone init');
       return this.callParent();
     },
-    getSpecialItems: function() {
-      var overlay;
+    getSubItems: function() {
+      var overlay, subItems;
       overlay = new Ext.Panel({
         styleHtmlContent: true,
         docked: 'bottom',
         modal: true,
         cls: 'overlay_panel',
         hideOnMaskTap: true,
+        hideAnimation: 'slideOut',
+        showAnimation: 'slideIn',
         items: [
           {
             xtype: 'searchfield',
@@ -33,19 +35,25 @@
           }
         ]
       });
-      return [
+      subItems = [
         {
           cls: 'phoneSearchIcon',
           docked: 'right',
           listeners: {
             tap: function(button) {
-              console.log('tap main');
-              console.log(overlay);
               return overlay.showBy(button);
             }
           }
         }
       ];
+      subItems.push({
+        xtype: 'image',
+        centered: true,
+        src: 'resources/images/cv-logo-header-medium.png',
+        minWidth: 172,
+        minHeight: 22
+      });
+      return subItems;
     }
   });
 

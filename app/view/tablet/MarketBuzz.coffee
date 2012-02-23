@@ -51,7 +51,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
         if @.citiMinute
             Ext.layout.AbstractBox(@.citiMinute,1)
         else
-            @.citiMinute = {xtype:'CitiMinute',flex: 1, id: 'citiMinute', title: 'Citi Minute'}
+            @.citiMinute = {xtype:'CitiMinute',flex: 1, id: 'citiMinute', title: 'A Citi Minute'}
         
         if @.cvTopStoriesPortlet
             Ext.layout.AbstractBox(@.cvTopStoriesPortlet,1)
