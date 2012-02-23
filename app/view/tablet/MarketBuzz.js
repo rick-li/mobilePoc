@@ -38,7 +38,7 @@
       this.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2');
       this.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3');
       this.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1');
-      this.cvCarousel = Ext.getCmp('cvCarousel');
+      this.citiMinute = Ext.getCmp('citiMinute');
       this.cvTopStoriesPortlet = Ext.getCmp('cvTopStoriesPortlet');
       this.cvCommentary = Ext.getCmp('cvCommentary');
       if (this.cvResearchPortlet) {
@@ -71,13 +71,13 @@
           title: 'Citi Velocity Video'
         };
       }
-      if (this.cvCarousel) {
-        Ext.layout.AbstractBox(this.cvCarousel, 1);
+      if (this.citiMinute) {
+        Ext.layout.AbstractBox(this.citiMinute, 1);
       } else {
-        this.cvCarousel = {
-          xtype: 'CmCarousel',
+        this.citiMinute = {
+          xtype: 'CitiMinute',
           flex: 1,
-          id: 'cvCarousel',
+          id: 'citiMinute',
           title: 'Citi Minute'
         };
       }
@@ -105,7 +105,7 @@
           xtype: 'panel',
           flex: 1,
           layout: 'vbox',
-          items: [this.cvCarousel]
+          items: [this.citiMinute]
         }
       ];
     },
@@ -122,7 +122,7 @@
           xtype: 'panel',
           flex: 2,
           layout: 'vbox',
-          items: [this.cvResearchPortlet, this.cvCarousel, this.cvVideoPortlet]
+          items: [this.cvResearchPortlet, this.citiMinute, this.cvVideoPortlet]
         }
       ];
     }

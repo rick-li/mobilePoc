@@ -1,6 +1,6 @@
-Ext.define('Cv.view.CmCarousel',
+Ext.define('Cv.view.CitiMinute',
     extend: 'Cv.view.Portlet'
-    xtype: 'CmCarousel'
+    xtype: 'CitiMinute'
     config:
         #layout: 'fit'
         height: 280
@@ -9,7 +9,7 @@ Ext.define('Cv.view.CmCarousel',
         console.log 'Carousel init'
         @add(
             {
-                xtype: 'carousel'
+                xtype: 'cvCarousel'
                 direction: 'horizontal'
                 items: @getCrls()
                 

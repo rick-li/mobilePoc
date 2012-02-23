@@ -1,15 +1,15 @@
 (function() {
 
-  Ext.define('Cv.view.CmCarousel', {
+  Ext.define('Cv.view.CitiMinute', {
     extend: 'Cv.view.Portlet',
-    xtype: 'CmCarousel',
+    xtype: 'CitiMinute',
     config: {
       height: 280
     },
     initialize: function() {
       console.log('Carousel init');
       this.add({
-        xtype: 'carousel',
+        xtype: 'cvCarousel',
         direction: 'horizontal',
         items: this.getCrls()
       });

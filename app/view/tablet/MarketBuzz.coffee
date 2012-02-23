@@ -32,7 +32,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
         @.cvResearchPortlet2 = Ext.getCmp('cvResearchPortlet2')
         @.cvResearchPortlet3 = Ext.getCmp('cvResearchPortlet3')
         @.cvVideoPortlet1 = Ext.getCmp('cvVideoPortlet1')
-        @.cvCarousel = Ext.getCmp('cvCarousel')
+        @.citiMinute = Ext.getCmp('citiMinute')
         @.cvTopStoriesPortlet = Ext.getCmp('cvTopStoriesPortlet')
         @.cvCommentary = Ext.getCmp('cvCommentary')
         if @.cvResearchPortlet
@@ -50,10 +50,10 @@ Ext.define('Cv.view.tablet.MarketBuzz',
         else
             @.cvVideoPortlet = {xtype:'VideoPortlet',flex: 1, id: 'cvVideoPortlet', title: 'Citi Velocity Video'}
         
-        if @.cvCarousel
-            Ext.layout.AbstractBox(@.cvCarousel,1)
+        if @.citiMinute
+            Ext.layout.AbstractBox(@.citiMinute,1)
         else
-            @.cvCarousel = {xtype:'CmCarousel',flex: 1, id: 'cvCarousel', title: 'Citi Minute'}
+            @.citiMinute = {xtype:'CitiMinute',flex: 1, id: 'citiMinute', title: 'Citi Minute'}
         
         if @.cvTopStoriesPortlet
             Ext.layout.AbstractBox(@.cvTopStoriesPortlet,1)
@@ -78,7 +78,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
                 flex: 1
                 layout: 'vbox'
                 items : [
-                    @.cvCarousel
+                    @.citiMinute
                     #@.cvResearchPortlet3
                 ]
             }
@@ -103,7 +103,7 @@ Ext.define('Cv.view.tablet.MarketBuzz',
                 layout: 'vbox'
                 items : [
                     @.cvResearchPortlet
-                    @.cvCarousel
+                    @.citiMinute
                     @.cvVideoPortlet
                 ]
             }
