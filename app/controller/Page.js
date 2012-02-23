@@ -5,11 +5,22 @@
     config: {
       pages: {},
       refs: {
-        menuBtn: '#menuBarButtons button'
+        menuBtn: '#menuBarButtons button',
+        detailBack: '#detailBack'
       },
       control: {
         menuBtn: {
           tap: 'redirect'
+        },
+        detailBack: {
+          tap: function() {
+            var historyActions, lastAction;
+            console.log('detail back');
+            historyActions = Cv.app.getHistory().getActions();
+            console.log(historyActions);
+            lastAction = historyActions[historyActions.length - 2];
+            return this.redirectTo(lastAction.getUrl());
+          }
         }
       },
       routes: {

@@ -15,7 +15,7 @@
           items: [
             {
               text: 'Back',
-              id: 'videoBack'
+              id: 'detailBack'
             }
           ]
         }, {

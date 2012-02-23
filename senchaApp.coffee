@@ -12,8 +12,8 @@ Ext.Loader.setConfig({enabled:false})
 Cv.app = Ext.application
     name: 'Cv'
     profiles: ['Phone','Tablet']
-    controllers: ['Research', 'Video']
-    views: ['Menu', 'Page', 'ResearchPortlet','CitiMinute']
+    controllers: ['Research', 'Video', 'Commentary', 'TopStories']
+    views: ['Menu', 'Page', 'ResearchPortlet','CvCarousel','TopStoriesPortlet','CommentaryPortlet']
     models: ['Research']
     launch: ->
         console.log('launch')

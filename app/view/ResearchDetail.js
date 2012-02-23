@@ -18,7 +18,7 @@
           items: [
             {
               text: 'Back',
-              id: 'researchBack'
+              id: 'detailBack'
             }
           ]
         }, {

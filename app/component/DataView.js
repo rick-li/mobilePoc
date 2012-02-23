@@ -8,6 +8,7 @@
       baseCls: Ext.baseCSSPrefix + 'list',
       cls: 'cv-dataview',
       itemCls: 'cv-list-item',
+      selectedCls: '',
       scrollable: {
         direction: 'vertical',
         directionLock: true

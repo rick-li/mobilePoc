@@ -3,19 +3,9 @@ Ext.define 'Cv.controller.Video',
     config:
         refs:
             videoList: 'VideoPortlet dataview'
-            videoBack: '#videoBack'
         control:
             videoList:
                 select: 'redirect'
-            #video back is for desktop browser and other platform that supports html5 video tag only
-            videoBack:
-                tap: ->
-                    console.log 'video back'
-                    historyActions = Cv.app.getHistory().getActions()
-                    console.log historyActions
-                    lastAction = historyActions[historyActions.length-2]
-                    @redirectTo(lastAction.getUrl())
-                
         routes:
             'video/:alertId': 'showDetail'
     redirect: (list)->

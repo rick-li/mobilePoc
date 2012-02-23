@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('Cv.CvCarousel', {
+  Ext.define('Cv.view.CvCarousel', {
     extend: Ext.Carousel,
     xtype: 'cvCarousel',
     config: {
