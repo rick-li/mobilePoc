@@ -17,7 +17,7 @@
             {
               xtype: 'CitiMinute',
               id: 'citiMinute',
-              title: 'Citi Minute',
+              title: 'A Citi Minute',
               height: '300px'
             }, {
               xtype: 'TopStoriesPortlet',

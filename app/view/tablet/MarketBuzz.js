@@ -76,7 +76,7 @@
           xtype: 'CitiMinute',
           flex: 1,
           id: 'citiMinute',
-          title: 'Citi Minute'
+          title: 'A Citi Minute'
         };
       }
       if (this.cvTopStoriesPortlet) {

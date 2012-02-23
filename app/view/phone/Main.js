@@ -14,6 +14,8 @@
         modal: true,
         cls: 'overlay_panel',
         hideOnMaskTap: true,
+        hideAnimation: 'slideOut',
+        showAnimation: 'slideIn',
         items: [
           {
             xtype: 'searchfield',
@@ -39,8 +41,6 @@
           docked: 'right',
           listeners: {
             tap: function(button) {
-              console.log('tap main');
-              console.log(overlay);
               return overlay.showBy(button);
             }
           }
