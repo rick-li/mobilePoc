@@ -6,7 +6,7 @@ Ext.define("Cv.view.phone.Main",
         @callParent()
         
         
-    getSpecialItems: ->
+    getSubItems: ->
         overlay = new Ext.Panel({
             styleHtmlContent: true
             docked: 'bottom'
@@ -31,7 +31,7 @@ Ext.define("Cv.view.phone.Main",
                 }
             ]
         })
-        [{
+        subItems = [{
             #ui: 'button'
             cls: 'phoneSearchIcon'
             docked: 'right'
@@ -41,6 +41,8 @@ Ext.define("Cv.view.phone.Main",
                     console.log overlay
                     overlay.showBy(button)
         }] 
+        subItems.push {xtype:'image',centered:true,src:'resources/images/cv-logo-header-medium.png',minWidth: 172,minHeight:22}
+        return subItems
         
     
     #getSearchItem:->

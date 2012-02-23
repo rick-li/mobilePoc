@@ -1,6 +1,8 @@
 Ext.define("Cv.view.tablet.Main",
     extend: 'Cv.view.Main'
-    getSpecialItems: ->
+    getSubItems: ->
         console.log 'tablet main'
-        return [{xtype:'searchfield',name: 'searchfield',placeholder: 'Search...',docked: 'right'}]
+        subItems = [{xtype:'searchfield',name: 'searchfield',placeholder: 'Search...',docked: 'right'}]
+        subItems.push {xtype:'image',centered:true,src:'resources/images/CitiV_Logo_Top.png',minWidth: 233,minHeight:30}
+        return subItems
 )

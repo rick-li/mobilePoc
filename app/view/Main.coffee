@@ -18,6 +18,7 @@ Ext.define("Cv.view.Main",
                 {
                  docked: 'top'
                  xtype: 'toolbar'
+                 minHeight: 22
                  #html:  '<div class="logo"><img style="margin:10px;" src="resources/images/CitiV_Logo_Top.png"></div>'
                  #layout: 'hbox'
                  #title: 'CitiVelocity'
@@ -27,11 +28,8 @@ Ext.define("Cv.view.Main",
                 {docked: 'top', items:[Ext.create 'Cv.view.Menu']}
             ]
     getSubItems: ->
-      subItems = @getSpecialItems(); 
-      subItems.push {xtype:'image',centered:true,src:'resources/images/CitiV_Logo_Top.png',minWidth: 233,minHeight:30}
-      return subItems
-    getSpecialItems: ->
-        return []
+      return []
+
     initialize: ->
         console.log 'main init'
         @setItems(@getTitleItems())

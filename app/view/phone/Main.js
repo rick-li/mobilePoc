@@ -6,8 +6,8 @@
       console.log('main phone init');
       return this.callParent();
     },
-    getSpecialItems: function() {
-      var overlay;
+    getSubItems: function() {
+      var overlay, subItems;
       overlay = new Ext.Panel({
         styleHtmlContent: true,
         docked: 'bottom',
@@ -33,7 +33,7 @@
           }
         ]
       });
-      return [
+      subItems = [
         {
           cls: 'phoneSearchIcon',
           docked: 'right',
@@ -46,6 +46,14 @@
           }
         }
       ];
+      subItems.push({
+        xtype: 'image',
+        centered: true,
+        src: 'resources/images/cv-logo-header-medium.png',
+        minWidth: 172,
+        minHeight: 22
+      });
+      return subItems;
     }
   });
 
