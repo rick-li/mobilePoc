@@ -15,8 +15,8 @@
           layout: 'vbox',
           items: [
             {
-              xtype: 'CmCarousel',
-              id: 'cvCarousel',
+              xtype: 'CitiMinute',
+              id: 'citiMinute',
               title: 'Citi Minute',
               height: '300px'
             }, {

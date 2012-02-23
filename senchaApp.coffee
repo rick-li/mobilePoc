@@ -13,7 +13,7 @@ Cv.app = Ext.application
     name: 'Cv'
     profiles: ['Phone','Tablet']
     controllers: ['Research', 'Video', 'Commentary', 'TopStories']
-    views: ['Menu', 'Page', 'ResearchPortlet','CmCarousel','TopStoriesPortlet','CommentaryPortlet']
+    views: ['Menu', 'Page', 'ResearchPortlet','CvCarousel','TopStoriesPortlet','CommentaryPortlet']
     models: ['Research']
     launch: ->
         console.log('launch')

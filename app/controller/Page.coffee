@@ -4,9 +4,17 @@ Ext.define 'Cv.controller.Page',
         pages: {}
         refs:
             menuBtn: '#menuBarButtons button'
+            detailBack: '#detailBack'
         control:
             menuBtn:
                 tap: 'redirect'
+            detailBack:
+                tap: ->
+                    console.log 'detail back'
+                    historyActions = Cv.app.getHistory().getActions()
+                    console.log historyActions
+                    lastAction = historyActions[historyActions.length-2]
+                    @redirectTo(lastAction.getUrl())
         routes:
             'page/:pageId': 'switchPage'
     redirect: (menuBtn)->

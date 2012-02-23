@@ -4,22 +4,11 @@
     extend: 'Ext.app.Controller',
     config: {
       refs: {
-        videoList: 'VideoPortlet dataview',
-        videoBack: '#videoBack'
+        videoList: 'VideoPortlet dataview'
       },
       control: {
         videoList: {
           select: 'redirect'
-        },
-        videoBack: {
-          tap: function() {
-            var historyActions, lastAction;
-            console.log('video back');
-            historyActions = Cv.app.getHistory().getActions();
-            console.log(historyActions);
-            lastAction = historyActions[historyActions.length - 2];
-            return this.redirectTo(lastAction.getUrl());
-          }
         }
       },
       routes: {

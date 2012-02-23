@@ -3,18 +3,9 @@ Ext.define 'Cv.controller.Research',
     config:
         refs:
             researchList: 'ResearchPortlet dataview'
-            researchBack: '#researchBack'
         control:
             researchList:
                 itemtap: 'redirect'
-            researchBack:
-                tap: ->
-                    console.log 'research back'
-                    historyActions = Cv.app.getHistory().getActions()
-                    console.log historyActions
-                    lastAction = historyActions[historyActions.length-2]
-                    @redirectTo(lastAction.getUrl())
-                
         routes:
             'research/:pubId': 'showDetail'
     redirect: (list)->

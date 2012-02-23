@@ -2,11 +2,17 @@ Ext.define('Cv.view.TopStoriesPortlet',
     extend: 'Cv.view.Portlet'
     xtype: 'TopStoriesPortlet'
     config:
+        isbindTapEvent: false
         cls: 'portal cv-topstories'
-        listeners:[
-            'afterrender': (panel)->
-                console.log Ext.select('div.topstories-item')
-        ]
+        listeners: 
+            'painted': (component, eOpts)->
+                if not component.config.isbindTapEvent
+                    elementArray = Ext.select('div.topstories-item').elements
+                    elementArray.forEach (el, i) =>
+                        if el.id && Ext.get(el.id)
+                            Ext.get(el.id).on 'tap', (event)=>
+                                Cv.app.redirectTo('topStories/' + el.id)
+                    component.config.isbindTapEvent = true
     initialize: ->
         console.log 'initialize top stories'
         @add(@createList())
@@ -16,6 +22,7 @@ Ext.define('Cv.view.TopStoriesPortlet',
         tpl = @getXTemplate()
         list = Ext.create('Cv.component.DataView'
             itemTpl: tpl
+            pressedCls: ''
             store: Cv.topStoriesStore
             pageSize: 3
         )

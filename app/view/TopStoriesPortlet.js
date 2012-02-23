@@ -4,14 +4,25 @@
     extend: 'Cv.view.Portlet',
     xtype: 'TopStoriesPortlet',
     config: {
+      isbindTapEvent: false,
       cls: 'portal cv-topstories',
-      listeners: [
-        {
-          'afterrender': function(panel) {
-            return console.log(Ext.select('div.topstories-item'));
+      listeners: {
+        'painted': function(component, eOpts) {
+          var elementArray,
+            _this = this;
+          if (!component.config.isbindTapEvent) {
+            elementArray = Ext.select('div.topstories-item').elements;
+            elementArray.forEach(function(el, i) {
+              if (el.id && Ext.get(el.id)) {
+                return Ext.get(el.id).on('tap', function(event) {
+                  return Cv.app.redirectTo('topStories/' + el.id);
+                });
+              }
+            });
+            return component.config.isbindTapEvent = true;
           }
         }
-      ]
+      }
     },
     initialize: function() {
       console.log('initialize top stories');
@@ -23,6 +34,7 @@
       tpl = this.getXTemplate();
       list = Ext.create('Cv.component.DataView', {
         itemTpl: tpl,
+        pressedCls: '',
         store: Cv.topStoriesStore,
         pageSize: 3
       });

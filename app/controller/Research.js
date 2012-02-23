@@ -4,22 +4,11 @@
     extend: 'Ext.app.Controller',
     config: {
       refs: {
-        researchList: 'ResearchPortlet dataview',
-        researchBack: '#researchBack'
+        researchList: 'ResearchPortlet dataview'
       },
       control: {
         researchList: {
           itemtap: 'redirect'
-        },
-        researchBack: {
-          tap: function() {
-            var historyActions, lastAction;
-            console.log('research back');
-            historyActions = Cv.app.getHistory().getActions();
-            console.log(historyActions);
-            lastAction = historyActions[historyActions.length - 2];
-            return this.redirectTo(lastAction.getUrl());
-          }
         }
       },
       routes: {

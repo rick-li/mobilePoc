@@ -68,8 +68,10 @@ $content_font_color: #434343;
       }
     }
   }
-  .x-list .cv-list-item.x-item-selected{
+  .x-list .cv-list-item.x-item-pressed{
     text-shadow: none;
+    backgound-color: #B2DF1E;
+    background-image:-webkit-linear-gradient(#C9EA60, #BAE433 50%, #B2DF1E 51%, #A0C91B);
   }
   .cv-topstories .cv-list-item{
     height: 200px;
