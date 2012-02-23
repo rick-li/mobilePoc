@@ -29,3 +29,14 @@
 .cv-dataview .x-dataview-inner {
   width: 100%;
 }
+
+/* line 29, C:/software/git/mobilePoc/resources/sass/portal.scss */
+cv-topstories .x-toolbar {
+  background-image: -webkit-linear-gradient(#abbaff, #7687ff, #3425ff, blue);
+  color: white;
+  height: 30px;
+}
+/* line 34, C:/software/git/mobilePoc/resources/sass/portal.scss */
+cv-topstories .x-toolbar .x-title {
+  font-size: 16px;
+}

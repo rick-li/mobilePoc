@@ -16,8 +16,8 @@
   Cv.app = Ext.application({
     name: 'Cv',
     profiles: ['Phone', 'Tablet'],
-    controllers: ['Research', 'Video'],
-    views: ['Menu', 'Page', 'ResearchPortlet', 'CmCarousel'],
+    controllers: ['Research', 'Video', 'Commentary', 'TopStories'],
+    views: ['Menu', 'Page', 'ResearchPortlet', 'CmCarousel', 'TopStoriesPortlet', 'CommentaryPortlet'],
     models: ['Research'],
     launch: function() {
       console.log('launch');

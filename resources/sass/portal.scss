@@ -25,3 +25,13 @@
 .cv-dataview .x-dataview-inner{
   width: 100%;
 }
+
+cv-topstories .x-toolbar{
+  background-image: -webkit-linear-gradient(#ABBAFF, #7687FF, #3425FF, #0000FF);
+  color: white;
+  height: 30px;
+  
+  .x-title{
+    font-size: 16px;
+  }
+}
