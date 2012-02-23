@@ -1,7 +1,3 @@
-Ext.setup(
-    
-
-)
 Ext.define("Cv.view.phone.Main",
     extend: 'Cv.view.Main'
     

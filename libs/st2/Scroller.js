@@ -909,7 +909,7 @@ Ext.define('Ext.scroll.Scroller', {
         this.isDragging = true;
 
         this.fireEvent('scrollstart', this, x, y);
-		e.stopPropagation();
+        e.stopPropagation();
     },
 
     /**
