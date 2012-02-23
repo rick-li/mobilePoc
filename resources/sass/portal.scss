@@ -11,7 +11,6 @@
   font: bold 14px arial,sans-serif;
 }
 
-
 #menuBarButtons .x-button-pressed{
   background: url("../images/arrow_red.png") no-repeat center top;
 }
@@ -26,12 +25,22 @@
   width: 100%;
 }
 
-cv-topstories .x-toolbar{
-  background-image: -webkit-linear-gradient(#ABBAFF, #7687FF, #3425FF, #0000FF);
-  color: white;
-  height: 30px;
-  
-  .x-title{
-    font-size: 16px;
-  }
+.phoneSearchIcon{
+  background: url('../images/search_icon.png') no-repeat !important;
+  border: none !important;
+  height:15px;
+  width:14px;
+  margin-top: 15px !important;
+}
+
+.phone_searchfield{
+  position: absolute;
+  left:0px;
+  top: 0px;
+}
+.overlay_panel{
+  top: 0px !important;
+  left: 0px !important;
+  width:  100%;
+  height: 45px;
 }

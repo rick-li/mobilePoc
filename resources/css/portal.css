@@ -13,30 +13,43 @@
   font: bold 14px arial,sans-serif;
 }
 
-/* line 15, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 14, C:/software/git/mobilePoc/resources/sass/portal.scss */
 #menuBarButtons .x-button-pressed {
   background: url("../images/arrow_red.png") no-repeat center top;
 }
 
-/* line 19, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 18, C:/software/git/mobilePoc/resources/sass/portal.scss */
 .logo {
   position: absolute;
   top: 0;
   left: 40%;
 }
 
-/* line 25, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 24, C:/software/git/mobilePoc/resources/sass/portal.scss */
 .cv-dataview .x-dataview-inner {
   width: 100%;
 }
 
-/* line 29, C:/software/git/mobilePoc/resources/sass/portal.scss */
-cv-topstories .x-toolbar {
-  background-image: -webkit-linear-gradient(#abbaff, #7687ff, #3425ff, blue);
-  color: white;
-  height: 30px;
+/* line 28, C:/software/git/mobilePoc/resources/sass/portal.scss */
+.phoneSearchIcon {
+  background: url("../images/search_icon.png") no-repeat !important;
+  border: none !important;
+  height: 15px;
+  width: 14px;
+  margin-top: 15px !important;
 }
-/* line 34, C:/software/git/mobilePoc/resources/sass/portal.scss */
-cv-topstories .x-toolbar .x-title {
-  font-size: 16px;
+
+/* line 36, C:/software/git/mobilePoc/resources/sass/portal.scss */
+.phone_searchfield {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+/* line 41, C:/software/git/mobilePoc/resources/sass/portal.scss */
+.overlay_panel {
+  top: 0px !important;
+  left: 0px !important;
+  width: 100%;
+  height: 45px;
 }
