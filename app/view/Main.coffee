@@ -28,8 +28,7 @@ Ext.define("Cv.view.Main",
                 {docked: 'top', items:[Ext.create 'Cv.view.Menu']}
             ]
     getSubItems: ->
-      return []
-
+        return []
     initialize: ->
         console.log 'main init'
         @setItems(@getTitleItems())

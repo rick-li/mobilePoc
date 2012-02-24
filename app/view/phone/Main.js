@@ -41,6 +41,8 @@
           docked: 'right',
           listeners: {
             tap: function(button) {
+              console.log('tap main');
+              console.log(overlay);
               return overlay.showBy(button);
             }
           }

@@ -8,7 +8,7 @@
       views: ['Main', 'MarketBuzz']
     },
     isActive: function() {
-      return Ext.os.is.Desktop ||Ext.os.is.Phone;
+      return Ext.os.is.Phone || Ext.os.is.Desktop;
     },
     launch: function() {
       console.log(Date.now() + ' Cv.profile.Phone launch');
