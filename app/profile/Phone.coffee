@@ -5,8 +5,8 @@ Ext.define('Cv.profile.Phone'
         controllers: ['Page']
         views: ['Main','MarketBuzz']
     isActive: ->
-        #return Ext.os.is.Phone
-        return Ext.os.is.Phone || Ext.os.is.Desktop
+        return Ext.os.is.Phone
+        #return Ext.os.is.Phone || Ext.os.is.Desktop
     launch: ->
         console.log Date.now() + ' Cv.profile.Phone launch'
         @callParent()
