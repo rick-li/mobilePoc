@@ -1,4 +1,4 @@
-/* line 3, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+/* line 3, C:/software/git/mobilePoc/resources/sass/carousel.scss */
 body {
   background-color: #000;
 }
@@ -15,22 +15,22 @@ media screen and (orientation:portrait) {
     }
 }*/
 @media screen and (orientation:landscape) {
-  /* line 21, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+  /* line 21, C:/software/git/mobilePoc/resources/sass/carousel.scss */
   .my-carousel-item-img {
     background-size: auto 100%;
   }
 }
-/* line 26, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+/* line 26, C:/software/git/mobilePoc/resources/sass/carousel.scss */
 .x-portrait .my-carousel-item-img {
   background-size: 100% auto;
 }
 
-/* line 30, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+/* line 30, C:/software/git/mobilePoc/resources/sass/carousel.scss */
 .x-landscape .my-carousel-item-img {
   background-size: auto 100%;
 }
 
-/* line 34, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+/* line 34, C:/software/git/mobilePoc/resources/sass/carousel.scss */
 .my-carousel-item-img {
   margin: auto;
   margin-top: 5px;
@@ -39,23 +39,23 @@ media screen and (orientation:portrait) {
   background-position: center center;
 }
 
-/* line 42, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+/* line 42, C:/software/git/mobilePoc/resources/sass/carousel.scss */
 .x-carousel-indicator > * {
   background-color: white !important;
   opacity: 0.4;
 }
 
-/* line 47, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+/* line 47, C:/software/git/mobilePoc/resources/sass/carousel.scss */
 .x-carousel-indicator > .x-carousel-indicator-active {
   opacity: 1;
 }
 
-/* line 54, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+/* line 54, C:/software/git/mobilePoc/resources/sass/carousel.scss */
 .cm-container {
   background: url("../images/Citi_Minute_BG_Image.png");
 }
 
-/* line 58, C:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+/* line 58, C:/software/git/mobilePoc/resources/sass/carousel.scss */
 .cm-carousel-text {
   font-size: 12px;
   font-weight: bold;
