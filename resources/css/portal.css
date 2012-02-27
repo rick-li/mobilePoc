@@ -1,4 +1,4 @@
-/* line 1, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 1, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 .portal {
   backgound-color: #EFE;
   /*height:200px;*/
@@ -6,31 +6,31 @@
   border-right: 1px solid #333;
 }
 
-/* line 8, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 8, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 .portal .portalTitle {
   height: 35px;
   color: #FFCC00;
   font: bold 14px arial,sans-serif;
 }
 
-/* line 14, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 14, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 #menuBarButtons .x-button-pressed {
   background: url("../images/arrow_red.png") no-repeat center top;
 }
 
-/* line 18, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 18, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 .logo {
   position: absolute;
   top: 0;
   left: 40%;
 }
 
-/* line 24, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 24, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 .cv-dataview .x-dataview-inner {
   width: 100%;
 }
 
-/* line 28, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 28, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 .phoneSearchIcon {
   background: url("../images/search_icon.png") no-repeat !important;
   border: none !important;
@@ -39,17 +39,17 @@
   margin-top: 15px !important;
 }
 
-/* line 36, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 36, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 .phone_searchfield {
   position: absolute;
   left: 0px;
   top: 0px;
 }
 
-/* line 41, C:/software/git/mobilePoc/resources/sass/portal.scss */
+/* line 41, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/portal.scss */
 .overlay_panel {
-  top: 0px !important;
   left: 0px !important;
+  top: 0px !important;
   width: 100%;
   height: 45px;
 }
