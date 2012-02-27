@@ -11,12 +11,18 @@
       this.add({
         xtype: 'cvCarousel',
         direction: 'horizontal',
-        items: this.getCrls()
+        items: this.getCrls(),
+        id: 'cmCrls',
+        listeners: {
+          tap: function() {
+            return console.log('tap');
+          }
+        }
       });
       return this.callParent();
     },
     getCrls: function() {
-      var date, i, img, imgs, items, list, ln, title;
+      var date, i, id, img, imgs, items, list, ln, title;
       console.log('get Carousel');
       list = cmData.list;
       imgs = ["cm1", "cm2", "Citi_Minute_Horizontal_480x262"];
@@ -27,10 +33,12 @@
         img = imgs[i];
         title = list[i].title;
         date = list[i].formatedDate;
+        id = list[i].alertId;
         items.push({
           xtype: 'panel',
           layout: 'vbox',
           cls: 'cm-container',
+          id: id,
           items: [
             {
               xtype: "image",

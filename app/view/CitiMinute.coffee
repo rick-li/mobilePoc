@@ -12,7 +12,20 @@ Ext.define('Cv.view.CitiMinute',
                 xtype: 'cvCarousel'
                 direction: 'horizontal'
                 items: @getCrls()
-                
+                id : 'cmCrls'
+                listeners: 
+                    tap :->
+                        console.log 'tap'
+                #listeners:
+                    #afterRender: (c)->
+                        #c.items.each(
+                            #(item)->
+                                #item.el.on('tap',
+                                #->
+                                    #console.log item.id
+                                
+                                #)
+                        #)
             }
         )
         @callParent()
@@ -31,17 +44,18 @@ Ext.define('Cv.view.CitiMinute',
             img = imgs[i]
             title = list[i].title
             date = list[i].formatedDate
+            id = list[i].alertId
             items.push
                 xtype: 'panel'
                 layout: 'vbox'
                 cls: 'cm-container'
+                id: id
                 items:  [
                     {
                         xtype: "image"
                         flex: '3.5'
                         cls: "my-carousel-item-img"
                         src: "resources/images/" + img + ".png"
-                        
                     },
                     {
                         dock: 'bottom'

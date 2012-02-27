@@ -9,7 +9,7 @@ Ext.define("Cv.view.phone.Main",
     getSubItems: ->
         overlay = new Ext.Panel({
             styleHtmlContent: true
-            docked: 'bottom'
+            docked:'left'
             modal: true
             cls: 'overlay_panel'
             hideOnMaskTap: true
