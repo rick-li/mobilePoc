@@ -1,0 +1,67 @@
+/* line 3, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+body {
+  background-color: #000;
+}
+
+/*
+.my-carousel-item {
+    background: url(images/loading.png) no-repeat center center;
+}
+
+
+media screen and (orientation:portrait) {
+    .my-carousel-item-img {
+        background-size: 100% auto;
+    }
+}
+
+
+@media screen and (orientation:landscape) {
+    .my-carousel-item-img {
+        background-size: auto 100%;
+    }
+}
+*/
+/* line 26, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+.x-portrait .my-carousel-item-img {
+  background-size: 100% auto;
+}
+
+/* line 30, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+.x-landscape .my-carousel-item-img {
+  background-size: auto 100%;
+}
+
+/* line 34, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+.my-carousel-item-img {
+  margin: auto;
+  margin-top: 5px;
+  width: 342px;
+  height: 192px;
+  background-position: center center;
+}
+
+/* line 42, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+.x-carousel-indicator > * {
+  background-color: white !important;
+  opacity: 0.4;
+}
+
+/* line 47, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+.x-carousel-indicator > .x-carousel-indicator-active {
+  opacity: 1;
+}
+
+/* line 54, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+.cm-container {
+  background: url("../images/Citi_Minute_BG_Image.png");
+}
+
+/* line 58, c:/soft/PortableGit-1.7.9-preview20120201/mobilePoc/resources/sass/carousel.scss */
+.cm-carousel-text {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  padding-left: 15px;
+  line-height: 20px;
+}
