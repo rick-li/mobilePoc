@@ -1,12 +1,20 @@
-Ext.define 'cv.controller.Page',
+Ext.define 'Cv.controller.Page',
     extend: 'Ext.app.Controller'
     config:
         pages: {}
         refs:
             menuBtn: '#menuBarButtons button'
+            detailBack: '#detailBack'
         control:
             menuBtn:
                 tap: 'redirect'
+            detailBack:
+                tap: ->
+                    console.log 'detail back'
+                    historyActions = Cv.app.getHistory().getActions()
+                    console.log historyActions
+                    lastAction = historyActions[historyActions.length-2]
+                    @redirectTo(lastAction.getUrl())
         routes:
             'page/:pageId': 'switchPage'
     redirect: (menuBtn)->
@@ -19,14 +27,17 @@ Ext.define 'cv.controller.Page',
         #2. create Page panel and insert to viewport
         pages = @getPages()
         if not pages[pageId]
-            pages[pageId] = new cv.view.Page({pageId: pageId})
+            if pageId is 'MarketBuzz'
+                pages[pageId] = @createMarketBuzz(pageId)
+            else
+                pages[pageId] = Ext.create('Cv.view.Page',{pageId: pageId,html:"It's "+pageId+" page."})
 
         menuBar = Ext.getCmp('menuBarButtons')
         #make menu selected, and suppress the event to prevent loop call 
         activeMenuBtn = menuBar.child('#'+pageId)
         menuBar.setPressedButtons(activeMenuBtn)
         Ext.getCmp('viewport').setActiveItem(pages[pageId], {type: 'slide', direction: 'right'})
+    createMarketBuzz: (pageId)->
+        return undefined#Ext.create('Cv.view.MarketBuzz',{pageId: pageId});
     launch:->
-        console.log 'launch controller'
-        #sync up the menu button here
-        #
+        console.log 'launch Page controller'

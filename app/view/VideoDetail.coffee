@@ -1,4 +1,4 @@
-Ext.define('cv.view.VideoDetail',
+Ext.define('Cv.view.VideoDetail',
     extend: 'Ext.Panel'
     config:
         record: ''
@@ -9,7 +9,7 @@ Ext.define('cv.view.VideoDetail',
             {
                 xtype: 'toolbar'
                 title: @getRecord().get('analystName')
-                items:[{text:'Back', id:'videoBack'}]
+                items:[{text:'Back', id:'detailBack'}]
             },{
                 tpl: '{analystType}'
                 data: @getRecord().getData()

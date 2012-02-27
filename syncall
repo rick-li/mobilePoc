@@ -1,8 +1,9 @@
 
-dest=`echo ~/phonegap_www/base/`
+dest=`echo ~/phonegap_www/`
 echo $dest
 find . -type d -not -iwholename '*.git*' -exec mkdir -p $dest{} \;
 find . -type f -name '*.js' -exec cp {} $dest{} \;
+find . -type f -name '*.json' -exec cp {} $dest{} \;
 find . -type f -name '*.css' -exec cp {} $dest{} \;
 find . -type f -name '*.gif' -exec cp {} $dest{} \;
 #find . -type f -name '*.png' -exec cp {} $dest{} \;

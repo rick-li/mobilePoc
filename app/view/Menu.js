@@ -1,10 +1,9 @@
 (function() {
 
-  Ext.define('cv.view.Menu', {
+  Ext.define('Cv.view.Menu', {
     extend: 'Ext.Toolbar',
     config: {
       height: 40,
-      layout: 'fit',
       scrollable: 'horizontal'
     },
     initialize: function() {

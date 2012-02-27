@@ -1,4 +1,4 @@
-Ext.define('cv.view.ResearchDetail',
+Ext.define('Cv.view.ResearchDetail',
     extend: 'Ext.Panel'
     config:
         record: ''
@@ -9,7 +9,7 @@ Ext.define('cv.view.ResearchDetail',
             {
                 xtype: 'toolbar'
                 title: {xtype:'title', title: @getRecord().get('headLine')}
-                items:[{text:'Back', id:'researchBack'}]
+                items:[{text:'Back', id:'detailBack'}]
             },{
                 tpl: '{synopsis}'
                 data: @getRecord().getData()

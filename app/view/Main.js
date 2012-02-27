@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define("cv.view.Main", {
+  Ext.define("Cv.view.Main", {
     extend: 'Ext.Panel',
     config: {
       id: 'viewport',
@@ -14,21 +14,26 @@
             if cvMarketBuzz
                 cvMarketBuzz.fireEvent('doOrientationChange', cvMarketBuzz)
     */
-    initialize: function() {
-      var cvMenu;
-      console.log('main init');
-      cvMenu = Ext.create('cv.view.Menu');
-      this.setItems([
+    getTitleItems: function() {
+      return [
         {
           docked: 'top',
           xtype: 'toolbar',
-          title: 'CitiVelocity'
+          minHeight: 22,
+          items: this.getSubItems()
         }, {
           docked: 'top',
-          items: [cvMenu]
+          items: [Ext.create('Cv.view.Menu')]
         }
-      ]);
-      return this.callParent(arguments);
+      ];
+    },
+    getSubItems: function() {
+      return [];
+    },
+    initialize: function() {
+      console.log('main init');
+      this.setItems(this.getTitleItems());
+      return this.callParent();
     }
   });
 

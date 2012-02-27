@@ -1,4 +1,4 @@
-Ext.ns('cv', 'cv.views', 'cv.controllers')
+Ext.ns('Cv', 'Cv.views', 'Cv.controllers')
 
 #TODO to introduce a eventbus component to decouple the components
 ###
@@ -9,23 +9,26 @@ Ext.setup
 ###
 Ext.Loader.setConfig({enabled:false})
 #Ext.Loader.setConfig({enabled:true,paths:{'cv': './public/app/sencha/app'}})
-cv.app = Ext.application
-    name: 'cv'
-    controllers: ['Main','Page', 'Research', 'Video']
-    views: ['Main', 'Menu', 'Page', 'MarketBuzz', 'ResearchPortlet']
+Cv.app = Ext.application
+    name: 'Cv'
+    profiles: ['Phone','Tablet']
+    controllers: ['Research', 'Video', 'Commentary', 'TopStories']
+    views: ['Menu', 'Page', 'ResearchPortlet','CvCarousel','TopStoriesPortlet','CommentaryPortlet']
     models: ['Research']
     launch: ->
         console.log('launch')
-        Ext.create('cv.view.Main')
+        #Ext.create('Cv.view.Main')
         if(location.href.indexOf('#') == -1)
             #TODO get default page
             console.log('redirect to default page')
             @redirectTo('page/MarketBuzz')
 
-
-
-cv.util = {
+Cv.util = {
     getCurrentHashUrl: ->
         return location.href.substring(location.href.indexOf('#')+1)
+    getOrientation: ->
+        if Ext.Viewport.getWindowHeight() >= Ext.Viewport.getWindowWidth()
+            return Ext.Viewport.PORTRAIT
+        return Ext.Viewport.LANDSCAPE
 
 }

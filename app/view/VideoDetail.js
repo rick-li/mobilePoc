@@ -1,6 +1,6 @@
 (function() {
 
-  Ext.define('cv.view.VideoDetail', {
+  Ext.define('Cv.view.VideoDetail', {
     extend: 'Ext.Panel',
     config: {
       record: ''
@@ -15,7 +15,7 @@
           items: [
             {
               text: 'Back',
-              id: 'videoBack'
+              id: 'detailBack'
             }
           ]
         }, {

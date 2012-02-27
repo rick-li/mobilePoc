@@ -1,7 +1,8 @@
 (function() {
 
-  Ext.define('cv.view.ResearchPortlet', {
-    extend: 'cv.view.Portlet',
+  Ext.define('Cv.view.ResearchPortlet', {
+    extend: 'Cv.view.Portlet',
+    xtype: 'research',
     config: {
       height: 200
     },
@@ -11,9 +12,8 @@
     createList: function() {
       var list;
       list = new Ext.List({
-        height: this.getHeight(),
         itemTpl: '<div>{headLine}</div><div>{synopsis}</div>',
-        store: cv.researchStore
+        store: Cv.researchStore
       });
       return list;
     }

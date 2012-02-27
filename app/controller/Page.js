@@ -1,15 +1,26 @@
 (function() {
 
-  Ext.define('cv.controller.Page', {
+  Ext.define('Cv.controller.Page', {
     extend: 'Ext.app.Controller',
     config: {
       pages: {},
       refs: {
-        menuBtn: '#menuBarButtons button'
+        menuBtn: '#menuBarButtons button',
+        detailBack: '#detailBack'
       },
       control: {
         menuBtn: {
           tap: 'redirect'
+        },
+        detailBack: {
+          tap: function() {
+            var historyActions, lastAction;
+            console.log('detail back');
+            historyActions = Cv.app.getHistory().getActions();
+            console.log(historyActions);
+            lastAction = historyActions[historyActions.length - 2];
+            return this.redirectTo(lastAction.getUrl());
+          }
         }
       },
       routes: {
@@ -25,9 +36,14 @@
       console.log('page index id: ' + pageId);
       pages = this.getPages();
       if (!pages[pageId]) {
-        pages[pageId] = new cv.view.Page({
-          pageId: pageId
-        });
+        if (pageId === 'MarketBuzz') {
+          pages[pageId] = this.createMarketBuzz(pageId);
+        } else {
+          pages[pageId] = Ext.create('Cv.view.Page', {
+            pageId: pageId,
+            html: "It's " + pageId + " page."
+          });
+        }
       }
       menuBar = Ext.getCmp('menuBarButtons');
       activeMenuBtn = menuBar.child('#' + pageId);
@@ -37,8 +53,9 @@
         direction: 'right'
       });
     },
+    createMarketBuzz: function(pageId) {},
     launch: function() {
-      return console.log('launch controller');
+      return console.log('launch Page controller');
     }
   });
 

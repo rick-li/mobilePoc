@@ -1,16 +1,19 @@
 (function() {
 
-  Ext.define('cv.view.Portlet', {
+  Ext.define('Cv.view.Portlet', {
     extend: 'Ext.Panel',
     config: {
       portletType: '',
-      title: ''
+      title: '',
+      cls: 'portal',
+      layout: 'fit'
     },
     initialize: function() {
       this.add({
         docked: 'top',
         xtype: 'toolbar',
-        title: this.getTitle()
+        title: this.getTitle(),
+        cls: 'portalTitle'
       });
       return this.callParent(arguments);
     }

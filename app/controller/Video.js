@@ -1,25 +1,14 @@
 (function() {
 
-  Ext.define('cv.controller.Video', {
+  Ext.define('Cv.controller.Video', {
     extend: 'Ext.app.Controller',
     config: {
       refs: {
-        videoList: '#VideoPortlet list',
-        videoBack: '#videoBack'
+        videoList: 'VideoPortlet dataview'
       },
       control: {
         videoList: {
           select: 'redirect'
-        },
-        videoBack: {
-          tap: function() {
-            var historyActions, lastAction;
-            console.log('video back');
-            historyActions = cv.app.getHistory().getActions();
-            console.log(historyActions);
-            lastAction = historyActions[historyActions.length - 2];
-            return this.redirectTo(lastAction.getUrl());
-          }
         }
       },
       routes: {
@@ -40,9 +29,9 @@
       } else {
         if (!this.videoResources) this.videoResources = [];
         if (!this.videoResources[alertId]) {
-          record = cv.videoStore.findRecord('alertId', alertId);
+          record = Cv.videoStore.findRecord('alertId', alertId);
           console.log('detail is ');
-          detail = this.videoResources[alertId] = Ext.create('cv.view.VideoDetail', {
+          detail = this.videoResources[alertId] = Ext.create('Cv.view.VideoDetail', {
             record: record
           });
           console.log(detail);
