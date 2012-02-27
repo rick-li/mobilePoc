@@ -6,6 +6,7 @@ $content_font_color: #434343;
     background-color: #EEE !important;
   }
   .cv-list-item{
+    background-color: #EDEDEE;
   	background-image: -webkit-linear-gradient(#CCC, #DCD, #EDEDEE, #EEE);
   	height: 100px;
   	font: 13px arial,sans-serif;
@@ -71,13 +72,18 @@ $content_font_color: #434343;
   .x-list .cv-list-item.x-item-pressed{
     text-shadow: none;
     backgound-color: #B2DF1E;
-    background-image:-webkit-linear-gradient(#C9EA60, #BAE433 50%, #B2DF1E 51%, #A0C91B);
+    background-image:-webkit-linear-gradient(#8888FF, #7777FF, #6666FF, #5555FF);
+    
+    .headline,.author,.pubdate,.content,.title{
+        color: #FFF;
+      }
   }
   .cv-topstories .cv-list-item{
     height: 200px;
     
     .x-toolbar{
-      background-image: -webkit-linear-gradient(#ABBAFF, #7687FF, #3425FF, #0000FF);
+      background-color: #3425FF;
+      background-image: -webkit-linear-gradient(#6888FF, #5465FF, #3425FF, #0000FF);
       color: white;
       height: 30px;
     }

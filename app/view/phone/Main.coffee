@@ -37,10 +37,12 @@ Ext.define("Cv.view.phone.Main",
             #ui: 'button'
             cls: 'phoneSearchIcon'
             docked: 'right'
-            listeners: 
+            listeners:
                 tap: (button)->
+                    console.log 'tap main'
+                    console.log overlay
                     overlay.showBy(button)
-        }] 
+        }]
         subItems.push {xtype:'image',centered:true,src:'resources/images/cv-logo-header-medium.png',minWidth: 172,minHeight:22}
         return subItems
         
