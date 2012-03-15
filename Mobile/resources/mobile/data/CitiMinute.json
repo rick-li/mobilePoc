@@ -1,0 +1,70 @@
+var cmData = {
+  "type": "citiMinute",
+  "size": 3,
+  "totalSize": 3,
+  "list": [
+    {
+      "alertId": "12020803535135510",
+      "videoURL": "/geo/alerts/equity/120208035351355101.mp4",
+      "image": "/geo/alerts/equity/120208035351355102.png",
+      "imageGroup": {
+        "head": "/geo/alerts/equity/120208035351355106.png",
+        "small": "/geo/alerts/equity/120208035351355105.png",
+        "medium": "/geo/alerts/equity/120208035351355104.png",
+        "large": "/geo/alerts/equity/120208035351355103.png"
+      },
+      "title": "Deirdre Dunn, Head of TBA Trading: Agency Mortgage Market Update",
+      "dateString": "2012-02-08 03:54:00.0",
+      "analystName": "Brian Abdelhadi",
+      "summary": "REF-ARTICLE_URL:https://ir.citi.com/ISRW.pdfREF-ARTICLE_TITLE:Japan \r\nMacro Flash: 4Q GDP is estimated to have contracted 1.4% QoQ \r\nannualized",
+      "analystId": "657",
+      "analystType": "salesAnalyst",
+      "formatedDate": "08 Feb 12 03:54",
+      "refArticleURL": "https://ir.citi.com/ISRW.pdf",
+      "refArticleTitle": "Japan \r\nMacro Flash: 4Q GDP is estimated to have contracted 1.4% QoQ \r\nannualized",
+      "formattedDateStr": ""
+    },
+    {
+      "alertId": "11120121291925110",
+      "videoURL": "",
+      "image": "/geo/alerts/equity/111201212919251106.jpg",
+      "imageGroup": {
+        "head": "/geo/alerts/equity/111201212919251106.jpg",
+        "small": "",
+        "medium": "",
+        "large": ""
+      },
+      "title": "test",
+      "dateString": "2011-12-01 21:44:00.0",
+      "analystName": "Aerin Williams",
+      "summary": "Contact: CitiFXWire@citi.comCopyright ÃÂ© 2011 Citigroup https://icg.citi.com/data/documents/S\u0026T_ExternalDiscl_0209.pdf",
+      "analystId": "863",
+      "analystType": "salesAnalyst",
+      "formatedDate": "01 Dec 11 21:44",
+      "refArticleURL": "",
+      "refArticleTitle": "",
+      "formattedDateStr": ""
+    },
+    {
+      "alertId": "11120115003959210",
+      "videoURL": "/geo/alerts/equity/111201150039592104.mp4",
+      "image": "/geo/alerts/equity/111201150039592101.png",
+      "imageGroup": {
+        "head": "/geo/alerts/equity/111201150039592101.png",
+        "small": "",
+        "medium": "/geo/alerts/equity/111201150039592103.png",
+        "large": "/geo/alerts/equity/111201150039592102.png"
+      },
+      "title": "QA -CtiMinute Comm - test for 1588304-110",
+      "dateString": "2011-12-01 15:01:00.0",
+      "analystName": "Aerin Williams",
+      "summary": "QA -CtiMinute Comm - test for 1588304-110",
+      "analystId": "863",
+      "analystType": "salesAnalyst",
+      "formatedDate": "01 Dec 11 15:01",
+      "refArticleURL": "",
+      "refArticleTitle": "",
+      "formattedDateStr": ""
+    }
+  ]
+}

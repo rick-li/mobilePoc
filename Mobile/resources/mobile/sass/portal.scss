@@ -1,0 +1,46 @@
+.portal{
+  background-color: #EFE;
+  /*height:200px;*/
+  border: 0;
+  border-right:1px solid #333;
+}
+
+.portal .portalTitle{
+  height: 35px;
+  color: #FFCC00;
+  font: bold 14px arial,sans-serif;
+}
+
+#menuBarButtons .x-button-pressed{
+  background: url("../images/arrow_red.png") no-repeat center top;
+}
+
+.logo {
+    position:absolute;
+    top:0;
+    left: 40%
+}
+
+.cv-dataview .x-dataview-inner{
+  width: 100%;
+}
+
+.phoneSearchIcon{
+  background: url('../images/search_icon.png') no-repeat !important;
+  border: none !important;
+  height:15px;
+  width:14px;
+  margin-top: 15px !important;
+}
+
+.phone_searchfield{
+  position: absolute;
+  left:0px;
+  top: 0px;
+}
+.overlay_panel{
+  left: 0px !important;
+  top: 0px !important;
+  width:  100%;
+  height: 45px;
+}
