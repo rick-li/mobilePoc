@@ -6073,8 +6073,3 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-sheet-inner > .x-button:last-child, .x-sheet-action-inner > .x-button:last-child {
   margin-bottom: 0;
 }
-
-/* line 32, c:/software/git/mobilePoc/resources/sass/application.scss */
-.cv-phone .x-scroll-scroller {
-  position: relative;
-}
