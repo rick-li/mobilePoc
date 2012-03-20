@@ -1,8 +1,4 @@
 /* only for phone */
-/* line 3, ../sass/mobile.scss */
-.cv-phone .x-scroll-scroller {
-  position: relative;
-}
 /* line 7, ../sass/mobile.scss */
 .cv-phone .cv-logo {
   background: url("../images/cv-logo-header-medium.png") no-repeat;
