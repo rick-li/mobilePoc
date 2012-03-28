@@ -1,22 +1,23 @@
 function mobile(){
-  var $wnd_0 = window;
-  var $doc_0 = document;
-  sendStats('bootstrap', 'begin');
+  var $intern_23 = '', $intern_32 = '" for "gwt:onLoadErrorFn"', $intern_30 = '" for "gwt:onPropertyErrorFn"', $intern_33 = '#', $intern_45 = '.cache.js', $intern_35 = '/', $intern_44 = ':', $intern_24 = '::', $intern_11 = '<html><head><\/head><body><\/body><\/html>', $intern_27 = '=', $intern_34 = '?', $intern_29 = 'Bad handler "', $intern_43 = 'CE25BECECFA986CAD8CEEB26FB7623AF', $intern_16 = 'DOMContentLoaded', $intern_6 = 'DUMMY', $intern_40 = 'base', $intern_38 = 'baseUrl', $intern_1 = 'begin', $intern_7 = 'body', $intern_0 = 'bootstrap', $intern_37 = 'clear.cache.gif', $intern_26 = 'content', $intern_47 = 'end', $intern_2 = 'gwt.codesvr.mobile=', $intern_3 = 'gwt.codesvr=', $intern_31 = 'gwt:onLoadErrorFn', $intern_28 = 'gwt:onPropertyErrorFn', $intern_25 = 'gwt:property', $intern_19 = 'head', $intern_8 = 'iframe', $intern_36 = 'img', $intern_13 = 'javascript', $intern_9 = 'javascript:""', $intern_46 = 'loadExternalRefs', $intern_20 = 'meta', $intern_4 = 'mobile', $intern_42 = 'mobile.devmode.js', $intern_39 = 'mobile.nocache.js', $intern_22 = 'mobile::', $intern_18 = 'moduleRequested', $intern_17 = 'moduleStartup', $intern_21 = 'name', $intern_10 = 'position:absolute; width:0; height:0; border:none; left: -1000px; top: -1000px; !important', $intern_12 = 'script', $intern_41 = 'selectingPermutation', $intern_5 = 'startup', $intern_15 = 'undefined', $intern_14 = 'var $wnd = window.parent;';
+  var $wnd = window;
+  var $doc = document;
+  sendStats($intern_0, $intern_1);
   function isHostedMode(){
-    var query = $wnd_0.location.search;
-    return query.indexOf('gwt.codesvr.mobile=') != -1 || query.indexOf('gwt.codesvr=') != -1;
+    var query = $wnd.location.search;
+    return query.indexOf($intern_2) != -1 || query.indexOf($intern_3) != -1;
   }
 
   function sendStats(evtGroupString, typeString){
-    if ($wnd_0.__gwtStatsEvent) {
-      $wnd_0.__gwtStatsEvent({moduleName:'mobile', sessionId:$wnd_0.__gwtStatsSessionId, subSystem:'startup', evtGroup:evtGroupString, millis:(new Date).getTime(), type:typeString});
+    if ($wnd.__gwtStatsEvent) {
+      $wnd.__gwtStatsEvent({moduleName:$intern_4, sessionId:$wnd.__gwtStatsSessionId, subSystem:$intern_5, evtGroup:evtGroupString, millis:(new Date).getTime(), type:typeString});
     }
   }
 
   mobile.__sendStats = sendStats;
-  mobile.__moduleName = 'mobile';
+  mobile.__moduleName = $intern_4;
   mobile.__errFn = null;
-  mobile.__moduleBase = 'DUMMY';
+  mobile.__moduleBase = $intern_6;
   mobile.__softPermutationId = 0;
   mobile.__computePropValue = null;
   var __gwt_isKnownPropertyValue = function(){
@@ -37,40 +38,40 @@ function mobile(){
 
     function getInstallLocation(){
       setupInstallLocation();
-      return frameDoc.getElementsByTagName('body')[0];
+      return frameDoc.getElementsByTagName($intern_7)[0];
     }
 
     function setupInstallLocation(){
       if (frameDoc) {
         return;
       }
-      var scriptFrame = $doc_0.createElement('iframe');
-      scriptFrame.src = 'javascript:""';
-      scriptFrame.id = 'mobile';
-      scriptFrame.style.cssText = 'position:absolute; width:0; height:0; border:none; left: -1000px; top: -1000px; !important';
+      var scriptFrame = $doc.createElement($intern_8);
+      scriptFrame.src = $intern_9;
+      scriptFrame.id = $intern_4;
+      scriptFrame.style.cssText = $intern_10;
       scriptFrame.tabIndex = -1;
-      $doc_0.body.appendChild(scriptFrame);
+      $doc.body.appendChild(scriptFrame);
       frameDoc = scriptFrame.contentDocument;
       if (!frameDoc) {
         frameDoc = scriptFrame.contentWindow.document;
       }
       frameDoc.open();
-      frameDoc.write('<html><head><\/head><body><\/body><\/html>');
+      frameDoc.write($intern_11);
       frameDoc.close();
-      var frameDocbody = frameDoc.getElementsByTagName('body')[0];
-      var script = frameDoc.createElement('script');
-      script.language = 'javascript';
-      var temp = 'var $wnd = window.parent;';
+      var frameDocbody = frameDoc.getElementsByTagName($intern_7)[0];
+      var script = frameDoc.createElement($intern_12);
+      script.language = $intern_13;
+      var temp = $intern_14;
       script.text = temp;
       frameDocbody.appendChild(script);
     }
 
     function setupWaitForBodyLoad(callback){
       function isBodyLoaded(){
-        if (typeof $doc_0.readyState == 'undefined') {
-          return typeof $doc_0.body != 'undefined' && $doc_0.body != null;
+        if (typeof $doc.readyState == $intern_15) {
+          return typeof $doc.body != $intern_15 && $doc.body != null;
         }
-        return /loaded|complete/.test($doc_0.readyState);
+        return /loaded|complete/.test($doc.readyState);
       }
 
       var bodyDone = false;
@@ -83,8 +84,8 @@ function mobile(){
         if (!bodyDone) {
           bodyDone = true;
           callback();
-          if ($doc_0.removeEventListener) {
-            $doc_0.removeEventListener('DOMContentLoaded', onBodyDone, false);
+          if ($doc.removeEventListener) {
+            $doc.removeEventListener($intern_16, onBodyDone, false);
           }
           if (onBodyDoneTimerId) {
             clearInterval(onBodyDoneTimerId);
@@ -92,8 +93,8 @@ function mobile(){
         }
       }
 
-      if ($doc_0.addEventListener) {
-        $doc_0.addEventListener('DOMContentLoaded', function(){
+      if ($doc.addEventListener) {
+        $doc.addEventListener($intern_16, function(){
           onBodyDone();
         }
         , false);
@@ -108,8 +109,8 @@ function mobile(){
 
     function installCode(code){
       var docbody = getInstallLocation();
-      var script = getInstallLocationDoc().createElement('script');
-      script.language = 'javascript';
+      var script = getInstallLocationDoc().createElement($intern_12);
+      script.language = $intern_13;
       script.text = code;
       docbody.appendChild(script);
     }
@@ -121,65 +122,65 @@ function mobile(){
       );
     }
     ;
-    sendStats('moduleStartup', 'moduleRequested');
-    var script_0 = $doc_0.createElement('script');
-    script_0.src = filename;
-    $doc_0.getElementsByTagName('head')[0].appendChild(script_0);
+    sendStats($intern_17, $intern_18);
+    var script = $doc.createElement($intern_12);
+    script.src = filename;
+    $doc.getElementsByTagName($intern_19)[0].appendChild(script);
   }
 
   function processMetas(){
     var metaProps = {};
     var propertyErrorFunc;
     var onLoadErrorFunc;
-    var metas = $doc_0.getElementsByTagName('meta');
+    var metas = $doc.getElementsByTagName($intern_20);
     for (var i = 0, n = metas.length; i < n; ++i) {
-      var meta = metas[i], name_1 = meta.getAttribute('name'), content_0;
-      if (name_1) {
-        name_1 = name_1.replace('mobile::', '');
-        if (name_1.indexOf('::') >= 0) {
+      var meta = metas[i], name = meta.getAttribute($intern_21), content;
+      if (name) {
+        name = name.replace($intern_22, $intern_23);
+        if (name.indexOf($intern_24) >= 0) {
           continue;
         }
-        if (name_1 == 'gwt:property') {
-          content_0 = meta.getAttribute('content');
-          if (content_0) {
-            var value_0, eq = content_0.indexOf('=');
+        if (name == $intern_25) {
+          content = meta.getAttribute($intern_26);
+          if (content) {
+            var value, eq = content.indexOf($intern_27);
             if (eq >= 0) {
-              name_1 = content_0.substring(0, eq);
-              value_0 = content_0.substring(eq + 1);
+              name = content.substring(0, eq);
+              value = content.substring(eq + 1);
             }
              else {
-              name_1 = content_0;
-              value_0 = '';
+              name = content;
+              value = $intern_23;
             }
-            metaProps[name_1] = value_0;
+            metaProps[name] = value;
           }
         }
-         else if (name_1 == 'gwt:onPropertyErrorFn') {
-          content_0 = meta.getAttribute('content');
-          if (content_0) {
+         else if (name == $intern_28) {
+          content = meta.getAttribute($intern_26);
+          if (content) {
             try {
-              propertyErrorFunc = eval(content_0);
+              propertyErrorFunc = eval(content);
             }
              catch (e) {
-              alert('Bad handler "' + content_0 + '" for "gwt:onPropertyErrorFn"');
+              alert($intern_29 + content + $intern_30);
             }
           }
         }
-         else if (name_1 == 'gwt:onLoadErrorFn') {
-          content_0 = meta.getAttribute('content');
-          if (content_0) {
+         else if (name == $intern_31) {
+          content = meta.getAttribute($intern_26);
+          if (content) {
             try {
-              onLoadErrorFunc = eval(content_0);
+              onLoadErrorFunc = eval(content);
             }
              catch (e) {
-              alert('Bad handler "' + content_0 + '" for "gwt:onLoadErrorFn"');
+              alert($intern_29 + content + $intern_32);
             }
           }
         }
       }
     }
-    __gwt_getMetaProperty = function(name_0){
-      var value = metaProps[name_0];
+    __gwt_getMetaProperty = function(name){
+      var value = metaProps[name];
       return value == null?null:value;
     }
     ;
@@ -189,64 +190,64 @@ function mobile(){
 
   function computeScriptBase(){
     function getDirectoryOfFile(path){
-      var hashIndex = path.lastIndexOf('#');
+      var hashIndex = path.lastIndexOf($intern_33);
       if (hashIndex == -1) {
         hashIndex = path.length;
       }
-      var queryIndex = path.indexOf('?');
+      var queryIndex = path.indexOf($intern_34);
       if (queryIndex == -1) {
         queryIndex = path.length;
       }
-      var slashIndex = path.lastIndexOf('/', Math.min(queryIndex, hashIndex));
-      return slashIndex >= 0?path.substring(0, slashIndex + 1):'';
+      var slashIndex = path.lastIndexOf($intern_35, Math.min(queryIndex, hashIndex));
+      return slashIndex >= 0?path.substring(0, slashIndex + 1):$intern_23;
     }
 
     function ensureAbsoluteUrl(url){
       if (url.match(/^\w+:\/\//)) {
       }
        else {
-        var img = $doc_0.createElement('img');
-        img.src = url + 'clear.cache.gif';
+        var img = $doc.createElement($intern_36);
+        img.src = url + $intern_37;
         url = getDirectoryOfFile(img.src);
       }
       return url;
     }
 
     function tryMetaTag(){
-      var metaVal = __gwt_getMetaProperty('baseUrl');
+      var metaVal = __gwt_getMetaProperty($intern_38);
       if (metaVal != null) {
         return metaVal;
       }
-      return '';
+      return $intern_23;
     }
 
     function tryNocacheJsTag(){
-      var scriptTags = $doc_0.getElementsByTagName('script');
+      var scriptTags = $doc.getElementsByTagName($intern_12);
       for (var i = 0; i < scriptTags.length; ++i) {
-        if (scriptTags[i].src.indexOf('mobile.nocache.js') != -1) {
+        if (scriptTags[i].src.indexOf($intern_39) != -1) {
           return getDirectoryOfFile(scriptTags[i].src);
         }
       }
-      return '';
+      return $intern_23;
     }
 
     function tryBaseTag(){
-      var baseElements = $doc_0.getElementsByTagName('base');
+      var baseElements = $doc.getElementsByTagName($intern_40);
       if (baseElements.length > 0) {
         return baseElements[baseElements.length - 1].href;
       }
-      return '';
+      return $intern_23;
     }
 
     var tempBase = tryMetaTag();
-    if (tempBase == '') {
+    if (tempBase == $intern_23) {
       tempBase = tryNocacheJsTag();
     }
-    if (tempBase == '') {
+    if (tempBase == $intern_23) {
       tempBase = tryBaseTag();
     }
-    if (tempBase == '') {
-      tempBase = getDirectoryOfFile($doc_0.location.href);
+    if (tempBase == $intern_23) {
+      tempBase = getDirectoryOfFile($doc.location.href);
     }
     tempBase = ensureAbsoluteUrl(tempBase);
     return tempBase;
@@ -287,14 +288,14 @@ function mobile(){
     }
     ;
     mobile.__computePropValue = computePropValue;
-    sendStats('bootstrap', 'selectingPermutation');
+    sendStats($intern_0, $intern_41);
     if (isHostedMode()) {
-      return computeUrlForResource('mobile.devmode.js');
+      return computeUrlForResource($intern_42);
     }
     var strongName;
     try {
-      strongName = '4BBF054F3AED1285B81FAD9D3E7235A1';
-      var idx = strongName.indexOf(':');
+      strongName = $intern_43;
+      var idx = strongName.indexOf($intern_44);
       if (idx != -1) {
         softPermutationId = strongName.substring(idx + 1);
         strongName = strongName.substring(0, idx);
@@ -303,23 +304,23 @@ function mobile(){
      catch (e) {
     }
     mobile.__softPermutationId = softPermutationId;
-    return computeUrlForResource(strongName + '.cache.js');
+    return computeUrlForResource(strongName + $intern_45);
   }
 
   function loadExternalStylesheets(){
-    if (!$wnd_0.__gwt_stylesLoaded) {
-      $wnd_0.__gwt_stylesLoaded = {};
+    if (!$wnd.__gwt_stylesLoaded) {
+      $wnd.__gwt_stylesLoaded = {};
     }
-    sendStats('loadExternalRefs', 'begin');
-    sendStats('loadExternalRefs', 'end');
+    sendStats($intern_46, $intern_1);
+    sendStats($intern_46, $intern_47);
   }
 
   processMetas();
   mobile.__moduleBase = computeScriptBase();
-  var filename_0 = getCompiledCodeFilename();
+  var filename = getCompiledCodeFilename();
   loadExternalStylesheets();
-  sendStats('bootstrap', 'end');
-  installScript(filename_0);
+  sendStats($intern_0, $intern_47);
+  installScript(filename);
 }
 
 mobile();
