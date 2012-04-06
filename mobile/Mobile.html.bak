@@ -4,26 +4,30 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
         <title>Mobile - Hello World</title>
-        <link type="text/css" rel="stylesheet" href="mobile/resources/mobile/css/application.css">
-        <link type="text/css" rel="stylesheet" href="mobile/resources/mobile/css/mobile.css">
+        <link type="text/css" rel="stylesheet" href="resources/mobile/css/application.css">
+        <link type="text/css" rel="stylesheet" href="resources/mobile/css/mobile.css">
         <title>POC</title>
-        <script type="text/javascript" language="javascript" src="mobile/resources/st2/sencha-touch-all.js">
+        <script type="text/javascript" language="javascript" src="resources/st2/sencha-touch-all.js">
         </script>
-        <script type="text/javascript" src="mobile/resources/mobile/phonegap/phonegap-1.4.1.js">
+        <script type="text/javascript" src="resources/mobile/phonegap/phonegap-1.4.1.js">
         </script>
-        <script type="text/javascript" src="mobile/resources/mobile/phonegap/plugins/downloader.js">
+        <script type="text/javascript" src="resources/mobile/phonegap/plugins/downloader.js">
         </script>
-        <script type="text/javascript" language="javascript" src="mobile/resources/mobile/data/CitiMinute.json">
+        <script type="text/javascript" language="javascript" src="resources/mobile/data/CitiMinute.json">
         </script>
-        <script type="text/javascript" language="javascript" src="mobile/resources/mobile/data/Video.json">
+        <script type="text/javascript" language="javascript" src="resources/mobile/data/Video.json">
         </script>
-        <script type="text/javascript" language="javascript" src="mobile/resources/mobile/data/Research.json">
+        <script type="text/javascript" language="javascript" src="resources/mobile/data/Research.json">
         </script>
-        <script type="text/javascript" language="javascript" src="mobile/resources/mobile/data/CitVelMktBuzzMob.json">
-        
+        <script type="text/javascript" language="javascript" src="resources/mobile/data/CitVelMktBuzzMob.json">
+        	
         <script type="text/javascript" language="javascript" src="resources/mobile/data/TopStories.json"></script>
         </script>
-        <script type="text/javascript" src="mobile/mobile/mobile.nocache.js">
+        
+       
+        <script type="text/javascript" src="mobile/pr.js">
+        </script>
+        <script type="text/javascript" src="mobile/mobile.nocache.js">
         </script>
     </head>
     <body>
