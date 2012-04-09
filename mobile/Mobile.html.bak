@@ -52,13 +52,13 @@
             };
 
         </script>-->
-        <script type="text/javascript" language="javascript" src="/mobile/resources/mobile/data/CitiMinute.json"></script>
-        <script type="text/javascript" language="javascript" src="/mobile/resources/mobile/data/Video.json"></script>
-        <script type="text/javascript" language="javascript" src="/mobile/resources/mobile/data/Research.json"></script>
-        <script type="text/javascript" language="javascript" src="/mobile/resources/mobile/data/CitVelMktBuzzMob.json"></script>
+        <script type="text/javascript" language="javascript" src="resources/mobile/data/CitiMinute.json"></script>
+        <script type="text/javascript" language="javascript" src="resources/mobile/data/Video.json"></script>
+        <script type="text/javascript" language="javascript" src="resources/mobile/data/Research.json"></script>
+        <script type="text/javascript" language="javascript" src="resources/mobile/data/CitVelMktBuzzMob.json"></script>
         <script type="text/javascript" language="javascript" src="resources/mobile/data/TopStories.json"></script>
-        </script> <script type="text/javascript" src="/mobile/mobile/pr.js"></script>
-        <script type="text/javascript" src="/mobile/mobile/mobile.nocache.js"></script>
+        </script> <script type="text/javascript" src="mobile/mobile/pr.js"></script>
+        <script type="text/javascript" src="mobile/mobile.nocache.js"></script>
     </head>
     <body>
         <iframe src="javascript:''" id="__gwt_historyFrame" style="position: absolute; width: 0; height: 0; border: 0"></iframe>
