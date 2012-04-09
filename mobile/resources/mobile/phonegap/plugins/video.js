@@ -18,6 +18,7 @@ function VideoPlayer() {
  * @param url           The url to play
  */
 VideoPlayer.prototype.play = function(url) {
+	url = "https://www.citivelocity.com/citivelocity_s/cm_public/media/iphone/101223121056450101.mp4";
     PhoneGap.exec(null, null, "VideoPlayer", "playVideo", [url]);
 };
 
