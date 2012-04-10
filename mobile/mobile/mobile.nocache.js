@@ -293,7 +293,7 @@ function mobile(){
     }
     var strongName;
     try {
-      strongName = '5AF7E72741A16D9C8E53F3057A203D5B';
+      strongName = '71273CDB024B4F65B83E00BD53C10FAD';
       var idx = strongName.indexOf(':');
       if (idx != -1) {
         softPermutationId = strongName.substring(idx + 1);
