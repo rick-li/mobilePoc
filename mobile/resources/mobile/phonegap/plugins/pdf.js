@@ -18,7 +18,7 @@ function PdfViewer() {
  * @param url Pdf url 
  */
 PdfViewer.prototype.viewPdf = function(directory, fileName) {
-		fileName = "http://rick-li.github.com/mobilePoc/mobile/resources/mobile/phonegap/plugins/research.pdf";
+		fileName = "research.pdf";
     PhoneGap.exec(null, null, "PdfViewer", "viewPdf", [directory, fileName]);
 };
 
